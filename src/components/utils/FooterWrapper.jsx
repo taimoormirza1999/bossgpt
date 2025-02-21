@@ -36,7 +36,7 @@ export default function FooterWrapper() {
       <Suspense fallback={<Loader />}>
         <ScrollAnimation>
           <LoaderWrapper>
-            <FAQ />
+            {/* <FAQ /> */}
           </LoaderWrapper>
         </ScrollAnimation>
       </Suspense>

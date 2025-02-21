@@ -7,7 +7,6 @@ import BackgroundImage from "../assets/background.jpg";
 import ScriptsLoader from "@/components/ScriptsLoader";
 import FooterWrapper from "@/components/utils/FooterWrapper";
 import SuppressErrors from "@/components/utils/SuppressErrors";
-
 const CocogooseMedium = localFont({
   src: '../../public/fonts/Cocogoose-Classic-Medium-trial.ttf',
   weight: '400',
@@ -142,16 +141,16 @@ export default function RootLayout({ children }) {
     style={{ display: "none", visibility: "hidden" }}
   ></iframe>
 </noscript>
-       <div className="mx-0 relative bg-cover bg-center">
-          <Image
+       <div className={`mx-0 relative bg-cover bg-center overflow-x-hidden`}>
+          {/* <Image
             src={BackgroundImage}
             alt="Background"
             layout="fill"
             objectFit="cover"
             priority
             className="absolute inset-0 -z-10"
-          />
-        <Navigation />
+          /> */}
+        <Navigation  />
         <SuppressErrors/>
         {children}
         <FooterWrapper />

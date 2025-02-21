@@ -4,43 +4,47 @@
     font-weight: 400; 
     font-style: normal;
   }
-  @font-face {
-    font-family: 'Cocogoose-Classic-ExtraBold';
-    src: url('../assets/fonts/Cocogoose-Classic-ExtraBold-trial.ttf') format('truetype');
-    font-weight: 800;  
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'ImpactCustom';
-    src: url('../assets/fonts/impact.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'KozGoPr6NRegular';
-    src: url('../assets/fonts/KozGoPr6NRegular.woff') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'FranklinGothicMedium';
-    src: url('../assets/fonts/FranklinGothicMedium.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  } */
+    */
+:root {
+  --page-max-width: 1024px;
+  --speed-quickTransition: 0.1s;
+  --speed-regularTransition: 0.25s;
+  --radius-4: 4px;
+    --radius-6: 6px;
+    --radius-8: 8px;
+    --radius-12: 12px;
+    --radius-16: 16px;
+    --radius-24: 24px;
+    --radius-32: 32px;
+    --radius-rounded: 9999px;
+    --radius-circle: 50%;
+    /* --shadow-low: 0px 2px 4px rgba(0, 0, 0, .1);
+    --shadow-medium: 0px 4px 24px rgba(0, 0, 0, .2);
+    --shadow-high: 0px 7px 32px rgba(0, 0, 0, .35);
+    --shadow-stack-low: 0px 8px 2px 0px transparent, 0px 5px 2px 0px rgba(0, 0, 0, .01), 0px 3px 2px 0px rgba(0, 0, 0, .04), 0px 1px 1px 0px rgba(0, 0, 0, .07), 0px 0px 1px 0px rgba(0, 0, 0, .08); */
+}
   body {
-    background: #000000;
+    @apply bg-pmBlack;
     font-family: var(--font-cocogoose-medium), sans-serif;
     font-weight: 200;
   }
-  
+  .medium-transition{
+    @apply transition-all ease-in-out duration-500;
+  }
+  .primary-link{
+    @apply cursor-pointer text-osloGray hover:text-mtext-primary medium-transition hover:bg-anchorGlassBg border border-woodsmoke  hover:border-anchorGlassBg 
+  }
+  .page-max-width{
+    max-width: var(--page-max-width);
+  }
+  .plusSign{
+    @apply text-mtext-tertiary font-semibold text-lg
+  }
   /* Franklin Gothic Medium */
   .font-medium-fgm {
     font-family: var(--font-franklin), sans-serif;
     font-weight: 400;
   }
-  
   /* KozGoPr6N Regular */
   .font-medium-kgpr {
     font-family: var(--font-kozgopr), sans-serif;

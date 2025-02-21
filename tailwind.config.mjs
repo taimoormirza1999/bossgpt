@@ -11,12 +11,31 @@ export default {
 		  'ultrawide': '1920px', 
 		},
 		colors: {
+		 anchorGlassBg: "hsla(0, 0%, 100%, .08)",
 		  primary: '#ee00a7e4',
 		  red: '#f02d00',
-		  ferozi: '#00ffff',
+		  pmBlack:'#08090A',
+		  osloGray:'#8A8F98',
+		  mtext:{
+			primary: '#f7f8f8',
+			secondary: '#d0d6e0',
+			tertiary: '#8a8f98',
+			quaternary: '#62666d',
+		  },
+		  mbg:{
+			primary:'#08090A',
+			translucent: "hsla(0, 0%, 100%, .05)",
+			tertiary:"#232326",
+		  },
+		  link:{
+			primary: '#828fff',
+			hover: '#fff',
+		  },
+		  woodsmoke:'#08090A',
+		  btnWild:'#E6E6E6',
+	
 		  purple:'#7f7fff',
-		  pink200:'#ff00ff',
-		  gray636: '#636363',
+		  pink200:'#ff00ff'
 		},
 		backgroundImage: {
 		  'custom-gradient': 'linear-gradient(to right, #7f7fff, #ff00ff)',
@@ -119,8 +138,11 @@ export default {
 		  '3': '3px',
 		},
 		boxShadow: {
-		  'inner-left-right': 'inset -30px 0 15px rgba(0, 0, 0, 0.40), inset 30px 0 15px rgba(0, 0, 0, 0.40)', 
-		},
+			low: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+			medium: "0px 4px 24px rgba(0, 0, 0, 0.2)",
+			high: "0px 7px 32px rgba(0, 0, 0, 0.35)",
+			"stack-low": "0px 8px 2px 0px transparent, 0px 5px 2px 0px rgba(0, 0, 0, 0.01), 0px 3px 2px 0px rgba(0, 0, 0, 0.04), 0px 1px 1px 0px rgba(0, 0, 0, 0.07), 0px 0px 1px 0px rgba(0, 0, 0, 0.08)",
+		  },
 		
 	  },
 	},

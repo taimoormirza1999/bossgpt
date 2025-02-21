@@ -6,6 +6,10 @@ import ScrollAnimation from "../components/utils/ScrollAnimation";
 import LoaderWrapper from "../components/utils/LoaderWrapper";
 import MarqueeWrapper2 from "../components/MarqueeWrapper2";
 import BlogCards from "../components/blog/BlogCards";
+import BannerTextHeadingImage from "@/components/utils/BannerTextHeadingImage1";
+import BannerTextHeadingImage2 from "@/components/utils/BannerTextHeadingImage2";
+import Team from "@/components/Team";
+import BuiltOnStrongFoundations from "@/components/BuiltOnStrongFoundations";
 const Banner = lazy(() => import("../components/Banner"));
 const EnrollmentBanner = lazy(() => import("../components/EnrollmentBanner"));
 const YourPath = lazy(() => import("../components/YourPath"));
@@ -50,19 +54,39 @@ const Home = () => {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.9 } },
   };
- 
-
 
   return (
     <>
-    {loading ? (
+      {loading ? (
         <Loader />
       ) : (
-       <>
+        <>
           <Banner />
           <Suspense fallback={<Loader />}>
-            <EnrollmentBanner />
+            <BannerTextHeadingImage2
+              color="bg-[#68CC58]"
+              description1={"Project and long-term planning"}
+              heading={"Set the product direction"}
+              paragraph={
+                <>
+                  <span className="text-white font-medium">
+                    Optimized for speed and efficiency.
+                  </span>{" "}
+                  Create tasks in seconds, discuss issues in context, and breeze
+                  through your work in views tailored to you and your team.
+                </>
+              }
+            />
+
+            <BannerTextHeadingImage />
           </Suspense>
+          <Suspense fallback={<Loader />}>
+            <Team/>
+          </Suspense>
+          <Suspense fallback={<Loader />}>
+            <BuiltOnStrongFoundations/>
+          </Suspense>
+          {/*
           <Suspense fallback={<Loader />}>
             <ScrollAnimation variants={fadeIn}>
               <LoaderWrapper>
@@ -128,7 +152,7 @@ const Home = () => {
               </LoaderWrapper>
             </ScrollAnimation>
           </Suspense>
-          <BlogCards />
+          <BlogCards /> */}
           {/* {showForm && <SignupForm />} */}
         </>
       )}
