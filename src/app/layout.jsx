@@ -7,43 +7,44 @@ import BackgroundImage from "../assets/background.jpg";
 import ScriptsLoader from "@/components/ScriptsLoader";
 import FooterWrapper from "@/components/utils/FooterWrapper";
 import SuppressErrors from "@/components/utils/SuppressErrors";
-const CocogooseMedium = localFont({
-  src: '../../public/fonts/Cocogoose-Classic-Medium-trial.ttf',
-  weight: '400',
-  style: 'normal',
-  variable: '--font-cocogoose-medium',
-});
+import Head from "next/head";
+// const CocogooseMedium = localFont({
+//   src: '../../public/fonts/Cocogoose-Classic-Medium-trial.ttf',
+//   weight: '400',
+//   style: 'normal',
+//   variable: '--font-cocogoose-medium',
+// });
 
-const CocogooseExtraBold = localFont({
-  src: '../../public/fonts/Cocogoose-Classic-ExtraBold-trial.ttf',
-  weight: '800',
-  style: 'normal',
-  variable: '--font-cocogoose-bold',
-});
+// const CocogooseExtraBold = localFont({
+//   src: '../../public/fonts/Cocogoose-Classic-ExtraBold-trial.ttf',
+//   weight: '800',
+//   style: 'normal',
+//   variable: '--font-cocogoose-bold',
+// });
 
-const ImpactCustom = localFont({
-  src: '../../public/fonts/impact.ttf',
-  weight: '400',
-  style: 'normal',
-  variable: '--font-impact',
-});
+// const ImpactCustom = localFont({
+//   src: '../../public/fonts/impact.ttf',
+//   weight: '400',
+//   style: 'normal',
+//   variable: '--font-impact',
+// });
 
-const KozGoPr6NRegular = localFont({
-  src: '../../public/fonts/KozGoPr6NRegular.woff',
-  weight: '400',
-  style: 'normal',
-  variable: '--font-kozgopr',
-});
+// const KozGoPr6NRegular = localFont({
+//   src: '../../public/fonts/KozGoPr6NRegular.woff',
+//   weight: '400',
+//   style: 'normal',
+//   variable: '--font-kozgopr',
+// });
 
-const FranklinGothicMedium = localFont({
-  src: '../../public/fonts/FranklinGothicMedium.ttf',
-  weight: '400',
-  style: 'normal',
-  variable: '--font-franklin',
-});
+// const FranklinGothicMedium = localFont({
+//   src: '../../public/fonts/FranklinGothicMedium.ttf',
+//   weight: '400',
+//   style: 'normal',
+//   variable: '--font-franklin',
+// });
 
 export const metadata = {
-  manifest: 'https://msa-club.com/manifest.json',
+  // manifest: 'https://msa-club.com/manifest.json',
   title: "Animation Character Design Course | Master Chracter Creation | MSA Club",
   description:
     "Learn character animation and drawing with MSA Academy. Master Blender, After Effects, and 3D animation through expert-led courses. Join now for free resources and certification!",
@@ -93,7 +94,7 @@ export const metadata = {
       "Transform your artistic skills with our comprehensive Animation Character Design	Course. Learn from industry experts and bring your characters to life. Enroll now!",
    images: [
     {
-      url: 'https://msa-club.com/logo.png', 
+      // url: 'https://msa-club.com/logo.png', 
       width: 800,
       height: 600,
       alt: 'MSA Club Logo Image',
@@ -128,7 +129,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 
   return (
-    <html lang="en" suppressHydrationWarning={true} className={`${CocogooseMedium.variable} ${CocogooseExtraBold.variable} ${ImpactCustom.variable} ${KozGoPr6NRegular.variable} ${FranklinGothicMedium.variable}`}>
+    <html lang="en" suppressHydrationWarning={true} className={``}>
      <head>
    <ScriptsLoader/>
      </head>
@@ -150,6 +151,9 @@ export default function RootLayout({ children }) {
             priority
             className="absolute inset-0 -z-10"
           /> */}
+          {/* <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head> */}
         <Navigation  />
         <SuppressErrors/>
         {children}
