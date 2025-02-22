@@ -9,11 +9,11 @@ const Footer = () => {
     <footer className={`bg-pmBlack py-12 text-[0.9rem] font-normal ${inter.className}`}>
       <div className=" mx-auto page-max-width">
         {/* Logo and Navigation */}
-        <div className="flex flex-col md:flex-row justify-between items-center md:items-start space-y-6 md:space-y-0">
+        <div className="flex flex-col md:flex-row justify-between w-full  items-center md:items-start space-y-6 md:space-y-0">
           
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <Link href="/" className="flex items-center space-x-2">
+          <div className="flex items-start lg:items-center space-x-3">
+            <Link href="/" className="flex items-start lg:items-center space-x-2">
               {/* Replace with your logo */}
               {/* <svg
                 width="24"
@@ -28,14 +28,14 @@ const Footer = () => {
                           src="/logo-icon.svg"
                           height={1500}
                           width={1500}
-                          className="w-40 h-auto px-3 shadow-xl"
+                          className="w-36 lg:w-32 h-auto px-3 shadow-xl mb-10 lg:mb-0"
                           alt="Logo"
                         />
             </Link>
           </div>
 
           {/* Navigation Links */}
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-mtext-tertiary  ">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-mtext-tertiary w-90 lg:w-auto ">
             <div>
               <h3 className="text-mtext-primary ">Features</h3>
               <ul className="mt-3 space-y-5">
@@ -89,7 +89,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="text-center text-mtext-primary text-sm mt-6">
+        <div className="text-center text-mtext-primary text-sm mt-8 lg:mt-12">
           © {new Date().getFullYear()} BossGpt.com All rights reserved.
         </div>
       </div>

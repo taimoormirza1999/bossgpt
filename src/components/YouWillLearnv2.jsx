@@ -78,7 +78,7 @@ const MSALearningSection = () => {
               ${
                 activeTab === tab
                   ? " text-white shadow-lg border-white"
-                  : " text-gray-400 border-gray-400 "
+                  : " text-white/70 border-gray-400 "
               }`}
                     >
                       {tab === "animation"

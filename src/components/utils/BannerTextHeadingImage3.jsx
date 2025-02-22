@@ -1,15 +1,15 @@
 import React from 'react';
 import { motion } from "framer-motion"
-import Image from "next/image";
 import Link from "next/link";
 import inter from '@/app/InterFont';
+import Slider from './Slider';
 
-const BannerTextHeadingImage = ({ heading, paragraph, paragraphspecificwidth=false }) => {
+const BannerTextHeadingImage3 = ({ heading, paragraph, paragraphspecificwidth=false }) => {
   return (
     <section className={`relative  font-normal   background: bg-gradient-to-b from-mbg-translucent to-transparent to-20% text-white/70 py-20  ${inter.className}`}>
-      <div className=" mx-auto w-90 lg:w-full page-max-width grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">
+      <div className=" page-max-width mx-auto w-90 lg:w-full  grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">
         {/* Left Section - Title & Description */}
-        <motion.div  className="space-y-6">
+        <div className=" space-y-6 ">
           {/* Breadcrumb */}
           <div className="flex items-center space-x-2 text-white/70 text-sm">
             <div className="w-4 h-2 bg-yellow-500 rounded-full"></div>
@@ -27,39 +27,27 @@ const BannerTextHeadingImage = ({ heading, paragraph, paragraphspecificwidth=fal
           </div>
 
           {/* Title */}
-          <motion.h1 initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay:0.3 }} className="text-4xl md:text-5xl font-bold text-white/90">
+          <h1 className="text-4xl md:text-5xl font-bold text-white/90">
             Issue tracking <br />
             you’ll enjoy using
-          </motion.h1>
+          </h1>
 
           {/* Subtitle */}
-          <motion.p   initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay:0.3 }} className="text-white/70 max-w-lg">
+          <p className="text-white/70 max-w-lg">
             <span className="text-white/70 font-medium text-sm lg:text-base">
               Optimized for speed and efficiency.
             </span>{" "}
             Create tasks in seconds, discuss issues in context, and breeze
             through your work in views tailored to you and your team.
-          </motion.p>
-        </motion.div>
-
+          </p>
+        </div>
         {/* Right Section - Image */}
-        <div className="relative">
-          <Image
-            src="https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/d4c9c051-1515-488f-00aa-1553b9322900/f=auto,dpr=2,q=95,fit=scale-down,metadata=none"
-            alt="Issue Tracking Board"
-            width={1280}
-            height={720}
-            className="rounded-lg shadow-xl"
-            loading="lazy"
-          />
+        <div className="page-max-width overflow-x-visible " style={{display:'contents'}} >
+        <Slider />
         </div>
       </div>
     </section>
   );
 };
 
-export default BannerTextHeadingImage;
+export default BannerTextHeadingImage3;

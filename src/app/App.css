@@ -9,15 +9,7 @@
   --page-max-width: 1024px;
   --speed-quickTransition: 0.1s;
   --speed-regularTransition: 0.25s;
-  --radius-4: 4px;
-    --radius-6: 6px;
-    --radius-8: 8px;
-    --radius-12: 12px;
-    --radius-16: 16px;
-    --radius-24: 24px;
-    --radius-32: 32px;
-    --radius-rounded: 9999px;
-    --radius-circle: 50%;
+
     /* --shadow-low: 0px 2px 4px rgba(0, 0, 0, .1);
     --shadow-medium: 0px 4px 24px rgba(0, 0, 0, .2);
     --shadow-high: 0px 7px 32px rgba(0, 0, 0, .35);
@@ -34,6 +26,9 @@
   .primary-link{
     @apply cursor-pointer text-osloGray hover:text-mtext-primary medium-transition hover:bg-anchorGlassBg border border-woodsmoke  hover:border-anchorGlassBg 
   }
+  .nav-primary-link{
+    @apply cursor-pointer px-3 py-2 rounded-8 text-osloGray hover:text-mtext-primary medium-transition hover:bg-anchorGlassBg border border-woodsmoke  hover:border-anchorGlassBg 
+  }
   .page-max-width{
     max-width: var(--page-max-width);
   }
@@ -44,6 +39,9 @@
   .font-medium-fgm {
     font-family: var(--font-franklin), sans-serif;
     font-weight: 400;
+  }
+  section{
+    /* @apply py-20; */
   }
   /* KozGoPr6N Regular */
   .font-medium-kgpr {
@@ -74,7 +72,7 @@
   
   
   ::selection{
-    color: #ff00ff;
+    background-color: #828fff;
   }
   
   

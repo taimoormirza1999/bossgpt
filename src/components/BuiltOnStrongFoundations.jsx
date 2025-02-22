@@ -3,34 +3,34 @@ import Image from "next/image";
 
 const BuiltOnStrongFoundations = () => {
   return (
-    <section className={`bg-mbg-primary text-white py-20 px-6 font-normal  ${inter.className}`}>
+    <section className={`bg-mbg-primary text-white/70 py-20 px-6 font-normal  ${inter.className}`}>
     <div className="page-max-width mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Left Content */}
         <div>
-          <div className="flex items-center space-x-2 text-sm text-gray-400">
+          <div className="flex items-center space-x-2 text-sm text-white/70">
             <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
             <span>Under the hood</span>
           </div>
-          <h2 className="text-4xl font-bold mt-4">
+          <h2 className="text-4xl font-bold mt-4 text-white/90">
             Built on strong foundations
           </h2>
-          <p className="text-gray-400 mt-4">
-            Linear is so simple to use, it's easy to overlook the wealth of
-            complex technologies packed under the hood that keep Linear robust,
+          <p className="text-white/70 mt-4">
+            BossGPT is so simple to use, it's easy to overlook the wealth of
+            complex technologies packed under the hood that keep BossGPT robust,
             safe, and blazing fast.
           </p>
 
           {/* Features List */}
           <div className="mt-6 space-y-6">
             <div className="grid grid-cols-2">
-              <h3 className="text-sm font-semibold">Linear Sync Engine</h3>
-              <p className="text-gray-400 text-sm">
+              <h3 className="text-sm font-semibold text-white/90">BossGPT Sync Engine</h3>
+              <p className="text-white/70 text-sm">
                 Built with a high-performance architecture and an obsessive
                 focus on speed.
               </p>
             </div>
             <div className="grid grid-cols-2">
-              <h3 className="text-sm font-semibold flex items-center space-x-1">
+              <h3 className="text-sm font-semibold flex items-center space-x-1 text-white/90">
                 <span>Enterprise-ready security</span>
                 <svg
                   className="w-4 h-4 text-gray-300"
@@ -44,14 +44,14 @@ const BuiltOnStrongFoundations = () => {
                   />
                 </svg>
               </h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-white/70 text-sm">
                 Best-in-class security practices keep your work safe and secure
                 at every layer.
               </p>
             </div>
             <div className="grid grid-cols-2">
-              <h3 className="text-sm font-semibold">Engineered for scale</h3>
-              <p className="text-gray-400 text-sm">
+              <h3 className="text-sm font-semibold text-white/90">Engineered for scale</h3>
+              <p className="text-white/70 text-sm">
                 Built for teams of all sizes. From early-stage startups to
                 global enterprises.
               </p>

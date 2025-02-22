@@ -12,7 +12,7 @@ const Checkout = ({ showModal, setShowModal }) => {
 
   const packages = [
     {
-      name: "Basic",
+      name: "Free Trail",
       description: "Basic plan with essential features.",
       price: 20,
       includes: [
@@ -57,28 +57,29 @@ const Checkout = ({ showModal, setShowModal }) => {
       description: packageDetails.description,
       priceAmount: packageDetails.price,
     };
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_VITE_BACKEND_API}create-checkout-session`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(body),
-      }
-    );
-    const session = await response.json();
-    if (session.id) {
-      const stripe = await stripePromise;
-      const { error } = await stripe.redirectToCheckout({
-        sessionId: session.id,
-      });
-      if (error) {
-        console.error("Error during checkout redirection:", error);
-      }
-    } else {
-      console.error("Failed to create session:", session.error);
-    }
+    console.log(body)
+    // const response = await fetch(
+    //   `${process.env.NEXT_PUBLIC_VITE_BACKEND_API}create-checkout-session`,
+    //   {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(body),
+    //   }
+    // );
+    // const session = await response.json();
+    // if (session.id) {
+    //   const stripe = await stripePromise;
+    //   const { error } = await stripe.redirectToCheckout({
+    //     sessionId: session.id,
+    //   });
+    //   if (error) {
+    //     console.error("Error during checkout redirection:", error);
+    //   }
+    // } else {
+    //   console.error("Failed to create session:", session.error);
+    // }
   };
   return (
     <div
@@ -111,10 +112,10 @@ const Checkout = ({ showModal, setShowModal }) => {
         {packages.map((pkg, index) => (
           <div
             key={index}
-            className={`bg-black/40 rounded-[3rem] border-2 ${
+            className={`bg-black/40 rounded-[1.8rem] border-2 medium-transition ${
               index == 0
-                ? "border-purple shadow-purple/35 hover:shadow-purple/75"
-                : "border-pink200 shadow-pink200/35 hover:shadow-pink200/75"
+                ? "border-mtext-tertiary bg-mtext-secondary/5 shadow-purple/35 hover:shadow-purple/75"
+                : "border-mtext-secondary bg-mtext-secondary/10 shadow-pink200/35 hover:shadow-pink200/75"
             } shadow-xl p-6 px-7 lg:px-8  mx-auto hover:shadow-2xl transition duration-300 text-center cursor-pointer`}
           >
             <h2

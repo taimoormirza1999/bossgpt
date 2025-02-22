@@ -6,18 +6,18 @@ import inter from '@/app/InterFont';
 
 const BannerTextHeadingImage2 = ({ color, description1, heading, paragraph, paragraphspecificwidth=false }) => {
   return (
-    <section className={`relative  font-normal   background: bg-gradient-to-b from-mbg-translucent to-transparent to-20% text-white py-20  ${inter.className}`}>
-      <div className=" mx-auto page-max-width grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">
+    <section className={`relative  font-normal   background: bg-gradient-to-b from-mbg-translucent to-transparent to-20% text-white/70 py-20  ${inter.className}`}>
+      <div className=" mx-auto page-max-width w-90 lg:w-full  grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">
         {/* Left Section - Title & Description */}
-        <div className="space-y-6">
+        <div className="space-y-6 ">
           {/* Breadcrumb */}
-          <div className="flex items-center space-x-2 text-gray-400 text-sm">
+          <div className="flex items-center space-x-2 text-white/70 text-sm">
             <div className={`w-4 h-2 ${color?color: bg-yellow-500} rounded-full`}></div>
-            <Link href="/build" className="hover:underline">
+            <Link href="/build" className="">
              {description1}
             </Link>
             <svg
-              className="w-4 h-4 text-gray-400"
+              className="w-4 h-4 text-white/70"
               viewBox="0 0 16 16"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
@@ -27,24 +27,28 @@ const BannerTextHeadingImage2 = ({ color, description1, heading, paragraph, para
           </div>
 
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl font-bold">
+          <motion.h1 initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay:0.3 }}className="text-4xl md:text-5xl font-bold text-white/90">
            {heading}
-          </h1>
+          </motion.h1>
 
           {/* Subtitle */}
-          <p className="text-gray-400 max-w-lg">
+          <motion.p initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay:0.3 }}className="text-white/70 text-sm lg:text-base max-w-lg">
             {paragraph}
-          </p>
+          </motion.p>
         </div>
 
         {/* Right Section - Image */}
         <div className="relative">
-          <Image
+          <img
             src="https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/d4c9c051-1515-488f-00aa-1553b9322900/f=auto,dpr=2,q=95,fit=scale-down,metadata=none"
             alt="Issue Tracking Board"
-            width={1280}
-            height={720}
-            className="rounded-lg shadow-xl"
+            // width={1800}
+            // height={900}
+            className="rounded-lg shadow-xl w-full  page-max-width mx-auto overflow-visible"
             loading="lazy"
           />
         </div>

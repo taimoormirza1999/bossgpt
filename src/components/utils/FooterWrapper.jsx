@@ -44,7 +44,7 @@ export default function FooterWrapper() {
         <Suspense fallback={<Loader />}>
           <EnrollmentToast
             name={currentName}
-            courseName="Character Animation Design Course"
+            courseName="Pro Plan of BossGPT"
             timestamp={`About ${Math.round(joinTime)} hours ago`}
             onDismiss={() => setShowToast(false)}
             duration={10000}

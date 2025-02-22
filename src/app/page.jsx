@@ -10,6 +10,10 @@ import BannerTextHeadingImage from "@/components/utils/BannerTextHeadingImage1";
 import BannerTextHeadingImage2 from "@/components/utils/BannerTextHeadingImage2";
 import Team from "@/components/Team";
 import BuiltOnStrongFoundations from "@/components/BuiltOnStrongFoundations";
+import PricingSection from "@/components/PricingSection";
+import ClientsSection from "@/components/ClientsSection";
+import Blogg from "@/components/Blogg";
+import BannerTextHeadingImage3 from "@/components/utils/BannerTextHeadingImage3";
 const Banner = lazy(() => import("../components/Banner"));
 const EnrollmentBanner = lazy(() => import("../components/EnrollmentBanner"));
 const YourPath = lazy(() => import("../components/YourPath"));
@@ -62,14 +66,19 @@ const Home = () => {
       ) : (
         <>
           <Banner />
+          <ClientsSection/>
           <Suspense fallback={<Loader />}>
+          <Suspense fallback={<Loader />}>
+            <Team/>
+          </Suspense>
+          <BannerTextHeadingImage3/>
             <BannerTextHeadingImage2
               color="bg-[#68CC58]"
               description1={"Project and long-term planning"}
               heading={"Set the product direction"}
               paragraph={
                 <>
-                  <span className="text-white font-medium">
+                  <span className="text-white/70 font-medium">
                     Optimized for speed and efficiency.
                   </span>{" "}
                   Create tasks in seconds, discuss issues in context, and breeze
@@ -81,10 +90,15 @@ const Home = () => {
             <BannerTextHeadingImage />
           </Suspense>
           <Suspense fallback={<Loader />}>
-            <Team/>
-          </Suspense>
-          <Suspense fallback={<Loader />}>
             <BuiltOnStrongFoundations/>
+          </Suspense>
+          
+          <Suspense fallback={<Loader />}>
+            <ScrollAnimation variants={fadeIn}>
+              <LoaderWrapper>
+                <PricingSection showModal={showModal} setShowModal={setShowModal}/>
+              </LoaderWrapper>
+            </ScrollAnimation>
           </Suspense>
           {/*
           <Suspense fallback={<Loader />}>
@@ -132,13 +146,7 @@ const Home = () => {
           <Suspense fallback={<Loader />}>
             <EnrollmentBanner />
           </Suspense>
-          <Suspense fallback={<Loader />}>
-            <ScrollAnimation variants={fadeIn}>
-              <LoaderWrapper>
-                <Checkout showModal={showModal} setShowModal={setShowModal} />
-              </LoaderWrapper>
-            </ScrollAnimation>
-          </Suspense>
+          
           <Suspense fallback={<Loader />}>
             <ScrollAnimation>
               <LoaderWrapper>

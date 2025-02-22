@@ -26,6 +26,9 @@ export default {
 			primary:'#08090A',
 			translucent: "hsla(0, 0%, 100%, .05)",
 			tertiary:"#232326",
+			level1:"#0f1011",
+			level2:"#141516",
+			lineSecondary:"#202122",
 		  },
 		  link:{
 			primary: '#828fff',
@@ -38,8 +41,8 @@ export default {
 		  pink200:'#ff00ff'
 		},
 		backgroundImage: {
-		  'custom-gradient': 'linear-gradient(to right, #7f7fff, #ff00ff)',
-		},
+			'gradient-text': 'linear-gradient(45deg, #FF6B6B, #FFCC00, #6BFF6B)', // Example gradient
+		  },
 		spacing: {
 		  104: '26rem', 
 		  128: '32rem', 
@@ -124,6 +127,15 @@ export default {
 		},
 		borderRadius: {
 		  'primary': '1.8rem', 
+			'4': '4px',
+			'6': '6px',
+			'8': '8px',
+			'12': '12px',
+			'16': '16px',
+			'24': '24px',
+			'32': '32px',
+			'rounded': '9999px', // for fully rounded corners
+			'circle': '50%', // for circular shapes
 		},
 		animation: {
 		  'spin-fast': 'spin 0.8s linear infinite',
@@ -146,5 +158,7 @@ export default {
 		
 	  },
 	},
-  plugins: [],
+	plugins: [require("tailwind-scrollbar-hide"),
+		require('tailwindcss-textshadow'),
+	],
 };

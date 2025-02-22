@@ -2,10 +2,10 @@
 import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
-import { FiMenu, FiX } from "react-icons/fi";
 import inter from "../app/InterFont.jsx";
 import ButtonPrimary from "./utils/ButtonPrimary.jsx";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Navigation = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -42,9 +42,9 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`bg-mbg-primary/90 border-b-[0.5px] border-[white]/[20%] fixed top-0 left-0 right-0 z-50 shadow-lg py-2.5 md:py-1 xl:py-0 h-[74px]  ${inter.className} `}
+      className={`bg-mbg-primary/90  border-b-[0.5px] border-[white]/[20%] fixed top-0 left-0 right-0 z-50 shadow-lg py-0 md:py-2 xl:py-0 h-[74px] lg:h-[74px]  ${inter.className} `}
     >
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between   page-max-width ">
+      <div className="max-w-7xl mx-auto w-90 lg:w-full py-4 flex items-center justify-between   page-max-width ">
         <Link
           href="/"
           className="cursor-pointer flex flex-row items-center"
@@ -52,19 +52,19 @@ const Navigation = () => {
         >
           <img
             src="/logo-icon.svg"
-            // height={1500}
-            // width={1500}
-            className="w-20 h-auto px-3 shadow-xl"
-            alt="Logo"
+            className="w-14 lg:w-14 h-auto  shadow-xl"
+            alt="Logo" 
           />
-          <span className="font-medium text-xl">BOSS<span className=" pl-[2.5px] font-black">GPT</span></span>
+          <span className="font-medium text-base lg:text-xl lg:pl-2 text-white">
+            BOSS<span className=" pl-[2.5px] font-black">GPT</span>
+          </span>
         </Link>
 
-        <ul className="hidden md:flex space-x-6  px-3 pl-5 font-normal text-osloGray text-[0.96rem]">
+        <ul className="hidden md:flex space-x-2 px-3 pl-5 font-normal text-osloGray text-[0.96rem]">
           <li className="animate-bounce">
             <span
               onClick={() => handleScroll("enroll-checkout")}
-              className="  primary-link "
+              className="nav-primary-link "
             >
               Enroll
             </span>
@@ -72,7 +72,7 @@ const Navigation = () => {
           <li>
             <span
               onClick={() => handleScroll("drawing-course")}
-              className="primary-link "
+              className="nav-primary-link "
             >
               Drawing Course
             </span>
@@ -80,7 +80,7 @@ const Navigation = () => {
           <li>
             <span
               onClick={() => handleScroll("animation-course")}
-              className="primary-link "
+              className="nav-primary-link "
             >
               Animation Course
             </span>
@@ -91,32 +91,121 @@ const Navigation = () => {
           <Link href="/" className=" px-4 py-1.5 rounded-lg primary-link">
             Login
           </Link>
-          
+
           <ButtonPrimary primary={true} text="Signup" url="/" nav={true} />
         </div>
         <div className="md:hidden flex items-center">
-          <button className="text-white text-2xl " onClick={toggleMobileMenu}>
+          <button className="text-white/70text-2xl text-white" onClick={toggleMobileMenu}>
             {isMobileMenuOpen ? (
-              <FiX className="text-pink200 text-4xl" />
+              // <FiX className="text-white/70text-lg px-0 mx-0 font-light" style={{ strokeWidth: 0.7 }} />
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                // {...props}
+              >
+                <rect
+                  x="1"
+                  y="7.5"
+                  width="14"
+                  height="1"
+                  rx="0.5"
+                  style={{
+                    transformOrigin: "center",
+                    transition: "160ms var(--ease-out-quad)",
+                    transform: "rotate(45deg)",
+                  }}
+                />
+                <rect
+                  x="1"
+                  y="7.5"
+                  width="14"
+                  height="1"
+                  rx="0.5"
+                  style={{
+                    transformOrigin: "center",
+                    transition: "160ms var(--ease-out-quad)",
+                    transform: "rotate(-45deg)",
+                  }}
+                />
+              </svg>
             ) : (
-              <FiMenu className="text-white text-4xl" />
+              // <FiMenu className="text-white/70text-2xl" />
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                // {...props}
+              >
+                <rect
+                  x="1"
+                  y="7.5"
+                  width="14"
+                  height="1"
+                  rx="0.5"
+                  style={{
+                    transformOrigin: "center",
+                    transition: "160ms var(--ease-out-quad)",
+                    transform: "translateY(-3.5px)",
+                  }}
+                />
+                <rect
+                  x="1"
+                  y="7.5"
+                  width="14"
+                  height="1"
+                  rx="0.5"
+                  style={{
+                    transformOrigin: "center",
+                    transition: "160ms var(--ease-out-quad)",
+                    transform: "translateY(3.5px)",
+                  }}
+                />
+              </svg>
             )}
           </button>
         </div>
       </div>
 
       {isMobileMenuOpen && (
-        <div className="bg-black md:hidden py-1">
-          <ul className="flex flex-col items-center space-y-4 text-white ">
-            <li onClick={() => handleScroll("enroll-checkout")}>ENROLL</li>
-            <li onClick={() => handleScroll("drawing-course")}>
+        <motion.div
+          className="bg-mbg-primary md:hidden py-1 w-90 mx-auto rounded-lg border border-mbg-translucent py-10"
+          initial={{ opacity: 0, x: -90 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 1.9, ease: "easeInOut" }}
+        >
+          <motion.ul
+            className="flex flex-col items-center space-y-4 text-white"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            <li
+              className="font-normal text-osloGray text-sm"
+              onClick={() => handleScroll("enroll-checkout")}
+            >
+              ENROLL
+            </li>
+            <li
+              className="font-normal text-osloGray text-sm"
+              onClick={() => handleScroll("drawing-course")}
+            >
               DRAWING COURSE
             </li>
-            <li onClick={() => handleScroll("animation-course")}>
+            <li
+              className="font-normal text-osloGray text-sm"
+              onClick={() => handleScroll("animation-course")}
+            >
               ANIMATION COURSE
             </li>
-          </ul>
-        </div>
+          </motion.ul>
+        </motion.div>
       )}
     </nav>
   );
