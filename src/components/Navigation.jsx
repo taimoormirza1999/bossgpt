@@ -6,6 +6,8 @@ import inter from "../app/InterFont.jsx";
 import ButtonPrimary from "./utils/ButtonPrimary.jsx";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import CrossSvg from "./utils/icons/CrossSvg.jsx";
+import MenuSvg from "./utils/icons/MenuSvg.jsx";
 
 const Navigation = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -42,7 +44,7 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`bg-mbg-primary/90  border-b-[0.5px] border-[white]/[20%] fixed top-0 left-0 right-0 z-50 shadow-lg py-0 md:py-2 xl:py-0 h-[74px] lg:h-[74px]  ${inter.className} `}
+      className={`bg-mbg-primary/90  border-b-[0.5px] border-[white]/[20%] fixed top-0 left-0 right-0 z-50 shadow-lg py-0 md:py-2 xl:py-0 h-[78px] lg:h-[74px]  ${inter.className} `}
     >
       <div className="max-w-7xl mx-auto w-90 lg:w-full py-4 flex items-center justify-between   page-max-width ">
         <Link
@@ -97,75 +99,10 @@ const Navigation = () => {
         <div className="md:hidden flex items-center">
           <button className="text-white/70text-2xl text-white" onClick={toggleMobileMenu}>
             {isMobileMenuOpen ? (
-              // <FiX className="text-white/70text-lg px-0 mx-0 font-light" style={{ strokeWidth: 0.7 }} />
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-                // {...props}
-              >
-                <rect
-                  x="1"
-                  y="7.5"
-                  width="14"
-                  height="1"
-                  rx="0.5"
-                  style={{
-                    transformOrigin: "center",
-                    transition: "160ms var(--ease-out-quad)",
-                    transform: "rotate(45deg)",
-                  }}
-                />
-                <rect
-                  x="1"
-                  y="7.5"
-                  width="14"
-                  height="1"
-                  rx="0.5"
-                  style={{
-                    transformOrigin: "center",
-                    transition: "160ms var(--ease-out-quad)",
-                    transform: "rotate(-45deg)",
-                  }}
-                />
-              </svg>
+              <CrossSvg/>
             ) : (
               // <FiMenu className="text-white/70text-2xl" />
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-                // {...props}
-              >
-                <rect
-                  x="1"
-                  y="7.5"
-                  width="14"
-                  height="1"
-                  rx="0.5"
-                  style={{
-                    transformOrigin: "center",
-                    transition: "160ms var(--ease-out-quad)",
-                    transform: "translateY(-3.5px)",
-                  }}
-                />
-                <rect
-                  x="1"
-                  y="7.5"
-                  width="14"
-                  height="1"
-                  rx="0.5"
-                  style={{
-                    transformOrigin: "center",
-                    transition: "160ms var(--ease-out-quad)",
-                    transform: "translateY(3.5px)",
-                  }}
-                />
-              </svg>
+             <MenuSvg/>
             )}
           </button>
         </div>

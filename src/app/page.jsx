@@ -14,6 +14,7 @@ import PricingSection from "@/components/PricingSection";
 import ClientsSection from "@/components/ClientsSection";
 import Blogg from "@/components/Blogg";
 import BannerTextHeadingImage3 from "@/components/utils/BannerTextHeadingImage3";
+import CookiePolicy from "@/components/utils/CookiePolicy";
 const Banner = lazy(() => import("../components/Banner"));
 const EnrollmentBanner = lazy(() => import("../components/EnrollmentBanner"));
 const YourPath = lazy(() => import("../components/YourPath"));
@@ -100,6 +101,7 @@ const Home = () => {
               </LoaderWrapper>
             </ScrollAnimation>
           </Suspense>
+          <CookiePolicy />
           {/*
           <Suspense fallback={<Loader />}>
             <ScrollAnimation variants={fadeIn}>

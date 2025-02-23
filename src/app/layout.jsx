@@ -137,6 +137,7 @@ export default function RootLayout({ children }) {
       {/* NoScript Fallback for GTM */}
       <noscript>
   <iframe 
+   src="https://www.googletagmanager.com/ns.html?id=GTM-5JFVBHSJ"
     height="0" 
     width="0" 
     style={{ display: "none", visibility: "hidden" }}

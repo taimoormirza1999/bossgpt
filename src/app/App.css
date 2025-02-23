@@ -23,6 +23,9 @@
   .medium-transition{
     @apply transition-all ease-in-out duration-500;
   }
+  .normal-transition{
+    @apply transition-all ease-in-out duration-300;
+  }
   .primary-link{
     @apply cursor-pointer text-osloGray hover:text-mtext-primary medium-transition hover:bg-anchorGlassBg border border-woodsmoke  hover:border-anchorGlassBg 
   }

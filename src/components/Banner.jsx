@@ -68,9 +68,9 @@ const Banner = () => {
 
   return (
     <motion.div
-    layout
-      initial={{ opacity: 0, y: 50 }} // Start position
-      animate={{ opacity: 1, y: 0 }} // End position
+      layout
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }} 
       transition={{ duration: 1.2, ease: "easeOut" }}
       className={`relative w-85 lg:w-full  h-auto mt-10 md:mt-20 lg:mt-24 mx-auto page-max-width mb-7 md:mb-10 lg:mb-20 xl:mb-0 pb-10 pt-16 lg:pb-16 font-normal ${inter.className}`}
     >
@@ -113,13 +113,31 @@ const Banner = () => {
               text="Introducing Customer Requests"
               url="/"
               icon={true}
+              secondary={true}
+              
             />
           </motion.div>
 
           {/* Right Section - Image */}
-          <div className="my-5">
+          {/* <div className="my-5">
           <StackedImages/>
-          </div>
+          </div> */}
+          <motion.div
+          layout
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2, delay: 0.9 }}
+            className="relative"
+          >
+            <Image
+              src="https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/d4c9c051-1515-488f-00aa-1553b9322900/f=auto,dpr=2,q=95,fit=scale-down,metadata=none"
+              alt="Issue Tracking Board"
+              width={1280}
+              height={720}
+              className="rounded-lg shadow-xl"
+              loading="lazy"
+            />
+          </motion.div>
           {/* <motion.div
           layout
             initial={{ opacity: 0, scale: 0.9 }}
@@ -135,24 +153,8 @@ const Banner = () => {
               className="rounded-lg shadow-xl"
               loading="lazy"
             />
-          </motion.div>
-          <motion.div
-          layout
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2, delay: 0.9 }}
-            className="relative"
-          >
-            <Image
-              src="https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/d4c9c051-1515-488f-00aa-1553b9322900/f=auto,dpr=2,q=95,fit=scale-down,metadata=none"
-              alt="Issue Tracking Board"
-              width={1280}
-              height={720}
-              className="rounded-lg shadow-xl"
-              loading="lazy"
-            />
-          </motion.div>
-          <motion.div
+          </motion.div> */}
+          {/* <motion.div
           layout
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
