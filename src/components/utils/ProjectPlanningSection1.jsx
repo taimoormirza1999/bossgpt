@@ -5,7 +5,7 @@ import Link from "next/link";
 import inter from "@/app/InterFont";
 import ProductSectionFeature2Cols from "./ProductSectionFeature2Cols";
 
-const ProjectPlanningSection = ({
+const ProjectPlanningSection1 = ({
   direction,
   color,
   description1,
@@ -16,23 +16,10 @@ const ProjectPlanningSection = ({
 }) => {
   return (
     <section
-      className={`relative font-normal background: bg-gradient-to-b from-mbg-translucent to-transparent to-30% text-white/70 py-20  ${inter.className}`}
+      className={`relative font-normal  text-white/70 py-20  ${inter.className}`}
     >
       <div className=" mx-auto page-max-width w-90 lg:w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center  ">
         {/* Left Section - Title & Description */}
-        <div className="relative">
-          <img
-            src={image}
-            alt="Issue Tracking Board"
-            // width={1800}
-            // height={900}
-            className="rounded-lg shadow-xl w-full  page-max-width mx-auto overflow-visible"
-            loading="lazy"
-          />
-        </div>
-        
-
-        {/* Right Section - Image */}
         <div className="space-y-6 ">
           {/* Breadcrumb */}
           <div className="flex items-center space-x-2 text-white/70 text-sm">
@@ -74,10 +61,22 @@ const ProjectPlanningSection = ({
             {paragraph}
           </motion.p>
         </div>
+
+        {/* Right Section - Image */}
+        <div className="relative">
+          <img
+            src={image}
+            alt="Issue Tracking Board"
+            // width={1800}
+            // height={900}
+            className="rounded-lg shadow-xl w-full  page-max-width mx-auto overflow-visible"
+            loading="lazy"
+          />
+        </div>
         {/* <ProductSectionFeature2Cols/> */}
       </div>
     </section>
   );
 };
 
-export default ProjectPlanningSection;
+export default ProjectPlanningSection1;

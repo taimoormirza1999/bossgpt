@@ -5,7 +5,7 @@ import Link from "next/link";
 import inter from "@/app/InterFont";
 import ProductSectionFeature2Cols from "./ProductSectionFeature2Cols";
 
-const ProjectPlanningSection = ({
+const ProjectPlanningSection2 = ({
   direction,
   color,
   description1,
@@ -16,7 +16,7 @@ const ProjectPlanningSection = ({
 }) => {
   return (
     <section
-      className={`relative font-normal background: bg-gradient-to-b from-mbg-translucent to-transparent to-30% text-white/70 py-20  ${inter.className}`}
+      className={`relative font-normal  text-white/70 py-20  ${inter.className}`}
     >
       <div className=" mx-auto page-max-width w-90 lg:w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center  ">
         {/* Left Section - Title & Description */}
@@ -80,4 +80,4 @@ const ProjectPlanningSection = ({
   );
 };
 
-export default ProjectPlanningSection;
+export default ProjectPlanningSection2;

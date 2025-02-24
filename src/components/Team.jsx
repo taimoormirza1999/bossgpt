@@ -14,16 +14,17 @@ export default function Team() {
       transition={{ duration: 1.2, ease: "easeOut" }} className="space-y-6">
           {/* Title */}
           <motion.h1      className="text-4xl md:text-5xl font-bold leading-tight text-white/90">
-            Made for modern <br /> product teams
+          Your AI Boss for 
+          <br /> Effortless Projects
           </motion.h1>
 
           {/* Subtitle with Link */}
-          <motion.p     className="text-white/70 max-w-lg">
-          BossGPT AI is built on the principles that define the best project management teams— efficiency, precision, and smart automation. Whether you're tracking progress, breaking down complex tasks, or optimizing workflows, BossGPT AI ensures seamless project execution with AI-powered automation.{" "}
-            <Link href="/switch" className="text-white font-medium hover:underline">
-              Make the switch &rarr;
-            </Link>
-          </motion.p>
+          <motion.p className="text-white/70 max-w-lg">
+  BossGPT AI is designed for individuals who want to get things done without the hassle. From organizing tasks to automating workflows, let your AI boss take charge while you focus on what truly matters.{" "}
+  <Link href="/switch" className="text-white font-medium hover:underline">
+    Let AI handle it &rarr;
+  </Link>
+</motion.p>
         </motion.div>
       </div>
 

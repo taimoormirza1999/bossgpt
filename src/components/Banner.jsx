@@ -94,12 +94,12 @@ const Banner = () => {
             />
             {/* Title */}
             <h1 className="text-[2.4rem] md:text-5xl leading-[3rem] lg:leading-auto font-semibold lg:font-bold text-white/90">
-              BossGPT – Smart AI for Project Success{" "}
+              Hire a Boss – Let AI Handle Your Project{" "}
             </h1>
             {/* Subtitle */}
             <p className="text-white/70 text-base max-w-lg font-medium">
-              Handle your projects effortlessly with AI-driven task management,
-              smart suggestions, and automated workflows.
+            Stop stressing over deadlines—get an AI boss that organizes, plans, and helps you complete your projects effortlessly.
+
             </p>
           </motion.div>
 

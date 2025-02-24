@@ -17,6 +17,8 @@ import BannerTextHeadingImage3 from "@/components/utils/BannerTextHeadingImage3"
 import CookiePolicy from "@/components/utils/CookiePolicy";
 import FAQ from "@/components/FAQ";
 import CustomerReviews from "@/components/CustomerReviews";
+import ProjectPlanningSection1 from "@/components/utils/ProjectPlanningSection1";
+import ProjectPlanningSection2 from "@/components/utils/ProjectPlanningSection2";
 const Banner = lazy(() => import("../components/Banner"));
 const EnrollmentBanner = lazy(() => import("../components/EnrollmentBanner"));
 const YourPath = lazy(() => import("../components/YourPath"));
@@ -69,43 +71,77 @@ const Home = () => {
       ) : (
         <>
           <Banner />
-          <ClientsSection/>
+          <ClientsSection />
           <Suspense fallback={<Loader />}>
-          <Suspense fallback={<Loader />}>
-            <Team/>
-          </Suspense>
-          {/* <BannerTextHeadingImage3/> */}
+            <Suspense fallback={<Loader />}>
+              <Team />
+            </Suspense>
+            {/* <BannerTextHeadingImage3/> */}
             <ProjectPlanningSection
+            direction="right"
+            image="https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/d4c9c051-1515-488f-00aa-1553b9322900/f=auto,dpr=2,q=95,fit=scale-down,metadata=none"
               color="bg-[#68CC58]"
-              description1={"Smarter Project Planning & Execution"}
-              heading={"Set the product direction"}
+              description1={"Let AI Plan & Manage for You"}
+              heading={"Your AI Boss in Action"}
               paragraph={
                 <span className="text-white/70 font-normal">
                   <span className="text-white/90 font-medium">
-                  Align your team with a unified project timeline. Plan, manage, and track all project initiatives with BossGPT AI’s intelligent automation tools, ensuring efficiency and clarity at every stage.
+                  Stop worrying about planning and deadlines—BossGPT AI takes care of it for you.
                   </span>{" "}
-                  Create tasks in seconds, discuss issues in context, and breeze
-                  through your work in views tailored to you and your team.
+                  Create tasks, set deadlines, and track progress easily. BossGPT does all the organizing, so you can just focus on getting things done.
+                </span>
+              }
+            />
+            <ProjectPlanningSection1
+            direction="left"
+            image="https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/d4c9c051-1515-488f-00aa-1553b9322900/f=auto,dpr=2,q=95,fit=scale-down,metadata=none"
+              color="bg-[#68CC58]"
+              description1={"From Planning to Action—Made Easy"}
+              heading={"Your AI Assistant for Seamless Execution"}
+              paragraph={
+                <span className="text-white/70 font-normal">
+                  <span className="text-white/90 font-medium">
+                  No more stress over tasks! Let BossGPT handle it all.
+                  </span>{" "}
+                  Set goals, let BossGPT break them down, and it will remind you what to do next. All you need to do is follow the simple plan it creates for you.
+                </span>
+              }
+            />
+            <ProjectPlanningSection2
+            direction="left"
+            image="https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/d4c9c051-1515-488f-00aa-1553b9322900/f=auto,dpr=2,q=95,fit=scale-down,metadata=none"
+              color="bg-[#68CC58]"
+              description1={"Let AI Lead, While You Work"}
+              heading={"AI That Helps You Stay on Track"}
+              paragraph={
+                <span className="text-white/70 font-normal">
+                  <span className="text-white/90 font-medium">
+                  Imagine a boss that always helps you stay on track. BossGPT organizes everything for you, gives smart suggestions
+                  </span>{" "}
+                  and makes sure you never forget a task. It’s like having a personal assistant that makes work super easy.
                 </span>
               }
             />
 
             {/* <BannerTextHeadingImage /> */}
           </Suspense>
-          <Suspense fallback={<Loader />}>
-            <BuiltOnStrongFoundations/>
-          </Suspense>
-          
+          {/* <Suspense fallback={<Loader />}>
+            <BuiltOnStrongFoundations />
+          </Suspense> */}
+
           <Suspense fallback={<Loader />}>
             <ScrollAnimation variants={fadeIn}>
               <LoaderWrapper>
-                <PricingSection showModal={showModal} setShowModal={setShowModal}/>
+                <PricingSection
+                  showModal={showModal}
+                  setShowModal={setShowModal}
+                />
               </LoaderWrapper>
             </ScrollAnimation>
           </Suspense>
           <CookiePolicy />
-          <FAQ/>
-          <CustomerReviews/>
+          <FAQ />
+          <CustomerReviews />
           {/*
           <Suspense fallback={<Loader />}>
             <ScrollAnimation variants={fadeIn}>

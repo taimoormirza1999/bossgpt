@@ -85,7 +85,7 @@ const CustomerReviews = () => {
    <SectionWrapper>
    <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl font-bold">What Our Customers Say</h2>
-        <p className="text-gray-400 mt-2">
+        <p className="text-gray-400 mt-2 font-medium ">
           See how our platform is transforming the way people work.
         </p>
       </div>
