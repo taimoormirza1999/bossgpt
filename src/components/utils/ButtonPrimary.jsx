@@ -19,7 +19,7 @@ function ButtonPrimary({
             ? "bg-btnWild hover:bg-white border-btnWild text-woodsmoke"
             : "  bg-gradient-to-r from-mtext-tertiary via-mtext-primary/70 to-mtext-primary/90 bg-clip-text text-transparent border-mbg-primary  "
         } ${
-        nav ? "px-3 py-1.5 font-medium" : "px-8 py-2 font-semibold"
+        nav ? "px-3 py-1.5 font-medium" : "px-7 py-2 font-semibold"
       } text-sm lg:text-sm rounded-lg medium-transition flex items-center
       
       `}

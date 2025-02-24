@@ -1,11 +1,11 @@
 import React from 'react'
 
-function CheckIconSvg() {
+function CheckIconSvg({height=18, width=18}) {
   return (
   <svg
     className='me-2'
-    width="18"
-    height="18"
+    width={width}
+    height={height}
     viewBox="0 0 16 16"
     fill='#828fff'
     role="img"

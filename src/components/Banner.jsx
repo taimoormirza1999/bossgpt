@@ -8,6 +8,8 @@ import { useMediaQuery } from "react-responsive";
 import ButtonPrimary from "./utils/ButtonPrimary";
 import inter from "@/app/InterFont";
 import Link from "next/link";
+import CheckIconSvg from "./utils/icons/CheckIconSvg";
+import AICloneSignup from "./AICloneSignup";
 
 const images = [
   {
@@ -69,56 +71,93 @@ const Banner = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2, ease: "easeOut" }}
-      className={`relative w-85 lg:w-full  h-auto mt-10 md:mt-20 lg:mt-24 mx-auto page-max-width mb-7 md:mb-10 lg:mb-20 xl:mb-0 pb-10 pt-16 lg:pb-16 font-normal ${inter.className}`}
+      className={`relative w-85 lg:w-full h-auto mt-10 md:mt-20 lg:mt-24 mx-auto page-max-width mb-7 md:mb-10 lg:mb-20 xl:mb-0 pb-10 pt-16 lg:pb-16 font-normal ${inter.className}`}
     >
       <motion.div
         layout
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5, delay: 0.3 }}
+        style={{
+          backgroundImage: 'url("your-image-url-here.jpg")',
+          backgroundSize: "cover", // Ensures the image covers the whole div
+          backgroundPosition: "center", // Centers the image
+          backgroundRepeat: "no-repeat", // Prevents the image from repeating
+          padding: "20px",
+          borderRadius: "12px", // For rounded corners
+          color: "white", // Adjust text color to contrast with the background
+        }}
       >
-        <div className="mx-auto page-max-width grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">
-          <motion.div
-            layout
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 0.5 }}
-            className="space-y-6 text-center lg:text-start"
-          >
-            <Image
-              height={50}
-              width={50}
-              alt="hello"
-              className="w-28 mx-auto lg:mx-0 mt-5"
-              src="/laurel.svg"
-            />
-            {/* Title */}
-            <h1 className="text-[2.4rem] md:text-5xl leading-[3rem] lg:leading-auto font-semibold lg:font-bold text-white/90">
-              Hire a Boss – Let AI Handle Your Project{" "}
-            </h1>
-            {/* Subtitle */}
-            <p className="text-white/70 text-base max-w-lg font-medium">
-            Stop stressing over deadlines—get an AI boss that organizes, plans, and helps you complete your projects effortlessly.
+        <div className="mx-auto page-max-width grid grid-cols-1 lg:grid-cols-2 gap-5 items-center">
+          <div className="">
+            <motion.div
+              layout
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, delay: 0.5 }}
+              className="space-y-6 text-center lg:text-start"
+            >
+              <Image
+                height={50}
+                width={50}
+                alt="hello"
+                className="w-32 mx-auto lg:mx-0 mt-5"
+                src="/laurel.svg"
+              />
+              {/* Title */}
+              <h1 className="text-[2.4rem] md:text-4xl leading-[3rem] lg:leading-auto font-semibold lg:font-bold text-white/90">
+                🚀 Meet Your AI Boss
+              </h1>
+              {/* Subtitle */}
+              <p className="text-white/80 text-base max-w-lg font-medium">
+                It gives you tasks, sets deadlines, and keeps you on track. It
+                might even virtually yell at you for missing deadlines! 😅 No
+                more excuses, your AI Boss makes sure you stay productive, every
+                step of the way.
+              </p>
+              <ul className="text-white/90 text-sm list-inside font-medium ">
+                <li className="flex mb-2">
+                  {" "}
+                  <CheckIconSvg height={24} width={24} /> Sets deadlines for you
+                  – Stay on schedule without stress.
+                </li>
+                <li className="flex mb-2">
+                  <CheckIconSvg height={24} width={24} /> Tracks your tasks –
+                  Never forget what’s next on your to-do list.
+                </li>
+                <li className="flex mb-2">
+                  <CheckIconSvg height={24} width={24} />
+                  Reminds you – It’ll even send reminders if you're falling
+                  behind!
+                </li>
+                <li className="flex mb-2">
+                  <CheckIconSvg height={24} width={24} /> Pushes you to get
+                  things done – Your AI Boss keeps you productive, no excuses!
+                </li>
+              </ul>
+            </motion.div>
 
-            </p>
-          </motion.div>
-
-          {/* Buttons */}
-          <motion.div
-            layout
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 0.7 }}
-            className="flex flex-col lg:flex-row items-center gap-8"
-          >
-            <ButtonPrimary primary={true} text="Try now" url="https://vnay.com/sim/board/?page=login" />
-            <ButtonPrimary
-              text="Introducing Boss AI Project Manager"
-              url="https://vnay.com/sim/board/?page=login"
-              icon={true}
-              secondary={true}
-            />
-          </motion.div>
+            {/* Buttons */}
+            <motion.div
+              layout
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, delay: 0.7 }}
+              className="flex flex-col lg:flex-row items-center gap-8 mt-5"
+            >
+              <ButtonPrimary
+                primary={true}
+                text="Try now"
+                url="https://vnay.com/sim/board/?page=login"
+              />
+              <ButtonPrimary
+                text="Introducing Boss AI Project Manager"
+                url="https://vnay.com/sim/board/?page=login"
+                icon={true}
+                secondary={true}
+              />
+            </motion.div>
+          </div>
 
           {/* Right Section - Image */}
           {/* <div className="my-5">
@@ -131,16 +170,17 @@ const Banner = () => {
             transition={{ duration: 1.2, delay: 0.9 }}
             className="relative"
           >
-            <Image
+            <AICloneSignup/>
+            {/* <Image
               src="https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/d4c9c051-1515-488f-00aa-1553b9322900/f=auto,dpr=2,q=95,fit=scale-down,metadata=none"
               alt="Issue Tracking Board"
               width={1280}
               height={720}
               className="rounded-lg shadow-xl"
               loading="lazy"
-            />
+            /> */}
           </motion.div>
-         
+
           {/* <motion.div
           layout
             initial={{ opacity: 0, scale: 0.9 }}

@@ -20,6 +20,7 @@
     "react-responsive": "^10.0.0",
     "react-slick": "^0.30.3",
     "react-toastify": "^11.0.3",
+    "react-typed": "^2.0.12",
     "slick-carousel": "^1.8.1",
     "tailwind-merge": "^3.0.1",
     "tailwind-scrollbar-hide": "^2.0.0",

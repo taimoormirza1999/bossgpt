@@ -19,6 +19,7 @@ import FAQ from "@/components/FAQ";
 import CustomerReviews from "@/components/CustomerReviews";
 import ProjectPlanningSection1 from "@/components/utils/ProjectPlanningSection1";
 import ProjectPlanningSection2 from "@/components/utils/ProjectPlanningSection2";
+import FloatingActionButton from "@/components/FloatingActionButton";
 const Banner = lazy(() => import("../components/Banner"));
 const EnrollmentBanner = lazy(() => import("../components/EnrollmentBanner"));
 const YourPath = lazy(() => import("../components/YourPath"));
@@ -71,6 +72,7 @@ const Home = () => {
       ) : (
         <>
           <Banner />
+          <FloatingActionButton/>
           <ClientsSection />
           <Suspense fallback={<Loader />}>
             <Suspense fallback={<Loader />}>
