@@ -17,9 +17,9 @@ const FloatingActionButton = () => {
       if (messageIndex < messages.length - 1) {
         setMessageIndex((prev) => prev + 1); // Continue showing the next message
       } else {
-        setTimeout(() => setMessageIndex(0), 3000); // Reset after 3-second pause
+        setTimeout(() => setMessageIndex(0), 10000); // Reset after 3-second pause
       }
-    }, 5000); // Change message every 5 seconds
+    }, 10000); // Change message every 5 seconds
 
     return () => clearInterval(timer); // Clean up the interval
   }, [messageIndex]);

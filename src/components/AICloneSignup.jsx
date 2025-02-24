@@ -72,7 +72,7 @@ export default function AICloneSignup() {
         </div>
 
         {/* Footer Text */}
-        <p className="text-center text-sm text-white/50 mt-3">
+        <p className="text-center text-sm text-black/90 mt-3">
           If you already have an account, we&apos;ll log you in
         </p>
       </motion.div>

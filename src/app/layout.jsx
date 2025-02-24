@@ -146,7 +146,15 @@ export default function RootLayout({ children }) {
     style={{ display: "none", visibility: "hidden" }}
   ></iframe>
 </noscript>
-       <div className={`mx-0 relative bg-cover bg-center overflow-x-hidden`}>
+       <div className={`mx-0 relative bg-cover bg-center overflow-x-hidden`}  style={{
+        backgroundImage: 'url("https://images.unsplash.com/photo-1618022325802-7e5e732d97a1?q=80&w=3748&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+        backgroundSize: "cover", // Ensures the image covers the whole div
+        backgroundPosition: "center", // Centers the image
+        backgroundRepeat: "no-repeat", // Prevents the image from repeating
+        padding: "20px",
+        borderRadius: "12px", // For rounded corners
+        color: "white", // Adjust text color to contrast with the background
+      }}>
           {/* <Image
             src={BackgroundImage}
             alt="Background"

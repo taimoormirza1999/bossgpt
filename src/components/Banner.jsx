@@ -67,26 +67,19 @@ const Banner = () => {
 
   return (
     <motion.div
-      layout
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1.2, ease: "easeOut" }}
-      className={`relative w-85 lg:w-full h-auto mt-10 md:mt-20 lg:mt-24 mx-auto page-max-width mb-7 md:mb-10 lg:mb-20 xl:mb-0 pb-10 pt-16 lg:pb-16 font-normal ${inter.className}`}
+      // layout
+      // initial={{ opacity: 0, y: 50 }}
+      // animate={{ opacity: 1, y: 0 }}
+      // transition={{ duration: 1.2, ease: "easeOut" }}
+      className={`relative w-85 lg:w-full h-auto mt-10 md:mt-20 mx-auto page-max-width mb-7 md:mb-10 lg:mb-20 xl:mb-0 pb-20 pt-20 lg:pb-16 font-normal ${inter.className}`}
+     
     >
       <motion.div
         layout
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5, delay: 0.3 }}
-        style={{
-          backgroundImage: 'url("your-image-url-here.jpg")',
-          backgroundSize: "cover", // Ensures the image covers the whole div
-          backgroundPosition: "center", // Centers the image
-          backgroundRepeat: "no-repeat", // Prevents the image from repeating
-          padding: "20px",
-          borderRadius: "12px", // For rounded corners
-          color: "white", // Adjust text color to contrast with the background
-        }}
+       
       >
         <div className="mx-auto page-max-width grid grid-cols-1 lg:grid-cols-2 gap-5 items-center">
           <div className="">
