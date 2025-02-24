@@ -68,15 +68,31 @@ const Navigation = () => {
               onClick={() => handleScroll("enroll-checkout")}
               className="nav-primary-link "
             >
-              Enroll
+              Product
             </span>
           </li>
           <li>
             <span
-              onClick={() => handleScroll("drawing-course")}
+              onClick={() => handleScroll("faq")}
               className="nav-primary-link "
             >
-              Drawing Course
+              FAQ
+            </span>
+          </li>
+          <li>
+            <span
+              onClick={() => handleScroll("pricing-section")}
+              className="nav-primary-link "
+            >
+              Pricing
+            </span>
+          </li>
+          <li>
+            <span
+              onClick={() => handleScroll("customers")}
+              className="nav-primary-link "
+            >
+              Customers
             </span>
           </li>
           <li>
@@ -84,17 +100,25 @@ const Navigation = () => {
               onClick={() => handleScroll("animation-course")}
               className="nav-primary-link "
             >
-              Animation Course
+              Blog
             </span>
           </li>
+          {/* <li>
+            <span
+              onClick={() => handleScroll("animation-course")}
+              className="nav-primary-link "
+            >
+              Contact
+            </span>
+          </li> */}
         </ul>
 
         <div className="flex items-center font-normal  space-x-5 text-base">
-          <Link href="/" className=" px-4 py-1.5 rounded-lg primary-link">
+          <Link href="https://vnay.com/sim/board/?page=login" className=" px-4 py-1.5 rounded-lg primary-link">
             Login
           </Link>
 
-          <ButtonPrimary primary={true} text="Signup" url="/" nav={true} />
+          <ButtonPrimary primary={true} text="Signup" url="https://vnay.com/sim/board/?page=register" nav={true} />
         </div>
         <div className="md:hidden flex items-center">
           <button className="text-white/70text-2xl text-white" onClick={toggleMobileMenu}>

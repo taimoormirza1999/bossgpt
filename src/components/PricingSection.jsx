@@ -44,6 +44,7 @@ const PricingSection = ({ showModal, setShowModal }) => {
   };
   return (
     <section
+    id="pricing-section"
       className={` text-white/70  page-max-width mx-auto font-normal py-20  ${inter.className}`}
     >
       {loadScript && (

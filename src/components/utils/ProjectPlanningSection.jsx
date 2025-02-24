@@ -3,8 +3,9 @@ import { motion } from "framer-motion"
 import Image from "next/image";
 import Link from "next/link";
 import inter from '@/app/InterFont';
+import ProductSectionFeature2Cols from './ProductSectionFeature2Cols';
 
-const BannerTextHeadingImage2 = ({ color, description1, heading, paragraph, paragraphspecificwidth=false }) => {
+const ProjectPlanningSection = ({ color, description1, heading, paragraph, paragraphspecificwidth=false }) => {
   return (
     <section className={`relative  font-normal   background: bg-gradient-to-b from-mbg-translucent to-transparent to-20% text-white/70 py-20  ${inter.className}`}>
       <div className=" mx-auto page-max-width w-90 lg:w-full  grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">
@@ -52,9 +53,33 @@ const BannerTextHeadingImage2 = ({ color, description1, heading, paragraph, para
             loading="lazy"
           />
         </div>
+        <ProductSectionFeature2Cols/>
+        <div className="bg-green-500">
+        <div className="flex flex-col space-y-6 text-white">
+          {paragraphspecificwidth && (
+            <motion.p initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay:0.3 }} className="text-white/90 text-sm md:text-base max-w-lg">
+             sdfbnksndfjksnfjksdnfks
+            </motion.p>
+          )}
+
       </div>
+        <div className="flex flex-col space-y-6 text-white">
+          {paragraphspecificwidth && (
+            <motion.p initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay:0.3 }} className="text-white/90 text-sm md:text-base max-w-lg">
+             sdfbnksndfjksnfjksdnfks
+            </motion.p>
+          )}
+
+      </div>
+      </div>
+      </div>
+    
     </section>
   );
 };
 
-export default BannerTextHeadingImage2;
+export default ProjectPlanningSection;

@@ -31,35 +31,35 @@ const images = [
   },
 ];
 
-const StackedImages = () => {
-  return (
-    <div className="relative w-full flex justify-center items-center">
-      {images.map((image, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, scale: 0.9, y: 50 }}
-          whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 1, delay: index * 0.2, ease: "easeOut" }}
-          viewport={{ amount: 0.5, once: true }}
-          className="absolute "
-          style={{
-            zIndex: image.zIndex,
-            transform: `rotate(${image.rotate}deg) translate(${image.zIndex * 5}px) `,
-          }}
-        >
-          <Image
-            src={image.src}
-            alt={image.alt}
-            width={1280}
-            height={720}
-            className="rounded-lg shadow-xl"
-            loading="lazy"
-          />
-        </motion.div>
-      ))}
-    </div>
-  );
-};
+// const StackedImages = () => {
+//   return (
+//     <div className="relative w-full flex justify-center items-center">
+//       {images.map((image, index) => (
+//         <motion.div
+//           key={index}
+//           initial={{ opacity: 0, scale: 0.9, y: 50 }}
+//           whileInView={{ opacity: 1, scale: 1, y: 0 }}
+//           transition={{ duration: 1, delay: index * 0.2, ease: "easeOut" }}
+//           viewport={{ amount: 0.5, once: true }}
+//           className="absolute "
+//           style={{
+//             zIndex: image.zIndex,
+//             transform: `rotate(${image.rotate}deg) translate(${image.zIndex * 5}px) `,
+//           }}
+//         >
+//           <Image
+//             src={image.src}
+//             alt={image.alt}
+//             width={1280}
+//             height={720}
+//             className="rounded-lg shadow-xl"
+//             loading="lazy"
+//           />
+//         </motion.div>
+//       ))}
+//     </div>
+//   );
+// };
 
 
 
@@ -89,6 +89,7 @@ const Banner = () => {
             transition={{ duration: 1.2, delay: 0.5 }}
             className="space-y-6 text-center lg:text-start"
           >
+            <Image height={50} width={50} alt="hello" className="w-28 " src="/laurel.svg"/>
             {/* Title */}
             <h1 className="text-[2.4rem] md:text-5xl leading-[3rem] lg:leading-auto font-semibold lg:font-bold text-white/90">
               BossGPT – Smart AI for Project Success{" "}
@@ -96,7 +97,7 @@ const Banner = () => {
             {/* Subtitle */}
             <p className="text-white/70 text-base max-w-lg font-medium">
               Handle your projects effortlessly with AI-driven task management,
-              smart suggestions, and automated workflows.
+              smart suggestions, and automated workflows. 
             </p>
           </motion.div>
 

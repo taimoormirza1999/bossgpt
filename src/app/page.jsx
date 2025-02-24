@@ -7,7 +7,7 @@ import LoaderWrapper from "../components/utils/LoaderWrapper";
 import MarqueeWrapper2 from "../components/MarqueeWrapper2";
 import BlogCards from "../components/blog/BlogCards";
 import BannerTextHeadingImage from "@/components/utils/BannerTextHeadingImage1";
-import BannerTextHeadingImage2 from "@/components/utils/BannerTextHeadingImage2";
+import ProjectPlanningSection from "@/components/utils/ProjectPlanningSection";
 import Team from "@/components/Team";
 import BuiltOnStrongFoundations from "@/components/BuiltOnStrongFoundations";
 import PricingSection from "@/components/PricingSection";
@@ -15,6 +15,8 @@ import ClientsSection from "@/components/ClientsSection";
 import Blogg from "@/components/Blogg";
 import BannerTextHeadingImage3 from "@/components/utils/BannerTextHeadingImage3";
 import CookiePolicy from "@/components/utils/CookiePolicy";
+import FAQ from "@/components/FAQ";
+import CustomerReviews from "@/components/CustomerReviews";
 const Banner = lazy(() => import("../components/Banner"));
 const EnrollmentBanner = lazy(() => import("../components/EnrollmentBanner"));
 const YourPath = lazy(() => import("../components/YourPath"));
@@ -72,23 +74,23 @@ const Home = () => {
           <Suspense fallback={<Loader />}>
             <Team/>
           </Suspense>
-          <BannerTextHeadingImage3/>
-            <BannerTextHeadingImage2
+          {/* <BannerTextHeadingImage3/> */}
+            <ProjectPlanningSection
               color="bg-[#68CC58]"
-              description1={"Project and long-term planning"}
+              description1={"Smarter Project Planning & Execution"}
               heading={"Set the product direction"}
               paragraph={
-                <>
-                  <span className="text-white/70 font-medium">
-                    Optimized for speed and efficiency.
+                <span className="text-white/70 font-normal">
+                  <span className="text-white/90 font-medium">
+                  Align your team with a unified project timeline. Plan, manage, and track all project initiatives with BossGPT AI’s intelligent automation tools, ensuring efficiency and clarity at every stage.
                   </span>{" "}
                   Create tasks in seconds, discuss issues in context, and breeze
                   through your work in views tailored to you and your team.
-                </>
+                </span>
               }
             />
 
-            <BannerTextHeadingImage />
+            {/* <BannerTextHeadingImage /> */}
           </Suspense>
           <Suspense fallback={<Loader />}>
             <BuiltOnStrongFoundations/>
@@ -102,6 +104,8 @@ const Home = () => {
             </ScrollAnimation>
           </Suspense>
           <CookiePolicy />
+          <FAQ/>
+          <CustomerReviews/>
           {/*
           <Suspense fallback={<Loader />}>
             <ScrollAnimation variants={fadeIn}>
