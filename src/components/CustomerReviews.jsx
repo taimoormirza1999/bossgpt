@@ -91,13 +91,13 @@ const CustomerReviews = () => {
       </div>
 
       {/* Review Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-4 gap-x-5 mt-10  mx-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-4 gap-3 lg:gap-x-5 mt-10 w-90 lg:w-full mx-auto  ">
         {reviews.map((review, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.9, delay: index * 0.3 }}
+            transition={{ duration: 0.9, delay: index * 0.2 }}
             viewport={{ amount: 0.2, once: true }}
             className={` p-3.5 rounded-lg border-[1.35px] border-white/10 hover:border-white/30  bg-mbg-tertiary/40 shadow-lg shadow-white/10 text-center ${index==0&&("border-white/30")}`}
           >
@@ -107,7 +107,7 @@ const CustomerReviews = () => {
                 alt={review.name}
                 width={50}
                 height={50}
-                className="mb-4 rounded-12  w-full h-48 object-cover border border-white/20 bg-mbg-tertiary/80"
+                className="mb-4 rounded-12  w-full h-40 lg:h-48 object-cover border border-white/20 bg-mbg-tertiary/80"
               />
               <h3 className="text-lg font-semibold ">{review.name}</h3>
             </div>

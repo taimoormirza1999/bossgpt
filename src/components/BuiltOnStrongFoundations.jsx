@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const BuiltOnStrongFoundations = () => {
   return (
-    <section className={`bg-mbg-primary text-white/70 py-20 px-6 font-normal  ${inter.className}`}>
+    <section className={`bg-mbg-primary text-white/70 py-14 md:py-20 px-6 font-normal  ${inter.className}`}>
     <div className="page-max-width mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Left Content */}
         <div>

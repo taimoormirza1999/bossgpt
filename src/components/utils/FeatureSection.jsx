@@ -4,9 +4,9 @@ import Image from "next/image";
 
 const FeatureSection = ({ title, features, imageSrc }) => {
   return (
-    <section className="bg-mbg-primary text-white/70 py-20 px-6 font-normal">
+    <section className="bg-mbg-primary text-white/70 md:py-20 px-6 font-normal">
       <SectionWrapper page_max_width={false}>
-        <div className="page-max-width mx-auto grid grid-cols-2 md:grid-cols-2 gap-6">
+        <div className="page-max-width mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Left Content */}
           <div>
             {features.map((feature, index) => (

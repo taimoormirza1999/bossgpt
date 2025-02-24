@@ -9,7 +9,6 @@ import ButtonPrimary from "./utils/ButtonPrimary";
 import inter from "@/app/InterFont";
 import Link from "next/link";
 
-
 const images = [
   {
     src: "https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/d4c9c051-1515-488f-00aa-1553b9322900/f=auto,dpr=2,q=95,fit=scale-down,metadata=none",
@@ -61,8 +60,6 @@ const images = [
 //   );
 // };
 
-
-
 const Banner = () => {
   const isLargeScreen = useMediaQuery({ minWidth: 768 });
 
@@ -70,26 +67,31 @@ const Banner = () => {
     <motion.div
       layout
       initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }} 
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2, ease: "easeOut" }}
       className={`relative w-85 lg:w-full  h-auto mt-10 md:mt-20 lg:mt-24 mx-auto page-max-width mb-7 md:mb-10 lg:mb-20 xl:mb-0 pb-10 pt-16 lg:pb-16 font-normal ${inter.className}`}
     >
       <motion.div
-      layout
+        layout
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5, delay: 0.3 }}
       >
         <div className="mx-auto page-max-width grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">
-          {/* Left Section - Title & Description */}
           <motion.div
-          layout
+            layout
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.5 }}
             className="space-y-6 text-center lg:text-start"
           >
-            <Image height={50} width={50} alt="hello" className="w-28 " src="/laurel.svg"/>
+            <Image
+              height={50}
+              width={50}
+              alt="hello"
+              className="w-28 mx-auto lg:mx-0 mt-5"
+              src="/laurel.svg"
+            />
             {/* Title */}
             <h1 className="text-[2.4rem] md:text-5xl leading-[3rem] lg:leading-auto font-semibold lg:font-bold text-white/90">
               BossGPT – Smart AI for Project Success{" "}
@@ -97,25 +99,24 @@ const Banner = () => {
             {/* Subtitle */}
             <p className="text-white/70 text-base max-w-lg font-medium">
               Handle your projects effortlessly with AI-driven task management,
-              smart suggestions, and automated workflows. 
+              smart suggestions, and automated workflows.
             </p>
           </motion.div>
 
           {/* Buttons */}
           <motion.div
-          layout
+            layout
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.7 }}
             className="flex flex-col lg:flex-row items-center gap-8"
           >
-            <ButtonPrimary primary={true} text="Try now" url="/" />
+            <ButtonPrimary primary={true} text="Try now" url="https://vnay.com/sim/board/?page=login" />
             <ButtonPrimary
-              text="Introducing Customer Requests"
-              url="/"
+              text="Introducing Boss AI Project Manager"
+              url="https://vnay.com/sim/board/?page=login"
               icon={true}
               secondary={true}
-              
             />
           </motion.div>
 
@@ -124,7 +125,7 @@ const Banner = () => {
           <StackedImages/>
           </div> */}
           <motion.div
-          layout
+            layout
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, delay: 0.9 }}
