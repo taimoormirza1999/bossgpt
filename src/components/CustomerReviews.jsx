@@ -91,7 +91,7 @@ const CustomerReviews = () => {
       </div>
 
       {/* Review Cards */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-4 gap-3 lg:gap-x-5 mt-10 w-90 lg:w-full mx-auto  ">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-4 gap-2 lg:gap-x-5 mt-10 w-[93%] lg:w-full mx-auto  ">
         {reviews.map((review, index) => (
           <motion.div
             key={index}
@@ -99,7 +99,7 @@ const CustomerReviews = () => {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.9, delay: index * 0.2 }}
             viewport={{ amount: 0.2, once: true }}
-            className={` p-3.5 rounded-lg border-[1.35px] border-white/10 hover:border-white/30  bg-mbg-tertiary/40 shadow-lg shadow-white/10 text-center ${index==0&&("border-white/30")}`}
+            className={` p-2 lg:p-3.5 rounded-lg border-[1.35px] border-white/10 hover:border-white/30  bg-mbg-tertiary/40 shadow-lg shadow-white/10 text-center ${index==0&&("border-white/30")}`}
           >
             <div className=" items-center space-x-4 ">
               <Image

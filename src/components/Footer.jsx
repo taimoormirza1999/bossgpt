@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-mtext-tertiary w-90 lg:w-auto ">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-mtext-tertiary w-90 lg:w-auto ">
             <div>
               <h3 className="text-mtext-primary ">Features</h3>
               <ul className="mt-3 space-y-5">
@@ -66,7 +66,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div>
+            {/* <div>
               <h3 className="text-mtext-primary ">Resources</h3>
               <ul className="mt-3 space-y-5">
                 <li><Link href="https://developers.linear.app" target="_blank" className="hover:text-gray-300">API</Link></li>
@@ -74,7 +74,7 @@ const Footer = () => {
                 <li><Link href="/startups" className="hover:text-gray-300">Startups</Link></li>
                 <li><Link href="/security/vulnerability" className="hover:text-gray-300">Report issue</Link></li>
               </ul>
-            </div>
+            </div> */}
 
             <div>
               <h3 className="text-mtext-primary ">Connect</h3>

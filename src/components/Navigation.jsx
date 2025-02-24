@@ -55,7 +55,7 @@ const Navigation = () => {
           <img
             src="/logo-icon.svg"
             className="w-14 lg:w-14 h-auto  shadow-xl"
-            alt="Logo" 
+            alt="Logo"
           />
           <span className="font-medium text-base lg:text-xl lg:pl-2 text-white">
             BOSS<span className=" pl-[2.5px] font-black">GPT</span>
@@ -114,19 +114,30 @@ const Navigation = () => {
         </ul>
 
         <div className="flex items-center font-normal  space-x-5 text-base">
-          <Link href="https://vnay.com/sim/board/?page=login" className=" px-4 py-1.5 rounded-lg primary-link">
+          <Link
+            href="https://vnay.com/sim/board/?page=login"
+            className=" px-4 py-1.5 rounded-lg primary-link"
+          >
             Login
           </Link>
 
-          <ButtonPrimary primary={true} text="Signup" url="https://vnay.com/sim/board/?page=register" nav={true} />
+          <ButtonPrimary
+            primary={true}
+            text="Signup"
+            url="https://vnay.com/sim/board/?page=register"
+            nav={true}
+          />
         </div>
         <div className="md:hidden flex items-center">
-          <button className="text-white/70text-2xl text-white" onClick={toggleMobileMenu}>
+          <button
+            className="text-white/70text-2xl text-white"
+            onClick={toggleMobileMenu}
+          >
             {isMobileMenuOpen ? (
-              <CrossSvg/>
+              <CrossSvg />
             ) : (
               // <FiMenu className="text-white/70text-2xl" />
-             <MenuSvg/>
+              <MenuSvg />
             )}
           </button>
         </div>
@@ -134,11 +145,11 @@ const Navigation = () => {
 
       {isMobileMenuOpen && (
         <motion.div
-          className="bg-mbg-primary md:hidden py-1 w-90 mx-auto rounded-lg border border-mbg-translucent py-10"
-          initial={{ opacity: 0, x: -90 }}
-          animate={{ opacity: 1, x: 0 }}
+          className="bg-mbg-primary/90 md:hidden w-90 mx-auto rounded-lg border border-mbg-translucent py-7"
+          initial={{ opacity: 0,  }}
+          animate={{ opacity: 1, }}
           exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 1.9, ease: "easeInOut" }}
+          transition={{ duration: 1.2, ease: "easeInOut" }}
         >
           <motion.ul
             className="flex flex-col items-center space-y-4 text-white"
@@ -151,19 +162,31 @@ const Navigation = () => {
               className="font-normal text-osloGray text-sm"
               onClick={() => handleScroll("enroll-checkout")}
             >
-              ENROLL
+              Product
             </li>
             <li
               className="font-normal text-osloGray text-sm"
               onClick={() => handleScroll("drawing-course")}
             >
-              DRAWING COURSE
+              FAQ
             </li>
             <li
               className="font-normal text-osloGray text-sm"
               onClick={() => handleScroll("animation-course")}
             >
-              ANIMATION COURSE
+              Pricing
+            </li>
+            <li
+              className="font-normal text-osloGray text-sm"
+              onClick={() => handleScroll("animation-course")}
+            >
+               Customers
+            </li>
+            <li
+              className="font-normal text-osloGray text-sm"
+              onClick={() => handleScroll("animation-course")}
+            >
+              Blogs
             </li>
           </motion.ul>
         </motion.div>
