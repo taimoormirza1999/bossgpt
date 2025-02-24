@@ -140,6 +140,7 @@ const Banner = () => {
               loading="lazy"
             />
           </motion.div>
+         
           {/* <motion.div
           layout
             initial={{ opacity: 0, scale: 0.9 }}

@@ -87,7 +87,7 @@ function FAQ() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 * index }}
               key={index}
-              className="font-medium-fgm mt-4 lg:mt-0 mx-1 mb-5 w-full border-[1.2px] border-white/10 bg-mbg-tertiary/80 text-white/70 p-2.5 lg:p-4 lg:py-3 rounded-12"
+              className="font-medium-fgm  lg:mt-0 mx-1 mb-3.5 lg:mb-5 w-full border-[1.2px] border-white/10 bg-mbg-tertiary/80 text-white/70 p-2.5 lg:p-4 lg:py-3 rounded-12"
             >
               <div
                 className="font-medium text-base text-white flex justify-between items-center cursor-pointer"
