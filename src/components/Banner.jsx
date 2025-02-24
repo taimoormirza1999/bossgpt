@@ -72,7 +72,15 @@ const Banner = () => {
       // animate={{ opacity: 1, y: 0 }}
       // transition={{ duration: 1.2, ease: "easeOut" }}
       className={`relative w-85 lg:w-full h-auto mt-10 md:mt-20 mx-auto page-max-width mb-7 md:mb-10 lg:mb-20 xl:mb-0 pb-20 pt-20 lg:pb-16 font-normal ${inter.className}`}
-     
+      style={{
+        backgroundImage: 'url("https://images.unsplash.com/photo-1618022325802-7e5e732d97a1?q=80&w=3748&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+        backgroundSize: "cover", // Ensures the image covers the whole div
+        backgroundPosition: "center", // Centers the image
+        backgroundRepeat: "no-repeat", // Prevents the image from repeating
+        padding: "20px",
+        borderRadius: "12px", // For rounded corners
+        color: "white", // Adjust text color to contrast with the background
+      }}
     >
       <motion.div
         layout
@@ -81,7 +89,7 @@ const Banner = () => {
         transition={{ duration: 1.5, delay: 0.3 }}
        
       >
-        <div className="mx-auto page-max-width grid grid-cols-1 lg:grid-cols-2 gap-5 items-center">
+        <div className="mx-auto page-max-width grid grid-cols-1 lg:grid-cols-2 gap-5 items-center py-20">
           <div className="">
             <motion.div
               layout
