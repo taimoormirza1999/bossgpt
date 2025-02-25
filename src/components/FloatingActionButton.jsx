@@ -25,7 +25,7 @@ const FloatingActionButton = () => {
   }, [messageIndex]);
 
   return (
-    <div className="relative">
+    <div className="absolute botom-20">
       {/* Floating Action Button */}
       <div className="fixed botom-20 right-5 bg-gradient-to-r border-[1.2px] border-white/10 bg-mbg-tertiary/80 to-purple-700 text-white p-3 rounded-full shadow-xl cursor-pointer transform hover:scale-110 transition-all ease-in-out duration-300">
         {/* <BsRobot className="text-5xl" /> */}
