@@ -4,7 +4,7 @@ import msaText from "../assets/msa_text.png";
 import { motion } from "framer-motion";
 import Button from "./utils/Button";
 import Image from "next/image";
-import { useMediaQuery } from "react-responsive";
+// import { useMediaQuery } from "react-responsive";
 import ButtonPrimary from "./utils/ButtonPrimary";
 import inter from "@/app/InterFont";
 import Link from "next/link";
@@ -63,7 +63,7 @@ const images = [
 // };
 
 const Banner = () => {
-  const isLargeScreen = useMediaQuery({ minWidth: 768 });
+  // const isLargeScreen = useMediaQuery({ minWidth: 768 });
 
   return (
     <motion.div
@@ -71,32 +71,43 @@ const Banner = () => {
       // initial={{ opacity: 0, y: 50 }}
       // animate={{ opacity: 1, y: 0 }}
       // transition={{ duration: 1.2, ease: "easeOut" }}
-      className={`relative  lg:w-full h-auto mt-10 md:mt-20 mx-auto page-max-width mb-7 md:mb-10 lg:mb-20 xl:mb-0 pt-20 lg:pb-16 font-normal ${inter.className}`}
+      className={`relative lg:w-full h-auto mt-10 min-h-[90vh] md:mt-20 mx-auto  mb-7 md:mb-10 lg:mb-20 xl:mb-0 pt-20 lg:pb-16 font-normal ${inter.className}`}
       style={{
         backgroundImage: 'url("https://images.unsplash.com/photo-1618022325802-7e5e732d97a1?q=80&w=3748&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
         backgroundSize: "cover", // Ensures the image covers the whole div
         backgroundPosition: "center", // Centers the image
         backgroundRepeat: "no-repeat", // Prevents the image from repeating
-      
         borderRadius: "12px", // For rounded corners
-        color: "white", // Adjust text color to contrast with the background
+        color: "white",
+        zIndex: -2, // Adjust text color to contrast with the background
       }}
     >
+      <div
+    style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      backgroundColor: 'rgba(0, 0, 0, 0.65)',
+      zIndex: -1, 
+    }}
+  ></div>
       <motion.div
-        layout
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.5, delay: 0.3 }}
-       
+        // layout
+        // initial={{ opacity: 0, y: 30 }}
+        // animate={{ opacity: 1, y: 0 }}
+        // transition={{ duration: 1.5, delay: 0.3 }}
+       className="page-max-width mx-auto"
       >
-        <div className="mx-auto w-90 lg:w-full page-max-width grid grid-cols-1 lg:grid-cols-2 gap-5 items-center py-0">
+        <div className=" mx-auto w-90 lg:w-full page-max-width grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-0">
           <div className="">
             <motion.div
               layout
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.2, delay: 0.5 }}
-              className="space-y-6 text-center lg:text-start"
+              // initial={{ opacity: 0, y: 30 }}
+              // animate={{ opacity: 1, y: 0 }}
+              // transition={{ duration: 1.2, delay: 0.5 }}
+              className="space-y-6 text-center lg:text-start z-50"
             >
               <Image
                 height={50}
@@ -110,7 +121,7 @@ const Banner = () => {
                 🚀 Meet Your AI Boss
               </h1>
               {/* Subtitle */}
-              <p className="text-white/80 text-base max-w-lg font-medium">
+              <p className="text-white/90 text-base max-w-lg font-medium">
                 It gives you tasks, sets deadlines, and keeps you on track. It
                 might even virtually yell at you for missing deadlines! 😅 No
                 more excuses, your AI Boss makes sure you stay productive, every
@@ -166,9 +177,9 @@ const Banner = () => {
           </div> */}
           <motion.div
             layout
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2, delay: 0.9 }}
+            // initial={{ opacity: 0, scale: 0.9 }}
+            // animate={{ opacity: 1, scale: 1 }}
+            // transition={{ duration: 1.2, delay: 0.9 }}
             className="relative"
           >
             <AICloneSignup/>

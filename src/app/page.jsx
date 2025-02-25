@@ -66,20 +66,20 @@ const Home = () => {
   };
 
   return (
-    <>
+    <div className="relative">
       {loading ? (
         <Loader />
       ) : (
-        <>
-          <Banner />
+        <div className="">
           <FloatingActionButton/>
-          <ClientsSection />
+          <Banner />
+          {/* <ClientsSection /> */}
           <Suspense fallback={<Loader />}>
-            <Suspense fallback={<Loader />}>
+            {/* <Suspense fallback={<Loader />}>
               <Team />
-            </Suspense>
+            </Suspense> */}
             {/* <BannerTextHeadingImage3/> */}
-            <ProjectPlanningSection
+            {/* <ProjectPlanningSection
             direction="right"
             image="https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/d4c9c051-1515-488f-00aa-1553b9322900/f=auto,dpr=2,q=95,fit=scale-down,metadata=none"
               color="bg-[#68CC58]"
@@ -123,7 +123,7 @@ const Home = () => {
                   and makes sure you never forget a task. It’s like having a personal assistant that makes work super easy.
                 </span>
               }
-            />
+            /> */}
 
             {/* <BannerTextHeadingImage /> */}
           </Suspense>
@@ -134,10 +134,10 @@ const Home = () => {
           <Suspense fallback={<Loader />}>
             <ScrollAnimation variants={fadeIn}>
               <LoaderWrapper>
-                <PricingSection
+                {/* <PricingSection
                   showModal={showModal}
                   setShowModal={setShowModal}
-                />
+                /> */}
               </LoaderWrapper>
             </ScrollAnimation>
           </Suspense>
@@ -206,9 +206,9 @@ const Home = () => {
           </Suspense>
           <BlogCards /> */}
           {/* {showForm && <SignupForm />} */}
-        </>
+        </div>
       )}
-    </>
+    </div>
   );
 };
 

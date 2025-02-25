@@ -159,7 +159,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head> */}
         <Navigation  />
-        <SuppressErrors/>
+        {/* <SuppressErrors/> */}
         {children}
         <FooterWrapper />
         </div>
