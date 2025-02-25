@@ -173,7 +173,7 @@ const Banner = () => {
             placeholder="Type your email..."
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className=" px-4 py-3 rounded-lg w-[93%]  bg-white/80 text-mbg-primary placeholder-gray-400 border-[1.5px]  border-mbg-level1/30 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            className="mt-2 px-4 py-3 rounded-lg w-[93%]  bg-white/80 text-mbg-primary placeholder-gray-400 border-[1.5px]  border-mbg-level1/30 focus:ring-2 focus:ring-blue-500 focus:outline-none"
           />
                 {/* <motion.li
                   initial={{ opacity: 0, y: 20 }}
