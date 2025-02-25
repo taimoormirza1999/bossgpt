@@ -70,8 +70,8 @@ const Home = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className="">
-          <FloatingActionButton/>
+        <div className="relative">
+          {/* <FloatingActionButton/>  */}
           <Banner />
           {/* <ClientsSection /> */}
           <Suspense fallback={<Loader />}>

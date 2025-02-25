@@ -68,10 +68,7 @@ function FAQ() {
 
   return (
    
-<section className="pt-16"id="faq">
-
-
-   
+<section className="pt-16"id="faq">   
     <div className="p-3 py-6 my-0 md:mb-10 mx-auto" >
        <SectionWrapper>
       {/* Section Heading */}
