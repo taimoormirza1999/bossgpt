@@ -111,15 +111,15 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "MSA Academy | Master Anime & Character Animation",
+    title: "BossGPT | Master Anime & Character Animation",
     description:
-      "Join MSA Academy's industry-leading animation courses and learn anime character design, 3D animation, and more. Start your journey today!",
+      "Join BossGPT's industry-leading animation courses and learn anime character design, 3D animation, and more. Start your journey today!",
    images: [
     {
       url: "http://137.184.230.161:3000/landing/boss-gpt.png",
       width: 1200,
       height: 630,
-      alt: "MSA Academy Logo"
+      alt: "BossGPT Logo"
     }
   ],
   },
