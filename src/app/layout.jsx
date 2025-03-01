@@ -1,13 +1,9 @@
 import "./globals.css";
 import "./App.css";
-import localFont from 'next/font/local';
 import Navigation from "@/components/Navigation";
-import Image from "next/image";
-import BackgroundImage from "../assets/background.jpg";
 import ScriptsLoader from "@/components/ScriptsLoader";
 import FooterWrapper from "@/components/utils/FooterWrapper";
-import SuppressErrors from "@/components/utils/SuppressErrors";
-import Head from "next/head";
+
 // const CocogooseMedium = localFont({
 //   src: '../../public/fonts/Cocogoose-Classic-Medium-trial.ttf',
 //   weight: '400',
@@ -103,14 +99,14 @@ export const metadata = {
       alt: 'MSA Club Logo Image',
     },
     {
-      url: 'https://msa-club.com/hero_banner.png',
+      url: 'http://137.184.230.161:3000/landing/boss-gpt.png',
       width: 1800,
       height: 1600,
       alt: 'MSA Club Logo Image',
     },
   ],
   authors: ['Taimoor Hamza',],
-    url: "https://msa-academy.com/",
+    url: "https://bossgpt.com/",
   },
 
   twitter: {
@@ -120,7 +116,7 @@ export const metadata = {
       "Join MSA Academy's industry-leading animation courses and learn anime character design, 3D animation, and more. Start your journey today!",
    images: [
     {
-      url: "https://msa-club.com/hero_banner.png",
+      url: "http://137.184.230.161:3000/landing/boss-gpt.png",
       width: 1200,
       height: 630,
       alt: "MSA Academy Logo"
