@@ -112,7 +112,7 @@ const Banner = () => {
                 width={50}
                 alt="hello"
                 className="w-32 mx-auto lg:mx-0 mt-5"
-                src="/laurel.svg"
+                src="/landing/laurel.svg"
               />
               {/* Title */}
               <motion.h1
