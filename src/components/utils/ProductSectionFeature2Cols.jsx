@@ -39,7 +39,7 @@ export default function ProductSectionFeature2Cols() {
       <FeatureSection
       title="Product Features"
       features={features}
-      imageSrc="/landing/banner-boss-gpt.png"
+      imageSrc="/banner-boss-gpt.png"
     />
     </section>
   );
