@@ -1,38 +1,38 @@
 "use client";
 import { useEffect, useState, lazy, Suspense } from "react";
 import Loader from "../components/Loader";
-import SignupForm from "../components/SignupForm";
 import ScrollAnimation from "../components/utils/ScrollAnimation";
 import LoaderWrapper from "../components/utils/LoaderWrapper";
-import MarqueeWrapper2 from "../components/MarqueeWrapper2";
-import BlogCards from "../components/blog/BlogCards";
-import BannerTextHeadingImage from "@/components/utils/BannerTextHeadingImage1";
-import ProjectPlanningSection from "@/components/utils/ProjectPlanningSection";
-import Team from "@/components/Team";
-import BuiltOnStrongFoundations from "@/components/BuiltOnStrongFoundations";
-import PricingSection from "@/components/PricingSection";
-import ClientsSection from "@/components/ClientsSection";
-import Blogg from "@/components/Blogg";
-import BannerTextHeadingImage3 from "@/components/utils/BannerTextHeadingImage3";
 import CookiePolicy from "@/components/utils/CookiePolicy";
 import FAQ from "@/components/FAQ";
 import CustomerReviews from "@/components/CustomerReviews";
-import ProjectPlanningSection1 from "@/components/utils/ProjectPlanningSection1";
-import ProjectPlanningSection2 from "@/components/utils/ProjectPlanningSection2";
-import FloatingActionButton from "@/components/FloatingActionButton";
 const Banner = lazy(() => import("../components/Banner"));
-const EnrollmentBanner = lazy(() => import("../components/EnrollmentBanner"));
-const YourPath = lazy(() => import("../components/YourPath"));
-const Animation = lazy(() => import("../components/Animation"));
-const Drawing = lazy(() => import("../components/Drawing"));
-const Mentors = lazy(() => import("../components/Mentors"));
-const YouWillLearn = lazy(() => import("../components/YouWillLearn"));
-const CommunityMap = lazy(() => import("../components/CommunityMap"));
-const Checkout = lazy(() => import("../components/Checkout"));
+// import SignupForm from "../components/SignupForm";
+// import MarqueeWrapper2 from "../components/MarqueeWrapper2";
+// import BlogCards from "../components/blog/BlogCards";
+// import BannerTextHeadingImage from "@/components/utils/BannerTextHeadingImage1";
+// import ProjectPlanningSection from "@/components/utils/ProjectPlanningSection";
+// import Team from "@/components/Team";
+// import BuiltOnStrongFoundations from "@/components/BuiltOnStrongFoundations";
+// import PricingSection from "@/components/PricingSection";
+// import ClientsSection from "@/components/ClientsSection";
+// import Blogg from "@/components/Blogg";
+// import BannerTextHeadingImage3 from "@/components/utils/BannerTextHeadingImage3";
+// import ProjectPlanningSection1 from "@/components/utils/ProjectPlanningSection1";
+// import ProjectPlanningSection2 from "@/components/utils/ProjectPlanningSection2";
+// import FloatingActionButton from "@/components/FloatingActionButton";
+// const EnrollmentBanner = lazy(() => import("../components/EnrollmentBanner"));
+// const YourPath = lazy(() => import("../components/YourPath"));
+// const Animation = lazy(() => import("../components/Animation"));
+// const Drawing = lazy(() => import("../components/Drawing"));
+// const Mentors = lazy(() => import("../components/Mentors"));
+// const YouWillLearn = lazy(() => import("../components/YouWillLearn"));
+// const CommunityMap = lazy(() => import("../components/CommunityMap"));
+// const Checkout = lazy(() => import("../components/Checkout"));
 
 const Home = () => {
   const [loading, setLoading] = useState(false);
-  const [showModal, setShowModal] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
   const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
@@ -74,7 +74,7 @@ const Home = () => {
           {/* <FloatingActionButton/>  */}
           <Banner />
           {/* <ClientsSection /> */}
-          <Suspense fallback={<Loader />}>
+          {/* <Suspense fallback={<Loader />}> */}
             {/* <Suspense fallback={<Loader />}>
               <Team />
             </Suspense> */}
@@ -126,7 +126,7 @@ const Home = () => {
             /> */}
 
             {/* <BannerTextHeadingImage /> */}
-          </Suspense>
+          {/* </Suspense> */}
           {/* <Suspense fallback={<Loader />}>
             <BuiltOnStrongFoundations />
           </Suspense> */}

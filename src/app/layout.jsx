@@ -99,7 +99,7 @@ export const metadata = {
       alt: 'MSA Club Logo Image',
     },
     {
-      url: 'http://137.184.230.161:3000/landing/boss-gpt.png',
+      url: 'https://bossgpt.com/boss-gpt.png',
       width: 1800,
       height: 1600,
       alt: 'MSA Club Logo Image',
@@ -116,7 +116,7 @@ export const metadata = {
       "Join BossGPT's industry-leading animation courses and learn anime character design, 3D animation, and more. Start your journey today!",
    images: [
     {
-      url: "http://137.184.230.161:3000/landing/boss-gpt.png",
+      url: "https://bossgpt.com/boss-gpt.png",
       width: 1200,
       height: 630,
       alt: "BossGPT Logo"
