@@ -1,10 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import faqHeading from "../assets/freq_heading.png";
+import faqbackground from "../assets/faq_bg.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa"; // Import arrow icons
 import SectionWrapper from "./utils/SectionWrapper";
+import SectionHeading from "./utils/SectionHeading";
 
 function FAQ() {
   const [openIndex, setOpenIndex] = useState(null); // State to track the open FAQ
@@ -68,29 +69,38 @@ function FAQ() {
 
   return (
    
-<section className="pt-16"id="faq">   
+<section className="pt-16"id="faq"  style={{
+        backgroundImage: `url(${faqbackground.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        borderRadius: "12px",
+        color: "white",
+        // zIndex: -2,
+      }} >   
     <div className="p-3 py-6 my-0 md:mb-10 mx-auto" >
        <SectionWrapper>
       {/* Section Heading */}
-      <div className="text-center mb-6 md:mb-12" >
-        <h2 className="text-4xl font-bold  text-white/90" >FAQ</h2>
-      </div>
+      {/* <div className="text-center mb-6 md:mb-12" >
+        <h2 className="text-5xl font-extrabold  text-white/90 font-primary" ></h2>
+      </div> */}
+      <SectionHeading text={"FREQUENTLY ASKED QUESTIONS"}/>
 
       <div className=" ml-auto me-auto  lg:ml-auto  flex flex-row justify-end" >
-        <div className="flex flex-col  max-w-full mx-auto lg:w-[80%]">
+        <div className="flex flex-col  max-w-full mx-auto lg:w-[90%]">
           {faqs.map((faq, index) => (
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 * index }}
               key={index}
-              className="font-medium-fgm  lg:mt-0 mx-1 mb-3.5 lg:mb-5 w-full border-[1.2px] border-white/10 bg-mbg-tertiary/80 text-white/70 p-2.5 lg:p-4 lg:py-3 rounded-12"
+              className=" lg:mt-0 mx-1 mb-3.5 lg:mb-5 w-full border-[1.6px] border-white/50 bg-white/10 text-white/70 rounded-16  flex flex-col lg:justify-center  pt-4 pb-0.5 px-5 "
             >
               <div
-                className="font-medium text-base text-white flex justify-between items-center cursor-pointer"
+                className="font-bold text-base text-white flex justify-between items-center cursor-pointer "
                 onClick={() => toggleAnswer(index)} // Toggle the answer on click
               >
-                <span>{faq.question}</span>
+                <span className="font-primary text-xl font-semibold" >{faq.question}</span>
                 {/* Render the arrow icon based on whether it's open or not */}
                 {openIndex === index ? (
                   <FaChevronUp className="text-white/70" />
@@ -108,7 +118,7 @@ function FAQ() {
                   opacity: { duration: 0.5 },
                   height: { duration: 0.5 },
                 }}
-                className="mt-3 text-white text-sm lg:text-sm overflow-hidden"
+                className={`${openIndex === index ? "mt-3 my-3":"my-2"} text-white   overflow-hidden font-primary text-lg font-semibold`}
               >
                 {faq.answer}
               </motion.div>

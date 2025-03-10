@@ -31,7 +31,7 @@ export default {
 			lineSecondary:"#202122",
 		  },
 		  link:{
-			primary: '#828fff',
+			primary: '#007BFF',
 			hover: '#fff',
 		  },
 		  woodsmoke:'#08090A',

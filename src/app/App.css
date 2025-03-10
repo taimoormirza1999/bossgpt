@@ -30,7 +30,7 @@ body {
   @apply cursor-pointer text-osloGray hover:text-mtext-primary medium-transition hover:bg-anchorGlassBg border border-woodsmoke  hover:border-anchorGlassBg;
 }
 .nav-primary-link {
-  @apply cursor-pointer px-3 py-2 rounded-8 text-osloGray hover:text-mtext-primary medium-transition hover:bg-anchorGlassBg border border-woodsmoke  hover:border-anchorGlassBg;
+  @apply cursor-pointer px-3 py-2 rounded-8 text-white hover:text-mtext-primary medium-transition hover:bg-anchorGlassBg    hover:border-anchorGlassBg;
 }
 .page-max-width {
   max-width: var(--page-max-width);
@@ -39,9 +39,12 @@ body {
   @apply text-mtext-tertiary font-semibold text-lg;
 }
 /* Franklin Gothic Medium */
-.font-medium-fgm {
-  font-family: var(--font-franklin), sans-serif;
+.font-medium-cabinet {
+  font-family: var(--font-cabinet-grotesk-variable);
   font-weight: 400;
+}
+.font-primary{
+    font-family: var(--font-cabinet-grotesk-variable);
 }
 section {
   /* @apply py-20; */
