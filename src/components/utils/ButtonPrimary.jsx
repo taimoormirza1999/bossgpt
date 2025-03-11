@@ -25,9 +25,9 @@ function ButtonPrimary({
         nav
           ? "px-3 py-1.5 font-medium rounded-8"
           : banner
-          ? "px-14 py-3.5 sm:uppercase font-bold rounded-12 "
-          : "px-7 py-2 font-semibold  rounded-8"
-      } text-sm lg:text-sm  medium-transition flex items-center
+          ? "px-9 lg:px-14 py-3.5 uppercase font-black lg:font-bold rounded-12 "
+          : "px-7 py-2 font-black lg:font-semibold  rounded-8 w-auto "
+      }  text-xs lg:text-sm medium-transition flex items-center
       
       `}
     >

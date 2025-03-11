@@ -116,7 +116,7 @@ const Navigation = () => {
         <div className="flex items-center font-normal  space-x-5 text-base">
           <Link
             href="https://bossgpt.com/tool/v1/"
-            className=" px-4 py-1.5 rounded-lg primary-link"
+            className=" px-4 py-1.5 rounded-lg primary-link "
           >
             Login
           </Link>

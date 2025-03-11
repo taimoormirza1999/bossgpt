@@ -62,7 +62,7 @@ export default function ChatInterface() {
   }, [currentIndex]);
 
   return (
-    <div className={`${inter.className} font-normal relative flex flex-col h-[450px] xl:h-[550px] 2xl:h-[600px] bg-gradient-to-b from-white to-[#08090A]  p-[3.5px]   shadow-md shadow-white/30 rounded-24  w-full overflow-hidden`}>
+    <div className={`${inter.className} font-normal relative flex flex-col h-[450px] xl:h-[550px] 2xl:h-[600px] bg-gradient-to-b from-white to-[#08090A]  p-[3.5px] shadow-md shadow-white/30 rounded-24 w-[90%] mx-auto lg:w-full overflow-hidden`}>
       {/* Fixed Header */}
       <motion.div
         // initial={{ y: -20, opacity: 0 }}
@@ -79,7 +79,7 @@ export default function ChatInterface() {
             >
               <FaRobot className="text-[2.9rem]  " />
             </motion.div>
-            <span className="font-bold text-base lg:text-xl lg:pl-2 text-white font-primary ">
+            <span className="font-bold text-base lg:text-xl lg:pl-2 text-white  ">
               BOSS<span className="pl-[2.5px] font-black">GPT</span> Assistant
             </span>
           </h1>
@@ -87,7 +87,7 @@ export default function ChatInterface() {
       </motion.div>
 
       {/* Messages Container */}
-      <div className="flex-1 overflow-y-auto bg-[#18191C] p-4 space-y-4 pb-20 h-full scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent">
+      <div className="flex-1 overflow-y-auto bg-[#18191C] p-4 space-y-3 lg:space-y-4 pb-20 h-full scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent">
         <AnimatePresence mode="popLayout">
           {messages.map((message, index) => (
             <motion.div
@@ -98,7 +98,7 @@ export default function ChatInterface() {
               layout
               className={`flex ${!message.isUser ? "justify-end" : "justify-start"}`}
             >
-              <div className={`rounded-lg px-4 py-2 max-w-[80%] transition-all duration-300 ${message.isUser ? "bg-link-primary text-white" : "bg-zinc-200/15 text-zinc-100 font-primary text-sm"}`}>
+              <div className={`rounded-lg px-4 py-2 max-w-[80%] transition-all duration-300 ${message.isUser ? "bg-link-primary text-white" : "bg-zinc-200/15 text-zinc-100  text-sm"}`}>
                 {message.text}
               </div>
             </motion.div>
@@ -112,7 +112,7 @@ export default function ChatInterface() {
               exit={{ opacity: 0, y: 10 }}
               className="flex justify-start"
             >
-              <div className="rounded-lg px-4 py-2 max-w-[80%] bg-zinc-200/15 text-zinc-100 font-primary font-bold text-sm">
+              <div className="rounded-lg px-4 py-2 max-w-[80%] bg-zinc-200/15 text-zinc-100 font-bold text-sm">
                 <ReactTyped strings={["Boss AI is typing..."]} typeSpeed={30} loop />
               </div>
             </motion.div>

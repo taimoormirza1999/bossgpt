@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import ScriptsLoader from "@/components/ScriptsLoader";
 import FooterWrapper from "@/components/utils/FooterWrapper";
 import localFont from 'next/font/local'
+import ScreenProvider from "@/components/ScreenProvider";
 
 
 // const CabinetGroteskVariable = localFont({
@@ -122,20 +123,9 @@ export default function RootLayout({ children }) {
   ></iframe>
 </noscript>
        <div className={`mx-0 relative bg-cover bg-center overflow-x-hidden`}  >
-          {/* <Image
-            src={BackgroundImage}
-            alt="Background"
-            layout="fill"
-            objectFit="cover"
-            priority
-            className="absolute inset-0 -z-10"
-          /> */}
-          {/* <Head>
-        <link rel="icon" href="/favicon.ico" />
-      </Head> */}
+       
         <Navigation  />
-        {/* <SuppressErrors/> */}
-        {children}
+        <ScreenProvider>{children}</ScreenProvider>
         <FooterWrapper />
         </div>
       </body>

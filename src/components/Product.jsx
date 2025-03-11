@@ -6,6 +6,7 @@ import inter from "@/app/InterFont";
 import AICloneSignup from "./AICloneSignup";
 import Image from "next/image";
 import cloudImage from'@/assets/cloud.png';
+import ShapeImage from'@/assets/shape_style.svg';
 
 const Product = () => {
 
@@ -22,27 +23,27 @@ const Product = () => {
         // transition={{ duration: 1.5, delay: 0.3 }}
         className="page-max-width mx-auto z-10"
       >
-        <div className=" mx-auto w-90 lg:w-full page-max-width grid grid-cols-1 lg:grid-cols-2 gap-16  py-0">
+        <div className="lg:w-full grid grid-cols-1 lg:grid-cols-2 gap-20  py-0">
           <div className="">
             <motion.div
               layout
               // initial={{ opacity: 0, y: 30 }}
               // animate={{ opacity: 1, y: 0 }}
               // transition={{ duration: 1.2, delay: 0.5 }}
-              className="space-y-6  lg:text-start z-50"
+              className="space-y-6 lg:text-start z-50"
             >
 
               {/* Title */}
               {/* <SectionHeading text={"BE PRODUCTIVE WITH"} text2={""}/> */}
               <div className=" mb-6 md:mb-5 lg:mt-10" >
-                <h2 className="text-[1.95rem] text-center lg:text-start lg:text-[2.75rem] font-extrabold leading-tight  text-white/90 font-primary" >BE PRODUCTIVE WITH<br /><span className='-py-4'>BUILT-IN AI ASSISTANT</span></h2>
+                <h2 className="text-[2rem] text-center lg:text-start lg:text-[2.75rem] font-extrabold leading-tight  text-white/90 font-primary" >BE PRODUCTIVE WITH<br /><span className='-py-4'>BUILT-IN AI ASSISTANT</span></h2>
               </div>
               {/* Subtitle */}
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, delay: 0.4 }}
-                className="text-white/90 text-base max-w-lg font-medium text-center lg:text-start"
+                className="text-white/90 text-base max-w-lg font-light lg:font-medium text-center lg:text-start w-95 mx-auto lg:w-full"
               >
                 Maximize efficiency with our AI-powered assistant, designed to streamline your workflow. Whether you need smart suggestions, instant answers, or automated tasks, our AI is here to help. Stay focused, work faster, and achieve more—all with intelligent assistance at your fingertips.
               </motion.p>
@@ -58,16 +59,23 @@ const Product = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 0.14 }}
-              className="flex flex-col lg:flex-row  gap-8 mt-5 "
+              className="flex flex-col lg:flex-row items-center gap-8 mt-5 justify-center lg:justify-start"
             >
               <ButtonPrimary
                 // primary={true}
                 banner="true"
-                text="Try now"
+                text="TRY NOW"
                 url="https://vnay.com/sim/board/?page=login"
               />
             </motion.div>
           </div>
+          <Image 
+      width={1920} 
+      height={1080}
+      src={ShapeImage.src} 
+      alt="Banner" 
+     className="w-full absolute md:w-98 h-[38vh] sm:h-[60vh] md:h-full lg:h-full  object-cover -z-10 left-10 "
+    />
 
           {/* Right Section - Image */}
           {/* <div className="my-5">
@@ -87,7 +95,7 @@ const Product = () => {
             height={500}
             width={500}
             alt="Cloud"
-            className=" w-[24rem] h-auto bg-cover"
+            className=" w-[20rem] lg:w-[24rem] h-auto bg-cover"
             > 
             </Image>
             </div>
@@ -98,7 +106,7 @@ const Product = () => {
             height={500}
             width={500}
             alt="Cloud"
-            className=" w-[24rem] h-auto bg-cover"
+            className=" w-[20rem] lg:w-[24rem] h-auto bg-cover"
             > 
             </Image>
             </div>

@@ -2,10 +2,23 @@ import React from 'react';
 import Link from "next/link";
 import inter from "../app/InterFont.jsx";
 import Image from 'next/image';
+import useScreenStore from '../../store/useScreenStore.js';
+import faqbackground from "../assets/faq_bg.png";
 
 const Footer = () => {
+  const isLargeScreen = useScreenStore((state) => state.isLargeScreen);
+
   return (
-    <footer className={`bg-pmBlack py-12 text-[0.9rem] font-normal ${inter.className}`}>
+    <footer className={`bg-pmBlack py-12 text-[0.9rem] font-normal ${inter.className}`
+    }     
+    style={{
+      backgroundImage: !isLargeScreen ? `url(${faqbackground.src})` : 'none',
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      borderRadius: "12px",
+      color: "white",
+    }}>
       <div className="mx-auto page-max-width">
         <div className="flex flex-col md:flex-row justify-between w-full items-center md:items-start space-y-6 md:space-y-0">
           {/* Logo */}
