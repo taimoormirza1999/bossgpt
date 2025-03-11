@@ -116,7 +116,7 @@ const CustomerReviews = () => {
 
   return (
     <section
-      className="w-full py-16  text-white overflow-hidden"
+      className="w-full  pt-16 lg:py-16  text-white overflow-hidden"
       id="customers"
     >
       <div className="max-w-6xl mx-auto text-center mb-10">
@@ -181,13 +181,13 @@ const CustomerReviews = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 0.14 }}
-              className="flex flex-col lg:flex-row items-center gap-8 lg:mt-10 justify-center "
+              className="flex flex-col lg:flex-row items-center  mt-8 lg:mt-10 justify-center "
             >
               <ButtonPrimary
                 // primary={true}
                 banner="true"
                 text="SUBMIT YOUR REVIEW"
-                url="https://vnay.com/sim/board/?page=login"
+                url="https://bossgpt.com/tool/v1"
               />
             </motion.div>
     </section>

@@ -198,11 +198,11 @@ const Banner = () => {
               <ButtonPrimary
                 primary={true}
                 text="Try now"
-                url="https://vnay.com/sim/board/?page=login"
+                url="https://bossgpt.com/tool/v1"
               />
               <ButtonPrimary
                 text="Introducing Boss AI Project Manager"
-                url="https://vnay.com/sim/board/?page=login"
+                url="https://bossgpt.com/tool/v1"
                 icon={true}
                 secondary={true}
               />

@@ -13,7 +13,7 @@ function ButtonPrimary({
     <Link
       href={url}
       duration={800}
-      className={` capitalize shadow-stack-low border 
+      className={` Z-20 cursor-pointer shadow-stack-low border 
        
         ${
           primary
@@ -23,7 +23,7 @@ function ButtonPrimary({
             : "  bg-gradient-to-r  from-mtext-tertiary via-mtext-primary/70 to-mtext-primary/90 bg-clip-text text-transparent border-mbg-primary  "
         } ${
         nav
-          ? "px-3 py-1.5 font-medium rounded-8"
+          ? "px-3 py-2.5 font-medium rounded-8 "
           : banner
           ? "px-9 lg:px-14 py-3.5 uppercase font-black lg:font-bold rounded-12 "
           : "px-7 py-2 font-black lg:font-semibold  rounded-8 w-auto "

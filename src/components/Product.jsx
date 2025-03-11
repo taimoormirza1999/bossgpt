@@ -65,17 +65,18 @@ const Product = () => {
                 // primary={true}
                 banner="true"
                 text="TRY NOW"
-                url="https://vnay.com/sim/board/?page=login"
+                url="https://bossgpt.com/tool/v1"
+                className="z-10 relative"
               />
             </motion.div>
           </div>
-          <Image 
+          {/* <Image 
       width={1920} 
       height={1080}
       src={ShapeImage.src} 
       alt="Banner" 
      className="w-full absolute md:w-98 h-[38vh] sm:h-[60vh] md:h-full lg:h-full  object-cover -z-10 left-10 "
-    />
+    /> */}
 
           {/* Right Section - Image */}
           {/* <div className="my-5">

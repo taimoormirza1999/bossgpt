@@ -9,7 +9,7 @@ const Footer = () => {
   const isLargeScreen = useScreenStore((state) => state.isLargeScreen);
 
   return (
-    <footer className={`bg-pmBlack py-12 text-[0.9rem] font-normal ${inter.className}`
+    <footer className={`bg-pmBlack py-10 text-[0.9rem] font-normal ${inter.className}`
     }     
     style={{
       backgroundImage: !isLargeScreen ? `url(${faqbackground.src})` : 'none',
