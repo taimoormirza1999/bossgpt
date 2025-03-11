@@ -77,7 +77,15 @@ section {
 }
 
 ::selection {
-  background-color: #828fff;
+  background-color: #007BFF;
+}
+
+.primary-text-gradient{
+  @apply  text-transparent bg-gradient-to-r from-white to-[#3C3C3C] bg-clip-text;
+}
+
+.horizontal-center-big{
+transform: translateX(-50%)!important;
 }
 
 .blog_description .field {

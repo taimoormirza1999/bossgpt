@@ -2,22 +2,13 @@
 import React, { useState } from "react";
 import bannerImage from "../assets/background_banner.png";
 import { motion } from "framer-motion";
-import Button from "./utils/Button";
-import Image from "next/image";
-// import { useMediaQuery } from "react-responsive";
 import ButtonPrimary from "./utils/ButtonPrimary";
 import inter from "@/app/InterFont";
-import Link from "next/link";
-import CheckIconSvg from "./utils/icons/CheckIconSvg";
-import AICloneSignup from "./AICloneSignup";
 
 const Banner = () => {
-  // const isLargeScreen = useMediaQuery({ minWidth: 768 });
-  const [email, setEmail] = useState("");
-
   return (
     <motion.div
-      className={`-z-10 relative lg:w-full h-auto  min-h-[100vh] lg:-mt-[10vh] flex items-center  justify-between md:mt-20 mx-auto  mb-7 md:mb-10 lg:mb-20 xl:mb-0 pt-20 lg:pb-16 font-normal ${inter.className}`}
+      className={`-z-10 relative lg:w-full h-auto  min-h-[100vh] lg:-mt-[0vh] flex items-center  justify-between md:mt-20 mx-auto  mb-7 md:mb-10 lg:mb-20 xl:mb-0 pt-20 lg:pb-16 font-normal ${inter.className}`}
       style={{
         backgroundImage: `url(${bannerImage.src})`,
         backgroundSize: "cover",
@@ -28,7 +19,6 @@ const Banner = () => {
         // zIndex: -2,
       }}
     >
- 
       <motion.div className=" relative page-max-width mx-auto ">
         <div className=" mx-auto w-90 lg:w-full page-max-width grid grid-cols-1 lg:grid-cols-1 gap-12 items-center py-0">
           <div className="w-full">
@@ -39,13 +29,12 @@ const Banner = () => {
               // transition={{ duration: 1.2, delay: 0.5 }}
               className="space-y-6 text-center lg:text-start "
             >
-            
               {/* Title */}
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, delay: 0.2 }}
-                className="text-[2.4rem] uppercase text-center md:text-4xl leading-[3rem] lg:leading-auto lg:text-8xl font-primary font-black text-white/90"
+                className="text-[2.9rem] md:text-4xl lg:text-[3.4rem] uppercase text-center  lg:leading-[3.7rem] lg:leading-auto lg:text-7xl 2xl:text-8xl font-primary font-black text-white/90"
               >
                 Meet Your
                 <br /> AI Boss
@@ -60,48 +49,6 @@ const Banner = () => {
                 It gives you tasks, sets deadlines, and keeps you on track. It
                 might even virtually yell at you for missing deadlines.
               </motion.p>
-              {/* <ul className="text-white/90 text-sm list-inside font-medium ">
-                <motion.li
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1.2, delay: 0.6 }}
-                  className="flex mb-2"
-                >
-                  {" "}
-                  <CheckIconSvg height={24} width={24} /> Sets deadlines for you
-                  – Stay on schedule without stress.
-                </motion.li>
-                <motion.li
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1.2, delay: 0.8 }}
-                  className="flex mb-2"
-                >
-                  <CheckIconSvg height={24} width={24} /> Tracks your tasks –
-                  Never forget what’s next on your to-do list.
-                </motion.li>
-                <motion.li
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1.2, delay: 0.9 }}
-                  className="flex mb-2"
-                >
-                  <CheckIconSvg height={24} width={24} />
-                  Reminds you – It’ll even send reminders if you're falling
-                  behind!
-                </motion.li>
-                <motion.input
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1.2, delay: 0.16 }}
-            type="email"
-            placeholder="Type your email..."
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="mt-2 px-4 py-3 rounded-lg w-[93%]  bg-white/80 text-mbg-primary placeholder-gray-400 border-[1.5px]  border-mbg-level1/30 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-          />
-              
-              </ul> */}
             </motion.div>
 
             {/* Buttons */}
@@ -122,7 +69,6 @@ const Banner = () => {
           </div>
         </div>
       </motion.div>
-
     </motion.div>
   );
 };

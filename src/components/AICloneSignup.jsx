@@ -62,14 +62,14 @@ export default function ChatInterface() {
   }, [currentIndex]);
 
   return (
-    <div className={`${inter.className} font-normal relative flex flex-col h-[680px] bg-white/5 shadow-md shadow-white/30 rounded-12 max-h-[90vh] w-full overflow-hidden`}>
+    <div className={`${inter.className} font-normal relative flex flex-col h-[450px] xl:h-[550px] 2xl:h-[600px] bg-gradient-to-b from-white to-[#08090A]  p-[3.5px]   shadow-md shadow-white/30 rounded-24  w-full overflow-hidden`}>
       {/* Fixed Header */}
       <motion.div
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1, transition: { delay: 0.5, duration: 2 } }}
-        className="border-b border-zinc-800 sticky top-0 bg-[#242526] z-10 px-2 mt-1 rounded-12"
+        // initial={{ y: -20, opacity: 0 }}
+        // animate={{ y: 0, opacity: 1, transition: { delay: 0.5, duration: 2 } }}
+        className="border-b border-zinc-800 sticky top-0 bg-[#2F3031] z-10 px-2 rounded-tl-16 rounded-tr-16"
       >
-        <header className="px-4 py-4 ">
+        <header className=" py-4  px-2">
           <h1 className="text-xl font-semibold text-white flex flex-row items-center gap-5">
             <motion.div
               animate={{
@@ -77,9 +77,9 @@ export default function ChatInterface() {
                 transition: { repeat: Number.POSITIVE_INFINITY, duration: 2, repeatDelay: 3 },
               }}
             >
-              <FaRobot className="text-5xl" />
+              <FaRobot className="text-[2.9rem]  " />
             </motion.div>
-            <span className="font-medium text-base lg:text-xl lg:pl-2 text-white">
+            <span className="font-bold text-base lg:text-xl lg:pl-2 text-white font-primary ">
               BOSS<span className="pl-[2.5px] font-black">GPT</span> Assistant
             </span>
           </h1>
@@ -98,7 +98,7 @@ export default function ChatInterface() {
               layout
               className={`flex ${!message.isUser ? "justify-end" : "justify-start"}`}
             >
-              <div className={`rounded-lg px-4 py-2 max-w-[80%] transition-all duration-300 ${message.isUser ? "bg-link-primary text-white" : "bg-zinc-200/15 text-zinc-100"}`}>
+              <div className={`rounded-lg px-4 py-2 max-w-[80%] transition-all duration-300 ${message.isUser ? "bg-link-primary text-white" : "bg-zinc-200/15 text-zinc-100 font-primary text-sm"}`}>
                 {message.text}
               </div>
             </motion.div>
@@ -112,7 +112,7 @@ export default function ChatInterface() {
               exit={{ opacity: 0, y: 10 }}
               className="flex justify-start"
             >
-              <div className="rounded-lg px-4 py-2 max-w-[80%] bg-zinc-200/15 text-zinc-100">
+              <div className="rounded-lg px-4 py-2 max-w-[80%] bg-zinc-200/15 text-zinc-100 font-primary font-bold text-sm">
                 <ReactTyped strings={["Boss AI is typing..."]} typeSpeed={30} loop />
               </div>
             </motion.div>
@@ -124,9 +124,9 @@ export default function ChatInterface() {
       </div>
 
       {/* Input Field (Disabled) */}
-      <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="border-t border-zinc-800 p-2 pb-4">
+      <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="bg-[#242526] border-t border-zinc-800 p-2 pb-4">
         <div className="flex gap-2">
-          <input type="text" placeholder="Type your message..." disabled className="flex-1 py-2.5 px-3 rounded-8 bg-zinc-200/20 border border-zinc-700 text-white placeholder:text-zinc-300/80" />
+          <input type="text" placeholder="Type your message..." disabled className="flex-1 py-2.5 px-3 rounded-8 bg-[#2F3031] text-[#6C757D] border border-zinc-700 text-white placeholder:text-zinc-300/80" />
           <button disabled className="rounded-12 px-3.5 py-1.5 bg-link-primary opacity-80 text-white cursor-not-allowed">Send</button>
         </div>
       </motion.div>

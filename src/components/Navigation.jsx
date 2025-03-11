@@ -115,7 +115,7 @@ const Navigation = () => {
 
         <div className="flex items-center font-normal  space-x-5 text-base">
           <Link
-            href="https://vnay.com/sim/board/?page=login"
+            href="https://bossgpt.com/tool/v1/"
             className=" px-4 py-1.5 rounded-lg primary-link"
           >
             Login
@@ -124,7 +124,7 @@ const Navigation = () => {
           <ButtonPrimary
             primary={true}
             text="Signup"
-            url="https://vnay.com/sim/board/?page=register"
+            url="https://bossgpt.com/tool/v1/?page=register"
             nav={true}
           />
         </div>
