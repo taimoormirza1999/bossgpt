@@ -10,49 +10,40 @@ import Link from "next/link";
 export default function ChatInterface() {
   const predefinedMessages = [
     {
-      bot: "Hello! I'm Boss AI, your personal project manager. What do you need help with today?",
+      bot: "Hello! I'm Boss AI, your smart project manager. Need help organizing tasks, setting deadlines, or brainstorming ideas? I'm here for you!",
     },
     {
-      user: "I need help managing my MSA project. Can you suggest some ideas?",
+      user: "Hey Boss AI! I'm struggling to stay on top of my tasks. I have too much to do and don't know where to start.",
     },
     {
-      bot: "Absolutely! I'll generate a list of project ideas along with estimated timelines and key milestones.",
+      bot: "I get it! Managing tasks can feel overwhelming, but don't worry—I'll bring structure to your workflow. Let's break things down into manageable steps. What's your main priority right now?",
     },
     {
-      bot: "Here1 are a few project ideas that align with your goals. Let me know if you need more details!",
+      user: "I have a marketing campaign to manage, and I keep missing deadlines. I need a plan that keeps me on track.",
     },
     {
-      bot: "Here2 are a few project ideas that align with your goals. Let me know if you need more details!",
+      bot: "Got it! I'll create a structured plan with key milestones, deadlines, and reminders. Do you want me to prioritize urgent tasks first?",
     },
     {
-      bot: "Here3 are a few project ideas that align with your goals. Let me know if you need more details!",
+      user: "Yes! I tend to focus on small tasks and forget the big ones.",
     },
     {
-      bot: "Here4 are a few project ideas that align with your goals. Let me know if you need more details!",
+      bot: "No problem! I'll categorize tasks based on urgency and importance. Also, I can send reminders so you never miss a deadline. Would you like daily or weekly check-ins?",
     },
     {
-      bot: "Here5 are a few project ideas that align with your goals. Let me know if you need more details!",
+      user: "Daily check-ins would be great!",
     },
     {
-      bot: "Here6 are a few project ideas that align with your goals. Let me know if you need more details!",
+      bot: "Perfect! I'll send you a quick summary every morning with high-priority tasks and upcoming deadlines. I can also suggest time-saving strategies if needed!",
     },
     {
-      bot: "Here7 are a few project ideas that align with your goals. Let me know if you need more details!",
+      user: "That sounds exactly like what I need! Can you also help me track progress?",
     },
     {
-      bot: "Here8 are a few project ideas that align with your goals. Let me know if you need more details!",
+      bot: "Absolutely! I'll keep track of completed tasks and let you know how close you are to your goals. Plus, if you fall behind, I'll suggest adjustments to keep you on schedule!",
     },
     {
-      bot: "Here9 are a few project ideas that align with your goals. Let me know if you need more details!",
-    },
-    {
-      bot: "Here are a few project ideas that align with your goals. Let me know if you need more details!",
-    },
-    {
-      bot: "Here are a few project ideas that align with your goals. Let me know if you need more details!",
-    },
-    {
-      bot: "Here are a few project ideas that align with your goals. Let me know if you need more details!",
+      user: "Awesome! This will make things so much easier. Let's get started!",
     },
   ];
 
@@ -114,7 +105,7 @@ export default function ChatInterface() {
         animate={{ opacity: isHovered ? 1 : 0 }}
         transition={{ duration: 0.3 }}
         className="absolute inset-0 bg-gradient-to-b from-black/55 to-black/75 z-20 rounded-24 flex items-center justify-center"
-        onClick={() => window.location.href = 'https://bossgpt.com/tool/v1'}
+        onClick={() => (window.location.href = "https://bossgpt.com/tool/v1")}
       >
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
@@ -122,16 +113,16 @@ export default function ChatInterface() {
           transition={{ duration: 0.3 }}
           className="text-center"
         >
-          {/* <button className="px-2 py-4 bg-link-primary text-white rounded-full text-xl font-bold hover:bg-link-primary/90 transition-all duration-300 transform hover:scale-105">
-            Try Now
-          </button> */}
-           <Link
+         
+          <Link
             href="https://bossgpt.com/tool/v1/"
-            className=" px-4 py-1.5 rounded-lg primary-link "
+            className=" px-4 py-2.5 rounded-lg primary-link hover:bg-link-primary hover:text-white transition-all duration-300"
           >
-           Try Now!
+            Try Now!
           </Link>
-          <p className="text-white/70 mt-3 text-sm">Click to experience BossGPT</p>
+          <p className="bg-gradient-to-r from-white/50 to-white bg-clip-text text-transparent mt-3 text-sm">
+            Click to experience BossGPT
+          </p>
         </motion.div>
       </motion.div>
 
@@ -164,52 +155,65 @@ export default function ChatInterface() {
 
       {/* Messages Container */}
       <div className="flex-1 overflow-y-auto bg-[#18191C] p-4 space-y-3 lg:space-y-4 pb-20 h-full scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent">
-        <AnimatePresence mode="popLayout">
+        <AnimatePresence mode="popLayout" initial={false}>
           {messages.map((message, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20, scale: 0.95 }}
+              initial={{ opacity: 0, y: 3, scale: 0.98 }}
               animate={{
                 opacity: 1,
                 y: 0,
                 scale: 1,
                 transition: {
                   type: "spring",
-                  stiffness: 260,
-                  damping: 70,
-                  duration: 1.9,
+                  stiffness: 100,
+                  damping: 20,
+                  mass: 0.4,
+                  duration: 0.9
                 },
               }}
-              exit={{ opacity: 0, scale: 0.95, transition: { duration: 0.9 } }}
-              layout
+              exit={{ 
+                opacity: 0, 
+                scale: 0.95, 
+                transition: { 
+                  duration: 0.2,
+                  ease: "easeOut"
+                } 
+              }}
+              layout="position"
               className={`flex ${
                 message.isUser ? "justify-end" : "justify-start"
               }`}
             >
-              <div
-                className={`rounded-lg px-4 py-2 max-w-[80%] transition-all duration-300 ${
+              <motion.div
+                layout
+                className={`rounded-lg px-4 py-2 max-w-[80%] transition-all duration-200 ${
                   message.isUser
                     ? "bg-link-primary text-white"
                     : "bg-[#242526] text-zinc-100  text-sm shadow-lg"
                 }`}
               >
                 {message.text}
-              </div>
+              </motion.div>
             </motion.div>
           ))}
 
           {/* Typing Animation */}
           {isTyping && (
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 5 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 10 }}
+              exit={{ opacity: 0, y: 5 }}
+              transition={{
+                duration: 0.2,
+                ease: "easeInOut"
+              }}
               className="flex justify-start"
             >
               <div className="rounded-lg px-4 py-2 max-w-[80%] shadow-lg bg-[#242526] text-zinc-100  text-sm">
                 <ReactTyped
                   strings={["Boss AI is typing..."]}
-                  typeSpeed={30}
+                  typeSpeed={40}
                   loop
                 />
               </div>
