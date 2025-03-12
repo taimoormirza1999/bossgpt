@@ -44,7 +44,7 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`bg-mbg-primary/90  border-b-[0.5px] border-[white]/[20%] fixed top-0 left-0 right-0 z-50 shadow-lg py-0 md:py-2 xl:py-0 h-[78px] lg:h-[74px]  ${inter.className} `}
+      className={`bg-black/20  border-b-[0.5px] border-[white]/[20%] fixed top-0 left-0 right-0 z-50 shadow-lg py-0 md:py-2 xl:py-0 h-[78px] lg:h-[78px]  ${inter.className} `}
     >
       <div className="max-w-7xl mx-auto w-90 lg:w-full py-4 flex items-center justify-between   page-max-width ">
         <Link
@@ -113,10 +113,10 @@ const Navigation = () => {
           </li> */}
         </ul>
 
-        <div className="flex items-center font-normal  space-x-5 text-base">
+        <div className="flex items-center font-normal space-x-2 lg:space-x-5 text-base">
           <Link
-            href="https://vnay.com/sim/board/?page=login"
-            className=" px-4 py-1.5 rounded-lg primary-link"
+            href="https://bossgpt.com/tool/v1/"
+            className=" px-4 py-1.5 rounded-lg primary-link "
           >
             Login
           </Link>
@@ -124,13 +124,13 @@ const Navigation = () => {
           <ButtonPrimary
             primary={true}
             text="Signup"
-            url="https://vnay.com/sim/board/?page=register"
+            url="https://bossgpt.com/tool/v1/?page=register"
             nav={true}
           />
         </div>
         <div className="md:hidden flex items-center">
           <button
-            className="text-white/70text-2xl text-white"
+            className="text-white/70 text-2xl text-white"
             onClick={toggleMobileMenu}
           >
             {isMobileMenuOpen ? (
@@ -146,8 +146,8 @@ const Navigation = () => {
       {isMobileMenuOpen && (
         <motion.div
           className="bg-mbg-primary/90 md:hidden w-90 mx-auto rounded-lg border border-mbg-translucent py-7"
-          initial={{ opacity: 0,  }}
-          animate={{ opacity: 1, }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
         >
@@ -180,7 +180,7 @@ const Navigation = () => {
               className="font-normal text-osloGray text-sm"
               onClick={() => handleScroll("animation-course")}
             >
-               Customers
+              Customers
             </li>
             <li
               className="font-normal text-osloGray text-sm"

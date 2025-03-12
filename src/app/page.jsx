@@ -6,6 +6,8 @@ import LoaderWrapper from "../components/utils/LoaderWrapper";
 import CookiePolicy from "@/components/utils/CookiePolicy";
 import FAQ from "@/components/FAQ";
 import CustomerReviews from "@/components/CustomerReviews";
+import Tool from "@/components/Tool";
+import Product from "@/components/Product";
 const Banner = lazy(() => import("../components/Banner"));
 // import SignupForm from "../components/SignupForm";
 // import MarqueeWrapper2 from "../components/MarqueeWrapper2";
@@ -73,6 +75,7 @@ const Home = () => {
         <div className="relative">
           {/* <FloatingActionButton/>  */}
           <Banner />
+          <Tool/>
           {/* <ClientsSection /> */}
           {/* <Suspense fallback={<Loader />}> */}
             {/* <Suspense fallback={<Loader />}>
@@ -141,9 +144,10 @@ const Home = () => {
               </LoaderWrapper>
             </ScrollAnimation>
           </Suspense>
+          <Product/>
           <CookiePolicy />
-          <FAQ />
           <CustomerReviews />
+          <FAQ />
           {/*
           <Suspense fallback={<Loader />}>
             <ScrollAnimation variants={fadeIn}>

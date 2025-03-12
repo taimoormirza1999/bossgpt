@@ -3,41 +3,21 @@ import "./App.css";
 import Navigation from "@/components/Navigation";
 import ScriptsLoader from "@/components/ScriptsLoader";
 import FooterWrapper from "@/components/utils/FooterWrapper";
+import localFont from 'next/font/local'
+import ScreenProvider from "@/components/ScreenProvider";
 
-// const CocogooseMedium = localFont({
-//   src: '../../public/fonts/Cocogoose-Classic-Medium-trial.ttf',
+
+// const CabinetGroteskVariable = localFont({
+//   src: '../../public/fonts/CabinetGrotesk-Variable.ttf',
 //   weight: '400',
 //   style: 'normal',
-//   variable: '--font-cocogoose-medium',
+//   variable: '--font-cabinet-grotesk-variable',
 // });
-
-// const CocogooseExtraBold = localFont({
-//   src: '../../public/fonts/Cocogoose-Classic-ExtraBold-trial.ttf',
-//   weight: '800',
-//   style: 'normal',
-//   variable: '--font-cocogoose-bold',
-// });
-
-// const ImpactCustom = localFont({
-//   src: '../../public/fonts/impact.ttf',
-//   weight: '400',
-//   style: 'normal',
-//   variable: '--font-impact',
-// });
-
-// const KozGoPr6NRegular = localFont({
-//   src: '../../public/fonts/KozGoPr6NRegular.woff',
-//   weight: '400',
-//   style: 'normal',
-//   variable: '--font-kozgopr',
-// });
-
-// const FranklinGothicMedium = localFont({
-//   src: '../../public/fonts/FranklinGothicMedium.ttf',
-//   weight: '400',
-//   style: 'normal',
-//   variable: '--font-franklin',
-// });
+const CabinetGroteskVariable = localFont({
+  src: '../../public/fonts/CabinetGrotesk-Variable.ttf',
+  variable: '--font-cabinet-grotesk-variable',
+  display: 'swap',
+});
 
 export const metadata = {
   // manifest: 'https://msa-club.com/manifest.json',
@@ -98,7 +78,7 @@ export const metadata = {
       height: 600,
       alt: 'MSA Club Logo Image',
     },
-    {
+    {   
       url: 'https://bossgpt.com/boss-gpt.png',
       width: 1800,
       height: 1600,
@@ -128,7 +108,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 
   return (
-    <html lang="en" suppressHydrationWarning={true} className={``}>
+    <html lang="en" suppressHydrationWarning={true} className={`${CabinetGroteskVariable.variable}`}>
      <head>
    <ScriptsLoader/>
      </head>
@@ -143,20 +123,9 @@ export default function RootLayout({ children }) {
   ></iframe>
 </noscript>
        <div className={`mx-0 relative bg-cover bg-center overflow-x-hidden`}  >
-          {/* <Image
-            src={BackgroundImage}
-            alt="Background"
-            layout="fill"
-            objectFit="cover"
-            priority
-            className="absolute inset-0 -z-10"
-          /> */}
-          {/* <Head>
-        <link rel="icon" href="/favicon.ico" />
-      </Head> */}
+       
         <Navigation  />
-        {/* <SuppressErrors/> */}
-        {children}
+        <ScreenProvider>{children}</ScreenProvider>
         <FooterWrapper />
         </div>
       </body>

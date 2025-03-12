@@ -27,10 +27,10 @@ body {
   @apply transition-all ease-in-out duration-300;
 }
 .primary-link {
-  @apply cursor-pointer text-osloGray hover:text-mtext-primary medium-transition hover:bg-anchorGlassBg border border-woodsmoke  hover:border-anchorGlassBg;
+  @apply cursor-pointer text-xs lg:text-sm text-white hover:text-mtext-primary medium-transition bg-white/10 border border-white/50 hover:border-anchorGlassBg;
 }
 .nav-primary-link {
-  @apply cursor-pointer px-3 py-2 rounded-8 text-osloGray hover:text-mtext-primary medium-transition hover:bg-anchorGlassBg border border-woodsmoke  hover:border-anchorGlassBg;
+  @apply cursor-pointer px-3 py-2 rounded-8 text-white hover:text-mtext-primary medium-transition hover:bg-anchorGlassBg    hover:border-anchorGlassBg;
 }
 .page-max-width {
   max-width: var(--page-max-width);
@@ -39,9 +39,12 @@ body {
   @apply text-mtext-tertiary font-semibold text-lg;
 }
 /* Franklin Gothic Medium */
-.font-medium-fgm {
-  font-family: var(--font-franklin), sans-serif;
+.font-medium-cabinet {
+  font-family: var(--font-cabinet-grotesk-variable);
   font-weight: 400;
+}
+.font-primary{
+    font-family: var(--font-cabinet-grotesk-variable);
 }
 section {
   /* @apply py-20; */
@@ -74,7 +77,15 @@ section {
 }
 
 ::selection {
-  background-color: #828fff;
+  background-color: #007BFF;
+}
+
+.primary-text-gradient{
+  @apply  text-transparent bg-gradient-to-r from-white to-[#3C3C3C] bg-clip-text;
+}
+
+.horizontal-center-big{
+transform: translateX(-50%)!important;
 }
 
 .blog_description .field {
