@@ -103,7 +103,7 @@ const CustomerReviews = () => {
         await controls.start({
           x: [0, -(scrollWidth - clientWidth)],
           transition: {
-            duration: 80,
+            duration: 30,
             ease: "linear",
             repeat: Infinity,
           },

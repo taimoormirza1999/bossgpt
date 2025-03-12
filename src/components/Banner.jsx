@@ -13,7 +13,7 @@ const Banner = () => {
   const isMobileLScreen = useScreenStore((state) => state.isMobileLScreen);
   return (
     <motion.div
-      className={`-z-10 relative lg:w-full h-auto min-h-[95vh] lg:min-h-[100vh] lg:-mt-[0vh] flex  md:items-center  justify-between md:mt-20 mx-auto  mb-7 md:mb-10 lg:mb-20 xl:mb-0 pt-20 lg:pb-16 font-normal ${inter.className}`}
+      className={`relative lg:w-full h-auto min-h-[95vh] lg:min-h-[100vh] lg:-mt-[0vh] flex  md:items-center  justify-between md:mt-20 mx-auto  mb-7 md:mb-10 lg:mb-20 xl:mb-0 pt-20 lg:pb-16 font-normal ${inter.className}`}
       style={{
         backgroundImage: `url(${bannerImage.src})`,
         backgroundSize: "cover",
@@ -21,7 +21,6 @@ const Banner = () => {
         backgroundRepeat: "no-repeat",
         borderRadius: "12px",
         color: "white",
-        // zIndex: -2,
       }}
     >
       <motion.div className=" relative page-max-width mx-auto ">
@@ -70,9 +69,7 @@ const Banner = () => {
                 text="TRY NOW"
                 url="https://bossgpt.com/tool/v1"
               />
-              {/* <button onClick={()=>{
-                alert("DFSFs")
-              }}>sdfsdf</button> */}
+             
             </motion.div>
           </div>
         </div>

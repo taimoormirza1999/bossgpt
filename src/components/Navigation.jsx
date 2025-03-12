@@ -113,7 +113,7 @@ const Navigation = () => {
           </li> */}
         </ul>
 
-        <div className="flex items-center font-normal  space-x-5 text-base">
+        <div className="flex items-center font-normal space-x-2 lg:space-x-5 text-base">
           <Link
             href="https://bossgpt.com/tool/v1/"
             className=" px-4 py-1.5 rounded-lg primary-link "
@@ -130,7 +130,7 @@ const Navigation = () => {
         </div>
         <div className="md:hidden flex items-center">
           <button
-            className="text-white/70text-2xl text-white"
+            className="text-white/70 text-2xl text-white"
             onClick={toggleMobileMenu}
           >
             {isMobileMenuOpen ? (
@@ -146,8 +146,8 @@ const Navigation = () => {
       {isMobileMenuOpen && (
         <motion.div
           className="bg-mbg-primary/90 md:hidden w-90 mx-auto rounded-lg border border-mbg-translucent py-7"
-          initial={{ opacity: 0,  }}
-          animate={{ opacity: 1, }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
         >
@@ -180,7 +180,7 @@ const Navigation = () => {
               className="font-normal text-osloGray text-sm"
               onClick={() => handleScroll("animation-course")}
             >
-               Customers
+              Customers
             </li>
             <li
               className="font-normal text-osloGray text-sm"
