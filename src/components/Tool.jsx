@@ -15,7 +15,7 @@ const StatItem = ({ position, value, label }) => {
 };
 export default function Tool() {
   return (
-    <div className="relative mx-auto flex justify-center -mt-14 lg:-mt-48  z-10 mb-0">
+    <div className="relative mx-auto flex justify-center -mt-14 lg:-mt-[15vh]  z-10 mb-0">
     
       <StatItem position="left-5 lg:left-32 -top-32 lg:-top-40" value="100+" label="Satisfied Customers Globally" />
       <StatItem position="right-5 lg:right-32 -bottom-24  lg:-top-96 " value="10x" label="FASTER PRODUCTIVITY" />
@@ -26,7 +26,7 @@ export default function Tool() {
         height={1200}
         width={1400}
         alt=""
-        className="w-[85%] lg:w-[65rem] xl:w-[60rem] 2xl:w-[80rem]"
+        className="w-[85%] lg:w-[65%] xl:w-[60rem] 2xl:w-[80rem]"
       />
     </div>
   );

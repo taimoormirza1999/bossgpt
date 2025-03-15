@@ -70,7 +70,7 @@ const Banner = () => {
                   // primary={true}
                   banner="true"
                   text="TRY NOW"
-                  url="https://bossgpt.com/tool/v1"
+                  url={process.env.TRY_NOW_LINK}
                 />
                
               </motion.div>

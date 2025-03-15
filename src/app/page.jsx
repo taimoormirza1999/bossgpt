@@ -9,12 +9,16 @@ import CustomerReviews from "@/components/CustomerReviews";
 import Tool from "@/components/Tool";
 import Product from "@/components/Product";
 import { useRouter, usePathname } from "next/navigation";
+import faqbackground from "@/assets/faq_bg.png";
+import FooterWrapper from "@/components/utils/FooterWrapper";
+import useScreenStore from "../../store/useScreenStore";
 const Banner = lazy(() => import("../components/Banner"));
 // import SignupForm from "../components/SignupForm";
 
 const Home = () => {
   const [loading, setLoading] = useState(false);
-  // const [showModal, setShowModal] = useState(false);
+  // const [showModal, setShowModal] =   useState(false);
+  const isLargeScreen = useScreenStore((state) => state.isLargeScreen);
   const [showForm, setShowForm] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
@@ -86,7 +90,21 @@ const Home = () => {
           <Product/>
           <CookiePolicy />
           <CustomerReviews />
-          <FAQ />
+          <div 
+            className="relative" 
+            style={{
+              backgroundImage: isLargeScreen ? `url(${faqbackground.src})` : "none",
+              backgroundSize: "cover",
+              backgroundPosition: "bottom",
+              backgroundRepeat: "no-repeat",
+              borderRadius: "12px",
+            }}
+          >
+            <div className="relative z-10 text-white">
+              <FAQ id="faq" />
+              <FooterWrapper />
+            </div>
+          </div>
           {/*
           <BlogCards /> */}
           {/* {showForm && <SignupForm />} */}

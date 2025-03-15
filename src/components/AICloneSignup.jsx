@@ -115,7 +115,7 @@ export default function ChatInterface() {
         >
          
           <Link
-            href="https://bossgpt.com/tool/v1/"
+            href={process.env.TRY_NOW_LINK}
             className=" px-4 py-2.5 rounded-lg primary-link hover:bg-link-primary hover:text-white transition-all duration-300"
           >
             Try Now!

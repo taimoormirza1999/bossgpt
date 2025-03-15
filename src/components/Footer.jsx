@@ -6,7 +6,7 @@ import useScreenStore from "../../store/useScreenStore.js";
 import faqbackground from "../assets/faq_bg.png";
 import { usePathname, useRouter } from "next/navigation";
 
-const Footer = () => {
+const Footer = ({ removeBackground = false }) => {
   const isLargeScreen = useScreenStore((state) => state.isLargeScreen);
   const router = useRouter();
   const pathname = usePathname();
@@ -35,15 +35,19 @@ const Footer = () => {
   }, [pathname]);
   return (
     <footer
-      className={`bg-pmBlack py-10 text-[0.9rem] font-normal ${inter.className}`}
-      style={{
-        backgroundImage: !isLargeScreen ? `url(${faqbackground.src})` : "none",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        borderRadius: "12px",
-        color: "white",
-      }}
+      className={`py-10 text-[0.9rem] font-normal ${inter.className} ${!removeBackground ? 'bg-pmBlack' : 'bg-transparent'}`}
+      style={
+        !removeBackground
+          ? {
+              backgroundImage: !isLargeScreen ? `url(${faqbackground.src})` : "none",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              borderRadius: "12px",
+              color: "white",
+            }
+          : { color: "white" } // Only set text color when background is removed
+      }
     >
       <div className="mx-auto page-max-width">
         <div className="flex flex-col md:flex-row justify-between w-full items-center md:items-start space-y-6 md:space-y-0">
@@ -78,7 +82,7 @@ const Footer = () => {
                 className="w-[75vw] lg:w-[25rem] h-12 bg-[#1A1A1A] border border-[#333333] text-gray-300 rounded-lg px-6 outline-none focus:ring-1 focus:ring-gray-500 transition-all duration-200 placeholder:text-gray-500 block mb-4"
               />
               <Link
-                href="https://bossgpt.com/tool/v1/"
+               href={process.env.TRY_NOW_LINK}
                 className="inline-block text-center py-3 rounded-lg bg-white text-black hover:bg-gray-200 transition-colors px-10 font-semibold self-center lg:self-start"
               >
                 TRY NOW
@@ -135,7 +139,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="text-center text-mtext-primary text-sm lg:text-base mt-8 lg:mt-14 pt-5 font-primary border-t-[0.5px] border-white">
+      <div className="text-center text-mtext-primary text-sm lg:text-base mt-8 lg:mt-14 pt-5 font-primary border-t-[0.2px] border-white/50">
         © {new Date().getFullYear()} BossGpt.com All rights reserved.
       </div>
     </footer>
