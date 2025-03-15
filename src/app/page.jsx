@@ -8,6 +8,7 @@ import FAQ from "@/components/FAQ";
 import CustomerReviews from "@/components/CustomerReviews";
 import Tool from "@/components/Tool";
 import Product from "@/components/Product";
+import { useRouter, usePathname } from "next/navigation";
 const Banner = lazy(() => import("../components/Banner"));
 // import SignupForm from "../components/SignupForm";
 
@@ -15,6 +16,8 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   // const [showModal, setShowModal] = useState(false);
   const [showForm, setShowForm] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,6 +47,22 @@ const Home = () => {
   const fadeIn = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.9 } },
+  };
+
+  const handleScroll = (id) => {
+    if (pathname !== "/") {
+      router.push("/");
+      setTimeout(() => scrollToSection(id), 300);
+    } else {
+      scrollToSection(id);
+    }
+  };
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (

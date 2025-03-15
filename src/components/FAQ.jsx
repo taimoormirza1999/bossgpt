@@ -12,47 +12,47 @@ function FAQ() {
     {
       question: "What is BossGPT?",
       answer:
-        "BossGPT is an AI-powered tool designed to assist businesses in automating tasks, improving productivity, and enhancing decision-making.",
+        "BossGPT is an AI-powered productivity assistant designed to help individuals working alone stay organized, motivated, and on track with their goals.",
     },
     {
-      question: "How can BossGPT help my business?",
+      question: "How can BossGPT help me stay motivated?",
       answer:
-        "BossGPT can help streamline customer support, generate reports, automate routine tasks, and provide actionable insights to boost business efficiency.",
+        "BossGPT acts as your personal productivity coach, helping you break tasks into manageable steps, set reminders, and track progress to keep you motivated.",
     },
     {
-      question: "Is BossGPT compatible with other software?",
+      question: "Does BossGPT help with time management?",
       answer:
-        "Yes, BossGPT integrates seamlessly with popular business software, including CRMs, project management tools, and communication platforms.",
+        "Yes! BossGPT helps you structure your day, prioritize tasks, and avoid procrastination by keeping you accountable with smart reminders and actionable insights.",
     },
     {
-      question: "What kind of businesses can benefit from BossGPT?",
+      question: "Can BossGPT replace a human mentor or coach?",
       answer:
-        "BossGPT is designed for businesses of all sizes across various industries, including retail, technology, healthcare, and finance.",
+        "While BossGPT doesn't replace human mentorship, it serves as a reliable digital guide that offers personalized support, motivation, and strategic planning to boost your productivity.",
     },
     {
-      question: "How secure is my data with BossGPT?",
+      question: "Is BossGPT only for businesses, or can individuals use it too?",
       answer:
-        "We take data security seriously. BossGPT uses advanced encryption and complies with industry-standard security protocols to protect your data.",
+        "BossGPT is designed for solo entrepreneurs, freelancers, and anyone who works alone. It helps you stay focused, manage workloads, and maintain momentum.",
     },
     {
-      question: "Can I customize BossGPT to fit my specific needs?",
+      question: "How does BossGPT track my progress?",
       answer:
-        "Yes, BossGPT is highly customizable and can be tailored to meet the unique needs and requirements of your business.",
+        "BossGPT tracks completed tasks, provides progress updates, and suggests adjustments to keep you aligned with your goals and deadlines.",
     },
     {
-      question: "What is the pricing model for BossGPT?",
+      question: "Can I customize BossGPT to fit my workflow?",
       answer:
-        "BossGPT offers flexible pricing plans based on the size and needs of your business. You can contact us for a quote based on your requirements.",
-    },
-    {
-      question: "How do I get started with BossGPT?",
-      answer:
-        "Simply sign up on our website, and our team will guide you through the setup process to integrate BossGPT into your business workflows.",
+        "Yes, BossGPT adapts to your unique work style by adjusting task structures, reminders, and motivational strategies based on your preferences.",
     },
     {
       question: "Is there a free trial for BossGPT?",
       answer:
-        "Yes, we offer a 14-day free trial so you can explore all the features of BossGPT before committing to a plan.",
+        "Yes! We offer a 14-day free trial so you can experience how BossGPT improves your workflow and motivation before committing to a plan.",
+    },
+    {
+      question: "How do I start using BossGPT?",
+      answer:
+        "Simply sign up on our website, and BossGPT will guide you through setting up your personalized productivity plan.",
     },
     {
       question: "How can I contact BossGPT support?",
@@ -60,6 +60,7 @@ function FAQ() {
         "You can reach our support team via email at support@bossgpt.com or through our help center for assistance.",
     },
   ];
+
   const [openIndex, setOpenIndex] = useState(null); // State to track the open FAQ
   const isLargeScreen = useScreenStore((state) => state.isLargeScreen);
 

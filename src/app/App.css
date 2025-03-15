@@ -29,6 +29,9 @@ body {
 .primary-link {
   @apply cursor-pointer text-xs lg:text-sm text-white hover:text-mtext-primary medium-transition bg-white/10 border border-white/50 hover:border-anchorGlassBg;
 }
+.secondary-link {
+  @apply cursor-pointer text-xs lg:text-sm text-[#242424] hover:text-mtext-primary medium-transition bg-white border border-white/50 hover:border-anchorGlassBg;
+}
 .nav-primary-link {
   @apply cursor-pointer px-3 py-2 rounded-8 text-white hover:text-mtext-primary medium-transition hover:bg-anchorGlassBg    hover:border-anchorGlassBg;
 }
@@ -313,7 +316,7 @@ wp-btn:active {
 
 .blog_description b {
   font-weight: 600;
-  color: #ff00ff;
+  color: #fff;
 }
 
 .blog_description p {
@@ -324,7 +327,7 @@ wp-btn:active {
 
 .blog_description p b {
   font-weight: bolder;
-  color: #ff00ff;
+  color: #fff;
 }
 
 .blog_description img {

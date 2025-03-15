@@ -14,7 +14,7 @@ const Banner = () => {
   const isMobileLScreen = useScreenStore((state) => state.isMobileLScreen);
   return (
     <motion.div
-      className={`relative lg:w-full h-auto min-h-[95vh] lg:min-h-[100vh] lg:-mt-[0vh] flex  md:items-center  justify-between md:mt-20 mx-auto  mb-7 md:mb-10 lg:mb-20 xl:mb-0 pt-20 lg:pb-16 font-normal ${inter.className} overflow-hidden`}
+      className={`relative lg:w-full h-auto min-h-[95vh] lg:min-h-[100vh] lg:-mt-[0vh] flex md:items-center justify-between md:mt-20 mx-auto  mb-7 md:mb-10 lg:mb-20 xl:mb-0 pt-20 lg:pb-16 font-normal ${inter.className} overflow-hidden`}
     >
       <Image
         src={bannerImage}
