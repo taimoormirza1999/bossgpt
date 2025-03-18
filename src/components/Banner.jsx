@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import bannerImage from "../assets/background_banner.png";
+// import bannerImage from "../assets/background_banner.png";
 import { motion } from "framer-motion";
 import ButtonPrimary from "./utils/ButtonPrimary";
 import inter from "@/app/InterFont";
@@ -17,7 +17,7 @@ const Banner = () => {
       className={`relative lg:w-full h-auto min-h-[95vh] lg:min-h-[100vh] lg:-mt-[0vh] flex  md:items-center  justify-between md:mt-20 mx-auto  mb-7 md:mb-10 lg:mb-20 xl:mb-0 pt-20 lg:pb-16 font-normal ${inter.className} overflow-hidden`}
     >
       <Image
-        src={bannerImage}
+        src={'https://res.cloudinary.com/da6qujoed/image/upload/v1742333113/background_banner_h46grq.png'}
         alt="Banner Background"
         fill
         priority
