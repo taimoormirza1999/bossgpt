@@ -21,9 +21,9 @@ const Banner = () => {
         alt="Banner Background"
         fill
         priority
-        quality={100}
+        // quality={100}
+        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
         className="object-cover object-center z-0"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
       />
       <div className="relative z-10 w-full h-full rounded-xl">
         <motion.div className=" relative page-max-width mx-auto ">
