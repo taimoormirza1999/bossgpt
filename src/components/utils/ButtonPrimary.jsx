@@ -19,14 +19,14 @@ function ButtonPrimary({
           primary
             ? "bg-btnWild hover:bg-white border-btnWild text-woodsmoke"
             : banner
-            ? "bg-white/20 border-white/50 border-[1.6px]"
+            ? "bg-white/15 border-white/50 border-[1.6px] hover:bg-white/90 hover:text-woodsmoke"
             : "bg-gradient-to-r from-mtext-tertiary via-mtext-primary/70 to-mtext-primary/90 bg-clip-text text-transparent border-mbg-primary  "
         } ${
         nav
           ? "px-3 py-1.5 lg:py-2 font-medium rounded-8"
           : banner
           ? "px-9 lg:px-14 py-3.5 uppercase font-black lg:font-bold rounded-12 "
-          : "px-7 py-2 font-black lg:font-semibold  rounded-8 w-auto "
+          : "px-7 py-2 font-black lg:font-semibold rounded-8 w-auto "
       }  text-xs lg:text-sm medium-transition flex items-center
       
       `}

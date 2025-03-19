@@ -105,7 +105,7 @@ export default function ChatInterface() {
         animate={{ opacity: isHovered ? 1 : 0 }}
         transition={{ duration: 0.3 }}
         className="absolute inset-0 bg-gradient-to-b from-black/55 to-black/75 z-20 rounded-24 flex items-center justify-center"
-        onClick={() => (window.location.href = "https://bossgpt.com/tool/v1")}
+        onClick={() => (window.location.href = "https://www.bossgpt.com/tool/v1/?page=register")}
       >
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
@@ -115,8 +115,8 @@ export default function ChatInterface() {
         >
          
           <Link
-            href="https://bossgpt.com/tool/v1/"
-            className=" px-4 py-2.5 rounded-lg primary-link hover:bg-link-primary hover:text-white transition-all duration-300"
+            href={process.env.TRY_NOW_LINK}
+            className=" px-4 py-2.5 rounded-lg try_now-btn hover:brightness-200 hover:text-black transition-all duration-300 "
           >
             Try Now!
           </Link>
@@ -144,7 +144,7 @@ export default function ChatInterface() {
                 },
               }}
             >
-              <FaRobot className="text-[2.5rem]  " />
+              <FaRobot className="text-[2.5rem]" />
             </motion.div>
             <span className="font-bold text-base lg:text-xl lg:pl-2 text-white  ">
               BOSS<span className="pl-[2.5px] font-black">GPT</span> Assistant
@@ -189,7 +189,7 @@ export default function ChatInterface() {
                 layout
                 className={`rounded-lg px-4 py-2 max-w-[80%] transition-all duration-200 ${
                   message.isUser
-                    ? "bg-link-primary text-white"
+                    ? "bg-white/100 text-woodsmoke text-sm"
                     : "bg-[#242526] text-zinc-100  text-sm shadow-lg"
                 }`}
               >
@@ -240,7 +240,7 @@ export default function ChatInterface() {
           />
           <button
             disabled
-            className="rounded-12 px-4 text-sm py-1.5 bg-link-primary opacity-80 text-white cursor-not-allowed"
+            className="rounded-12 px-4 text-sm py-1.5 bg-white opacity-80 text-woodsmoke cursor-not-allowed"
           >
             Send
           </button>

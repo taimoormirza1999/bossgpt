@@ -26,6 +26,9 @@ body {
 .normal-transition {
   @apply transition-all ease-in-out duration-300;
 }
+.try_now-btn {
+  @apply cursor-pointer text-xs lg:text-sm text-white/80  medium-transition bg-white/10 border border-white/50 hover:brightness-200 hover:border-white/80 hover:text-white;
+}
 .primary-link {
   @apply cursor-pointer text-xs lg:text-sm text-white hover:text-mtext-primary medium-transition bg-white/10 border border-white/50 hover:border-anchorGlassBg;
 }
