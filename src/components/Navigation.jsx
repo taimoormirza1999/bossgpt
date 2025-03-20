@@ -126,6 +126,7 @@ const Navigation = () => {
             text="Signup"
             url="https://bossgpt.com/tool/v1/?page=register"
             nav={true}
+            tag="a"
           />
         </div>
         <div className="md:hidden flex items-center">

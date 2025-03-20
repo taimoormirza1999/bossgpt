@@ -114,12 +114,12 @@ export default function ChatInterface() {
           className="text-center"
         >
          
-          <Link
+          <a
             href={process.env.TRY_NOW_LINK}
             className=" px-4 py-2.5 rounded-lg try_now-btn hover:brightness-200 hover:text-black transition-all duration-300 "
           >
             Try Now!
-          </Link>
+          </a>
           <p className="bg-gradient-to-r from-white/50 to-white bg-clip-text text-transparent mt-3 text-sm">
             Click to experience BossGPT
           </p>

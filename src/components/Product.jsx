@@ -65,8 +65,9 @@ const Product = () => {
                 // primary={true}
                 banner="true"
                 text="TRY NOW"
-                url="https://bossgpt.com/tool/v1"
+                url={process.env.TRY_NOW_LINK}
                 className="z-10 relative"
+                tag="a"
               />
             </motion.div>
           </div>

@@ -81,12 +81,12 @@ const Footer = ({ removeBackground = false }) => {
                 placeholder="Enter email"
                 className="w-[75vw] lg:w-[35rem] h-12 bg-[#1A1A1A]/50 border border-[#333333] text-gray-300 rounded-lg px-6 outline-none focus:ring-1 focus:ring-gray-500 transition-all duration-200 placeholder:text-gray-500 block mb-4"
               />
-              <Link
+              <a
                href={process.env.TRY_NOW_LINK}
-                className="inline-block text-center text-xs lg:text-sm rounded-12 bg-white text-black hover:bg-gray-200 transition-all duration-300 ease-in-out px-6  lg:px-8 py-3 font-semibold self-center lg:self-start"
+                className="inline-block text-center text-xs lg:text-[0.85rem] rounded-12 bg-white text-black hover:bg-gray-200 transition-all duration-300 ease-in-out px-6  lg:px-8 py-3 font-semibold self-center lg:self-start"
               >
                 TRY NOW
-              </Link>
+              </a>
             </div>
           </div>
 
