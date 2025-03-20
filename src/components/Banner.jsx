@@ -71,6 +71,7 @@ const Banner = () => {
                   banner="true"
                   text="TRY NOW"
                   url={process.env.TRY_NOW_LINK}
+                  tag="a"
                 />
                
               </motion.div>
