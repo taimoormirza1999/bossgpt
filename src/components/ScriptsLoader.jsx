@@ -26,11 +26,7 @@ const ScriptsLoader = () => {
         `}
       </Script>
        {/* Hotjar Tracking */}
-          <Script
-            id="hotjar-script"
-            src="https://static.hotjar.com/c/hotjar-5271325.js"
-            strategy="lazyOnload"
-          />
+         
              
         </>
       )}
