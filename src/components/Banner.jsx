@@ -6,6 +6,7 @@ import ButtonPrimary from "./utils/ButtonPrimary";
 import inter from "@/app/InterFont";
 import useScreenStore from "../../store/useScreenStore";
 import Image from "next/image";
+import AnimatedText from "./utils/AnimatedText";
 // import TestCompo from "./utils/TestCompo";
 
 const Banner = () => {
@@ -25,6 +26,7 @@ const Banner = () => {
         alt="Banner Background"
         fill
         priority
+        draggable="false"
         // quality={100}
         // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
         className="object-cover object-center z-0"
@@ -52,11 +54,11 @@ const Banner = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1.2, delay: 0.2 }}
-                  className={`text-3xl text-center w-[90%] mx-auto lg:leading-auto lg:w-full lg:text-6xl font-thin  font-primary lg:font-bold text-white/90 mb-4 hidden lg:block`}
+                  className={`text-sm text-center w-[90%] mx-auto lg:leading-auto lg:w-full lg:text-6xl font-semibold capitalize font-primary lg:font-bold text-white/90 mb-4 `}
                 >
                   Tired of not finshing any project
                 </motion.h6>
-                <motion.h1
+                {/* <motion.h1
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
@@ -102,8 +104,8 @@ const Banner = () => {
                   >
                     &nbsp;AI Boss 🚀
                   </motion.span>
-                </motion.h1>
-
+                </motion.h1> */}
+                <AnimatedText isMobileSScreen={isMobileSScreen}/>
                 {/* Subtitle */}
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}

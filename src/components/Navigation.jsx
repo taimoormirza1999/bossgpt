@@ -52,7 +52,11 @@ const Navigation = () => {
           className="cursor-pointer flex flex-row items-center"
           suppressHydrationWarning={true}
         >
-          <img
+          <Image
+            height={50}
+            width={50}
+            priority={true}
+            draggable="false"
             src="/logo.svg"
             className="w-14 lg:w-14 h-auto  shadow-xl"
             alt="Logo"
@@ -97,7 +101,7 @@ const Navigation = () => {
           </li>
           <li>
             <span
-              onClick={() => handleScroll("animation-course")}
+              onClick={() => handleScroll("blogs")}
               className="nav-primary-link "
             >
               Blog

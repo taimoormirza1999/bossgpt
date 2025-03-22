@@ -75,7 +75,7 @@ const Footer = ({ removeBackground = false }) => {
             <h3 className="text-mtext-primary lg:mb-4 text-xl font-medium font-primary text-center">
               Subscribe Now
             </h3>
-            <p className="text-white/90 text-sm max-w-lg text-center w-80 mx-auto lg:w-[93%] -mt-4">
+            <p className="text-white/90 text-sm max-w-lg text-center w-[75%] mx-auto lg:w-[93%] -mt-4 font-light lg:font-normal">
             Stay ahead with AI-powered task management! Subscribe to our newsletter for updates, tips, and exclusive insights on boosting productivity.
             </p>
             <div className=" mb-4 flex flex-col items-center lg:justify-center justify-center ">

@@ -10,6 +10,7 @@ import Tool from "@/components/Tool";
 import Product from "@/components/Product";
 // import FooterWrapper from "../components/utils/FooterWrapper";
 import faqbackground from "../assets/faq_bg.png";
+import Blogs from "@/components/Blogs";
 // import Footer from "@/components/utils/Footer";
 const Banner = lazy(() => import("../components/Banner"));
 // import SignupForm from "../components/SignupForm";
@@ -70,7 +71,7 @@ const Home = () => {
           <Product/>
           <CookiePolicy />
           <CustomerReviews />
-          
+          <Blogs/>
           <div 
             className="relative"
             style={{

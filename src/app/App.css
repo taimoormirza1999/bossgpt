@@ -79,8 +79,13 @@ section {
   font-family: var(--font-cocogoose-bold), sans-serif;
 }
 
+/* ::selection {
+  background: linear-gradient(152deg, #E32C00 0%, #E32C00 60%, #FFFFFF 100%);
+
+} */
 ::selection {
-  background-color: #007BFF;
+  background-color: rgba(227, 44, 0, 0.5); /* Solid color */
+  color: #ffffff; /* Optional: Change text color */
 }
 
 .primary-text-gradient{

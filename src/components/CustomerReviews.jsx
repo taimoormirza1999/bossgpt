@@ -133,7 +133,7 @@ const CustomerReviews = () => {
                 
                 className="flex-shrink-0 w-[250px] lg:w-[400px] 2xl:w-[380px] rounded-[24px] bg-white/10  border-[1.6px] border-white/50 hover:border-[#3A3A3A] transition-all duration-300"
               >
-                <div className="flex flex-row gap-1 2xl:gap-x-3 ml-3 me-2 lg:mx-4 mt-3  lg:mt-2 mb-2">
+                <div className="flex flex-row gap-1 2xl:gap-x-3 ml-3 me-2 lg:mx-4 mt-3  lg:mt-3 mb-2 lg:mb-3">
                   <Image
                     src={review.imageUrl}
                     alt={review.name}
@@ -141,11 +141,11 @@ const CustomerReviews = () => {
                     height={48}
                     className="rounded-full object-cover w-12 h-12 lg:w-14 lg:h-14 mt-2 flex-shrink-0 shadow-lg"
                   />
-                  <div className="flex flex-col  gap-2  mt-3">
+                  <div className="flex flex-col  gap-2 mt-3">
                     <h3 className="text-[18px] font-extrabold font-primary  text-white">
                       {review.name}
                     </h3>
-                    <p className="text-[14px] text-[#A1A1A1] leading-[1.6] font-primary  ">
+                    <p className="text-[14px] lg:text-base text-[#D1D5DB] leading-[1.6] font-primary  ">
                       {review.review}
                     </p>
                     <div className="flex mb-1 lg:mb-2">
