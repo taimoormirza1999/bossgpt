@@ -130,6 +130,7 @@ const CustomerReviews = () => {
             {reviews.map((review, index) => (
               <motion.div
                 key={index}
+                
                 className="flex-shrink-0 w-[250px] lg:w-[400px] 2xl:w-[380px] rounded-[24px] bg-white/10  border-[1.6px] border-white/50 hover:border-[#3A3A3A] transition-all duration-300"
               >
                 <div className="flex flex-row gap-1 2xl:gap-x-3 ml-3 me-2 lg:mx-4 mt-3  lg:mt-2 mb-2">

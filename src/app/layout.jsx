@@ -126,7 +126,7 @@ export default function RootLayout({ children }) {
        
         <Navigation  />
         <ScreenProvider>{children}</ScreenProvider>
-        <FooterWrapper />
+        {/* <FooterWrapper /> */}
         </div>
       </body>
     </html>

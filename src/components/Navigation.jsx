@@ -53,7 +53,7 @@ const Navigation = () => {
           suppressHydrationWarning={true}
         >
           <img
-            src="/logo-icon.svg"
+            src="/logo.svg"
             className="w-14 lg:w-14 h-auto  shadow-xl"
             alt="Logo"
           />

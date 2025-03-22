@@ -7,7 +7,7 @@ import FAQ from "../FAQ";
 import { EnrollmentToast } from "../EnrollmentToast";
 import Footer from "../Footer";
 
-export default function FooterWrapper() {
+export default function FooterWrapper({ removeBackground = true }) {
   const [showToast, setShowToast] = useState(false);
   const names = ["Mark", "Rachel", "Emma", "Sophia", "Liam", "Olivia", "Taimoor", "Thomas", 'Jonathon'];
   const [currentName, setCurrentName] = useState(names[0]);
@@ -51,7 +51,7 @@ export default function FooterWrapper() {
           />
         </Suspense>
     )} 
-      <Footer />
+      <Footer removeBackground={removeBackground} />
     </>
   );
 }

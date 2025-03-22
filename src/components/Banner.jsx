@@ -6,18 +6,22 @@ import ButtonPrimary from "./utils/ButtonPrimary";
 import inter from "@/app/InterFont";
 import useScreenStore from "../../store/useScreenStore";
 import Image from "next/image";
+// import TestCompo from "./utils/TestCompo";
 
 const Banner = () => {
   const isLargeScreen = useScreenStore((state) => state.isLargeScreen);
   const isMobileMScreen = useScreenStore((state) => state.isMobileMScreen);
   const isMobileSScreen = useScreenStore((state) => state.isMobileSScreen);
   const isMobileLScreen = useScreenStore((state) => state.isMobileLScreen);
+
   return (
     <motion.div
       className={`relative lg:w-full h-auto min-h-[95vh] lg:min-h-[100vh] lg:-mt-[0vh] flex  md:items-center  justify-between md:mt-20 mx-auto  mb-7 md:mb-10 lg:mb-20 xl:mb-0 pt-20 lg:pb-16 font-normal ${inter.className} overflow-hidden`}
     >
       <Image
-        src={'https://res.cloudinary.com/da6qujoed/image/upload/v1742333113/background_banner_h46grq.png'}
+        src={
+          "https://res.cloudinary.com/da6qujoed/image/upload/v1742333113/background_banner_h46grq.png"
+        }
         alt="Banner Background"
         fill
         priority
@@ -30,22 +34,71 @@ const Banner = () => {
           <div className=" mx-auto w-90 lg:w-full page-max-width grid grid-cols-1 lg:grid-cols-1 gap-12 items-center py-0 ">
             <div className="w-full">
               <motion.div
-                layout
+                // layout
                 // initial={{ opacity: 0, y: 30 }}
                 // animate={{ opacity: 1, y: 0 }}
                 // transition={{ duration: 1.2, delay: 0.5 }}
-                className={`space-y-6 text-center lg:text-start  ${isMobileSScreen?"mb-[20%] pt-[30%]":isMobileMScreen?"mb-[20%] pt-[30%]":isMobileLScreen?"mb-[10%] pt-[25%]":"mb-[40%]"} lg:mb-[2%] `}
+                className={`space-y-6 text-center lg:text-start  ${
+                  isMobileSScreen
+                    ? "mb-[20%] pt-[30%]"
+                    : isMobileMScreen
+                    ? "mb-[20%] pt-[30%]"
+                    : isMobileLScreen
+                    ? "mb-[10%] pt-[25%]"
+                    : "mb-[40%]"
+                } lg:mb-[2%] `}
               >
-                {/* Title */}
-                <motion.h1
+                <motion.h6
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1.2, delay: 0.2 }}
-                  className={`${isMobileSScreen?"text-[2.7rem] leading-[2.7rem]":"text-[3.5rem] leading-[3.7rem]"} md:text-4xl lg:text-[3.4rem] uppercase text-center   lg:leading-[3.7rem] lg:leading-auto lg:text-7xl 2xl:text-8xl font-primary font-black text-white/90`}
+                  className={`text-3xl text-center w-[90%] mx-auto lg:leading-auto lg:w-full lg:text-6xl font-thin  font-primary lg:font-bold text-white/90 mb-4 hidden lg:block`}
                 >
-                  Meet Your
-                  <br /> AI Boss
+                  Tired of not finshing any project
+                </motion.h6>
+                <motion.h1
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 2, ease: "easeInOut" }}
+                  className={`${
+                    isMobileSScreen
+                      ? "text-[2.7rem] leading-[2.7rem]"
+                      : "text-[3.5rem] leading-[3.7rem]"
+                  } md:text-4xl lg:text-[3.4rem] uppercase text-center lg:leading-[3.7rem] lg:text-7xl 2xl:text-8xl font-primary font-black text-white/90`}
+                >
+                  <motion.span
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 20 }}
+                    transition={{
+                      duration: 2,
+                      delay: 1,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                      repeatDelay: 3,
+                    }}
+                    // className="block"
+                  >
+                    Meet Your
+                  </motion.span>
+                  <motion.span
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 30 }}
+                    transition={{
+                      duration: 2,
+                      delay: 2.5,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                      repeatDelay: 3,
+                    }}
+                    className="block lg:inline-block"
+                  >
+                    &nbsp;AI Boss 🚀
+                  </motion.span>
                 </motion.h1>
+
                 {/* Subtitle */}
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
@@ -73,7 +126,7 @@ const Banner = () => {
                   url={process.env.TRY_NOW_LINK}
                   tag="a"
                 />
-               
+                {/* <TestCompo /> */}
               </motion.div>
             </div>
           </div>

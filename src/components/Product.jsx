@@ -7,6 +7,7 @@ import AICloneSignup from "./AICloneSignup";
 import Image from "next/image";
 import cloudImage from'@/assets/cloud.png';
 import ShapeImage from'@/assets/shape_style.svg';
+// import ShapeImage from'@/assets/shape_style.png';
 
 const Product = () => {
 
@@ -71,13 +72,13 @@ const Product = () => {
               />
             </motion.div>
           </div>
-          {/* <Image 
+          <Image 
       width={1920} 
       height={1080}
       src={ShapeImage.src} 
       alt="Banner" 
-     className="w-full absolute md:w-98 h-[38vh] sm:h-[60vh] md:h-full lg:h-full  object-cover -z-10 left-10 "
-    /> */}
+     className="w-full absolute -top-24 md:w-98 h-[38vh] sm:h-[60vh] md:h-full lg:h-[95vh] object-cover -z-50 lg:-right-40 "
+    />
 
           {/* Right Section - Image */}
           {/* <div className="my-5">
@@ -91,24 +92,24 @@ const Product = () => {
             className="relative "
           >
             {/* bottom Left */}
-            <div className="absolute -left-36 bottom-3">
+            <div className="absolute -left-36 2xl:-left-44 bottom-3">
             <Image
             src={cloudImage.src}
             height={500}
             width={500}
             alt="Cloud"
-            className=" w-[20rem] lg:w-[24rem] h-auto bg-cover"
+            className=" w-[20rem] lg:w-[24rem] 2xl:w-[30rem] h-auto bg-cover"
             > 
             </Image>
             </div>
              {/* top right */}
-            <div className="absolute -right-32 top-3 scale-y-[-1]">
+            <div className="absolute -right-32 2xl:-right-52 top-3 scale-y-[-1]">
             <Image
             src={cloudImage.src}
             height={500}
             width={500}
             alt="Cloud"
-            className=" w-[20rem] lg:w-[24rem] h-auto bg-cover"
+            className=" w-[20rem] lg:w-[24rem] 2xl:w-[30rem] h-auto bg-cover"
             > 
             </Image>
             </div>

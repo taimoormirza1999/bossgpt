@@ -189,7 +189,7 @@ export default function ChatInterface() {
                 layout
                 className={`rounded-lg px-4 py-2 max-w-[80%] transition-all duration-200 ${
                   message.isUser
-                    ? "bg-white/100 text-woodsmoke text-sm"
+                    ? "bg-white/70 text-woodsmoke text-sm"
                     : "bg-[#242526] text-zinc-100  text-sm shadow-lg"
                 }`}
               >

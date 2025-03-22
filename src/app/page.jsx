@@ -8,6 +8,9 @@ import FAQ from "@/components/FAQ";
 import CustomerReviews from "@/components/CustomerReviews";
 import Tool from "@/components/Tool";
 import Product from "@/components/Product";
+// import FooterWrapper from "../components/utils/FooterWrapper";
+import faqbackground from "../assets/faq_bg.png";
+// import Footer from "@/components/utils/Footer";
 const Banner = lazy(() => import("../components/Banner"));
 // import SignupForm from "../components/SignupForm";
 
@@ -67,7 +70,19 @@ const Home = () => {
           <Product/>
           <CookiePolicy />
           <CustomerReviews />
-          <FAQ />
+          
+          <div 
+            className="relative"
+            style={{
+              backgroundImage: `url(${faqbackground.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <FAQ removeBackground={true} />
+            {/* <Footer removeBackground={true} /> */}
+          </div>
           {/*
           <BlogCards /> */}
           {/* {showForm && <SignupForm />} */}
@@ -76,5 +91,5 @@ const Home = () => {
     </div>
   );
 };
-
+   
 export default Home;

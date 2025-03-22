@@ -58,7 +58,7 @@ const Footer = ({ removeBackground = false }) => {
               className="flex flex-col items-center space-x-2 space-y-3"
             >
               <Image
-                src="/logo-icon.svg"
+                src="/logo.svg"
                 height={1500}
                 width={1500}
                 className="w-36 lg:w-36 h-auto px-3 shadow-xl mb-3 lg:mb-0"
@@ -71,21 +71,25 @@ const Footer = ({ removeBackground = false }) => {
           </div>
 
           {/* Subscribe Now Column */}
-          <div className="flex flex-col lg:items-start space-y-5 lg:space-y-2 ">
-            <h3 className="text-mtext-primary lg:mb-4 text-xl font-medium font-primary text-center lg:text-left">
+          <div className="flex flex-col  space-y-5 lg:space-y-2 ">
+            <h3 className="text-mtext-primary lg:mb-4 text-xl font-medium font-primary text-center">
               Subscribe Now
             </h3>
-            <div className=" mb-4 flex flex-col lg:items-start justify-start ">
+            <p className="text-white/90 text-sm max-w-lg text-center w-80 mx-auto lg:w-[93%] -mt-4">
+            Stay ahead with AI-powered task management! Subscribe to our newsletter for updates, tips, and exclusive insights on boosting productivity.
+            </p>
+            <div className=" mb-4 flex flex-col items-center lg:justify-center justify-center ">
               <input
                 type="text"
                 placeholder="Enter email"
-                className="w-[75vw] lg:w-[35rem] h-12 bg-[#1A1A1A]/50 border border-[#333333] text-gray-300 rounded-lg px-6 outline-none focus:ring-1 focus:ring-gray-500 transition-all duration-200 placeholder:text-gray-500 block mb-4"
+             
+                className="w-[75vw] mt-3 lg:w-[40vh] h-12 bg-white/10  border border-white/50 text-white/50 rounded-lg px-6 outline-none focus:ring-1 focus:ring-gray-500 transition-all duration-200 placeholder:text-white/50 block mb-4"
               />
               <a
                href={process.env.TRY_NOW_LINK}
-                className="inline-block text-center text-xs lg:text-[0.85rem] rounded-12 bg-white text-black hover:bg-gray-200 transition-all duration-300 ease-in-out px-6  lg:px-8 py-3 font-semibold self-center lg:self-start"
+                className="inline-block text-center text-xs lg:text-[0.85rem] rounded-12 bg-white text-black hover:bg-gray-200 transition-all duration-300 ease-in-out px-6  lg:px-8 py-3 font-semibold self-center"
               >
-                TRY NOW
+               SUBSCRIBE
               </a>
             </div>
           </div>
@@ -103,17 +107,6 @@ const Footer = ({ removeBackground = false }) => {
                   "customers",
                 ],
               },
-              // {
-              //   title: "Connect",
-              //   // links: ["Contact us", "X (Twitter)", "GitHub", "YouTube"],
-              //   hrefs: [
-              //     "/contact",
-              //     "https://x.com/linear",
-              //     "https://github.com/linear",
-              //     "https://www.youtube.com/@linear",
-              //   ],
-              //   external: [false, true, true, true],
-              // },
             ].map(({ title, links, hrefs, external }, index) => (
               <div key={index} className="text-center lg:text-left">
                 <h3 className="text-mtext-primary lg:mb-4 text-xl font-medium font-primary ">

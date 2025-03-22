@@ -26,8 +26,6 @@ const ScriptsLoader = () => {
         `}
       </Script>
        {/* Hotjar Tracking */}
-         
-             
         </>
       )}
     </>
