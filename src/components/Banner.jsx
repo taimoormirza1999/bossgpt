@@ -69,29 +69,34 @@ const Banner = () => {
                 >
                   <motion.span
                     initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 20 }}
+                    animate={{ 
+                      opacity: [0, 1, 1, 0],
+                      y: [20, 0, 0, -20]
+                    }}
                     transition={{
-                      duration: 2,
-                      delay: 1,
+                      duration: 3,
+                      times: [0, 0.2, 0.8, 1],
                       ease: "easeInOut",
                       repeat: Infinity,
-                      repeatDelay: 3,
+                      repeatDelay: 0.5
                     }}
-                    // className="block"
+                    className="block lg:inline-block"
                   >
                     Meet Your
                   </motion.span>
                   <motion.span
                     initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 30 }}
+                    animate={{ 
+                      opacity: [0, 1, 1, 0],
+                      y: [30, 0, 0, -20]
+                    }}
                     transition={{
-                      duration: 2,
-                      delay: 2.5,
+                      duration: 5,
+                      times: [0, 0.2, 0.8, 1],
+                      delay: 1.5,
                       ease: "easeInOut",
                       repeat: Infinity,
-                      repeatDelay: 3,
+                      repeatDelay: 0.5
                     }}
                     className="block lg:inline-block"
                   >

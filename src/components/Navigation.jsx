@@ -65,7 +65,7 @@ const Navigation = () => {
         <ul className="hidden md:flex space-x-2 px-3 pl-5 font-normal text-osloGray text-[0.96rem]">
           <li className="animate-bounce">
             <span
-              onClick={() => handleScroll("enroll-checkout")}
+              onClick={() => handleScroll("product")}
               className="nav-primary-link "
             >
               Product

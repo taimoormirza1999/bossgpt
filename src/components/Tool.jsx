@@ -20,7 +20,7 @@ export default function Tool() {
     <motion.div 
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1.2, delay: 1.5 }}
+    transition={{ duration: 1, delay: 2 }}
     className="relative mx-auto flex justify-center -mt-14 lg:-mt-48  z-20 mb-0">
     
       <StatItem position="left-5 lg:left-32 -top-32 lg:-top-40" value="100+" label="Satisfied Customers Globally" />
