@@ -1,5 +1,5 @@
 import React from "react";
-import toolImage from "../assets/tool.png";
+// import toolImage from "../assets/tool.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -28,7 +28,7 @@ export default function Tool() {
       {/* StatItem position="left-32 -top-16 lg:-top-52" value="100+" label="Satisfied Customers Globally" />
       <StatItem position="right-32 -top-80" value="10x" label="FASTER PRODUCTIVITY" /> */}
       <Image
-        src={toolImage}
+        src={"https://res.cloudinary.com/da6qujoed/image/upload/v1742837443/tool_afejvm.png"}
         height={1200}
         width={1400}
         alt=""
