@@ -71,7 +71,7 @@ const Home = () => {
           <Product/>
           <CookiePolicy />
           <CustomerReviews />
-          <Blogs/>
+          {/* <Blogs/> */}
           <div 
             className="relative"
             style={{
