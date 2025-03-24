@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const words = ["Boss", "Manager", "Coach", "Assistant"];
+const words = ["Boss  🚀", "Manager 🚀", "Coach 🚀", "Assistant"];
 
 const AnimatedText = ({isMobileSScreen}) => {
   const [index, setIndex] = useState(0);
@@ -43,7 +43,7 @@ const AnimatedText = ({isMobileSScreen}) => {
         transition={{ duration: 1, ease: "easeInOut" }}
         className="block lg:inline-block"
       >
-        &nbsp;AI {words[index]} 🚀
+        &nbsp;AI {words[index]}
       </motion.span>
     </motion.h1>
   );

@@ -54,7 +54,7 @@ const Banner = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1.2, delay: 0.2 }}
-                  className={`text-sm text-center w-[90%] mx-auto lg:leading-auto lg:w-full lg:text-6xl font-semibold capitalize font-primary lg:font-bold text-white/90 mb-4 `}
+                  className={`text-sm text-center w-[90%] mx-auto lg:leading-auto lg:w-full lg:text-[3.2rem] font-semibold  font-primary lg:font-light  text-white/90 mb-4 lg:mb-10`}
                 >
                   Tired of not finshing any project
                 </motion.h6>
