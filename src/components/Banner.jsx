@@ -6,7 +6,8 @@ import ButtonPrimary from "./utils/ButtonPrimary";
 import inter from "@/app/InterFont";
 import useScreenStore from "../../store/useScreenStore";
 import Image from "next/image";
-import AnimatedText from "./utils/AnimatedText";
+// import AnimatedText from "./utils/AnimatedText";
+import AnimatedText2 from "./utils/AnimatedText2";
 // import TestCompo from "./utils/TestCompo";
 
 const Banner = () => {
@@ -50,15 +51,16 @@ const Banner = () => {
                     : "mb-[40%]"
                 } lg:mb-[2%] `}
               >
-                <motion.h6
+                {/* <motion.h6
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1.2, delay: 0.2 }}
-                  className={`text-sm text-center w-[90%] mx-auto lg:leading-auto lg:w-full lg:text-[3.2rem] font-semibold  font-primary lg:font-light  text-white/90 mb-4 lg:mb-10`}
+                  className={`text-sm text-center w-[90%] mx-auto lg:leading-auto lg:w-full lg:text-[3rem] font-semibold  font-primary lg:font-light  text-white/90 mb-4 lg:mb-10 `}
                 >
-                  Tired of not finshing any project
-                </motion.h6>
-                {/* <motion.h1
+                  Tired of not finshing any project?
+                </motion.h6> */}
+                <AnimatedText2 isMobileSScreen={isMobileSScreen}/>
+                <motion.h1
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
@@ -70,42 +72,42 @@ const Banner = () => {
                   } md:text-4xl lg:text-[3.4rem] uppercase text-center lg:leading-[3.7rem] lg:text-7xl 2xl:text-8xl font-primary font-black text-white/90`}
                 >
                   <motion.span
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ 
-                      opacity: [0, 1, 1, 0],
-                      y: [20, 0, 0, -20]
-                    }}
-                    transition={{
-                      duration: 3,
-                      times: [0, 0.2, 0.8, 1],
-                      ease: "easeInOut",
-                      repeat: Infinity,
-                      repeatDelay: 0.5
-                    }}
+                    // initial={{ opacity: 0, y: 20 }}
+                    // animate={{ 
+                    //   opacity: [0, 1, 1, 0],
+                    //   y: [20, 0, 0, -20]
+                    // }}
+                    // transition={{
+                    //   duration: 3,
+                    //   times: [0, 0.2, 0.8, 1],
+                    //   ease: "easeInOut",
+                    //   repeat: Infinity,
+                    //   repeatDelay: 0.5
+                    // }}
                     className="block lg:inline-block"
                   >
                     Meet Your
                   </motion.span>
                   <motion.span
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ 
-                      opacity: [0, 1, 1, 0],
-                      y: [30, 0, 0, -20]
-                    }}
-                    transition={{
-                      duration: 5,
-                      times: [0, 0.2, 0.8, 1],
-                      delay: 1.5,
-                      ease: "easeInOut",
-                      repeat: Infinity,
-                      repeatDelay: 0.5
-                    }}
+                    // initial={{ opacity: 0, y: 30 }}
+                    // animate={{ 
+                    //   opacity: [0, 1, 1, 0],
+                    //   y: [30, 0, 0, -20]
+                    // }}
+                    // transition={{
+                    //   duration: 5,
+                    //   times: [0, 0.2, 0.8, 1],
+                    //   delay: 1.5,
+                    //   ease: "easeInOut",
+                    //   repeat: Infinity,
+                    //   repeatDelay: 0.5
+                    // }}
                     className="block lg:inline-block"
                   >
                     &nbsp;AI Boss 🚀
                   </motion.span>
-                </motion.h1> */}
-                <AnimatedText isMobileSScreen={isMobileSScreen}/>
+                </motion.h1>
+                {/* <AnimatedText isMobileSScreen={isMobileSScreen}/> */}
                 {/* Subtitle */}
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
