@@ -20,13 +20,13 @@ const AnimatedText2 = ({isMobileSScreen}) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
       transition={{ duration: 2.1, ease: "easeInOut" }}
-      className={`text-[1.5rem] text-center w-[90%] mx-auto lg:leading-auto lg:w-full lg:text-[3rem] font-light leading-tight font-primary lg:font-light  text-white/90 mb-4 lg:mb-10 `}>
+      className={`text-[1.5rem] text-center w-[90%] mx-auto lg:leading-auto md:w-full lg:text-[3rem] font-light leading-tight font-primary lg:font-light  text-white/90 mb-4 lg:mb-10 `}>
       <motion.span
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 20 }}
         transition={{ duration: 1.1, ease: "easeInOut" }}
-        className="block lg:inline-block"
+        className="block md:inline-block"
       >
         Tired of not
       </motion.span>
@@ -36,7 +36,7 @@ const AnimatedText2 = ({isMobileSScreen}) => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
         transition={{ duration: 1.1, ease: "easeInOut" }}
-        className="block lg:inline-block italic lg:not-italic font-medium"
+        className="block md:inline-block italic md:not-italic font-medium"
       >
         &nbsp;{words[index]}?
       </motion.span>

@@ -46,7 +46,7 @@ const Navigation = () => {
     <nav
       className={`bg-black/20  border-b-[0.5px] border-[white]/[20%] fixed top-0 left-0 right-0 z-50 shadow-lg py-0 md:py-2 xl:py-0 h-[78px] lg:h-[78px]  ${inter.className} `}
     >
-      <div className="max-w-7xl mx-auto w-90 lg:w-full py-4 flex items-center justify-between   page-max-width ">
+      <div className="max-w-7xl mx-auto w-90 lg:w-[95%] xl:w-full py-4 flex items-center justify-between page-max-width ">
         <Link
           href="/"
           className="cursor-pointer flex flex-row items-center"

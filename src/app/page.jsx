@@ -57,6 +57,7 @@ const Home = () => {
       ) : (
         <div className="relative">
           <Banner />
+          
           <Tool/>
           <Suspense fallback={<Loader />}>
             <ScrollAnimation variants={fadeIn}>
@@ -84,6 +85,10 @@ const Home = () => {
             <FAQ removeBackground={true} />
             {/* <Footer removeBackground={true} /> */}
           </div>
+          
+
+
+          
           {/*
           <BlogCards /> */}
           {/* {showForm && <SignupForm />} */}

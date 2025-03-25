@@ -10,10 +10,9 @@ import ShapeImage from'@/assets/shape_style.svg';
 // import ShapeImage from'@/assets/shape_style.png';
 
 const Product = () => {
-
   return (
     <motion.div
-      className={`relative lg:w-full h-auto mt-10 min-h-[70vh] flex items-center  justify-between md:mt-20 mx-auto  mb-7 md:mb-10 lg:mb-20 xl:mb-0 pt-20 lg:pb-16 font-normal ${inter.className}`}
+      className={`relative lg:w-[95%] xl:w-full h-auto mt-10 min-h-[70vh] flex items-center  justify-between md:mt-20 mx-auto  mb-7 md:mb-10 lg:mb-20 xl:mb-0 pt-20 lg:pb-16 font-normal ${inter.className}`}
 id="product"
     >
 
