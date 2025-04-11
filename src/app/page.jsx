@@ -11,6 +11,9 @@ import Product from "@/components/Product";
 // import FooterWrapper from "../components/utils/FooterWrapper";
 import faqbackground from "../assets/faq_bg.png";
 import Blogs from "@/components/Blogs";
+import AIBossTakeLead from "@/components/AIBossTakeLead";
+import NeverMissBeat from "@/components/NeverMissBeat";
+import TimelinesWithoutHassle from "@/components/TimelinesWithoutHassle";
 // import Footer from "@/components/utils/Footer";
 const Banner = lazy(() => import("../components/Banner"));
 // import SignupForm from "../components/SignupForm";
@@ -62,17 +65,16 @@ const Home = () => {
           <Suspense fallback={<Loader />}>
             <ScrollAnimation variants={fadeIn}>
               <LoaderWrapper>
-                {/* <PricingSection
-                  showModal={showModal}
-                  setShowModal={setShowModal}
-                /> */}
               </LoaderWrapper>
             </ScrollAnimation>
           </Suspense>
           <Product/>
+          <AIBossTakeLead/>
+          <NeverMissBeat/>
+          <TimelinesWithoutHassle/>
           <CookiePolicy />
           <CustomerReviews />
-          {/* <Blogs/> */}
+          <Blogs URL={`${process.env.NEXT_PUBLIC_VITE_BACKEND_ADMIN_APIS}blogs?limit=8`}/>
           <div 
             className="relative"
             style={{

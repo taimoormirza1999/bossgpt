@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { imagesUrl1 } from "../../config/constants";
 
 const StatItem = ({ position, value, label }) => {
   return (
@@ -42,13 +43,13 @@ export default function Tool() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, delay: 2 }}
-      className={`relative mx-auto flex justify-center ${marginTop} z-20 mb-0 lg:w-[95%] xl:w-full`}
+      className={`relative mx-auto flex justify-center ${marginTop} z-0 mb-0 lg:w-[95%] xl:w-full`}
     >
       <StatItem position="left-5 lg:left-32 -top-32 lg:-top-40" value="100+" label="Satisfied Customers Globally" />
       <StatItem position="right-5 lg:right-32 -bottom-24 lg:-top-96" value="10x" label="FASTER PRODUCTIVITY" />
       
       <Image
-        src={"https://res.cloudinary.com/da6qujoed/image/upload/v1742837443/tool_afejvm.png"}
+        src={imagesUrl1}
         height={1200}
         width={1400}
         alt=""

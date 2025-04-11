@@ -16,16 +16,6 @@ const fetchBlogData = async (name) => {
 }
 };
 
-const fetchRecentBlogs = async (name) => {
-  try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_VITE_BACKEND_ADMIN_APIS}blogs/recent-blogs?limit=5`)
-    const data = await response.json();
-    return data.filter((blog) => blog.friendlyUrl !== name);
-  } catch (error) {
-    console.error("Error fetching recent blogs:", error);
-    return [];
-  }
-};
 
 
 // ✅ 2️⃣ Override Metadata Dynamically (Server-Side)
@@ -90,11 +80,10 @@ export async function generateMetadata({ params }) {
 export default async function BlogDetail({ params }) {
   const { name } = await params;
   const blogData = await fetchBlogData(name);
-  const recentBlogs = await fetchRecentBlogs(name);
   if (!name) return notFound();
 
   if (!blogData) {
     return notFound();
   }
-  return <BlogClient blogData={blogData} recentblogData={recentBlogs} />;
+  return <BlogClient blogData={blogData} recentblogURL={`${process.env.NEXT_PUBLIC_VITE_BACKEND_ADMIN_APIS}blogs?limit=8`} />;
 }

@@ -1,19 +1,8 @@
-/* @font-face {
-    font-family: 'Cocogoose-Classic-Medium';
-    src: url('../assets/fonts/Cocogoose-Classic-Medium-trial.ttf') format('truetype');
-    font-weight: 400; 
-    font-style: normal;
-  }
-    */
+
 :root {
   --page-max-width: 1024px;
   --speed-quickTransition: 0.1s;
   --speed-regularTransition: 0.25s;
-
-  /* --shadow-low: 0px 2px 4px rgba(0, 0, 0, .1);
-    --shadow-medium: 0px 4px 24px rgba(0, 0, 0, .2);
-    --shadow-high: 0px 7px 32px rgba(0, 0, 0, .35);
-    --shadow-stack-low: 0px 8px 2px 0px transparent, 0px 5px 2px 0px rgba(0, 0, 0, .01), 0px 3px 2px 0px rgba(0, 0, 0, .04), 0px 1px 1px 0px rgba(0, 0, 0, .07), 0px 0px 1px 0px rgba(0, 0, 0, .08); */
 }
 body {
   @apply bg-pmBlack;
@@ -53,9 +42,9 @@ section {
   /* @apply py-20; */
 }
 /* KozGoPr6N Regular */
-.font-medium-kgpr {
-  font-family: var(--font-kozgopr), sans-serif;
-  font-weight: 900;
+.font-medium-geist{
+  font-family: var(--font-geist-variable), sans-serif;
+  font-weight: 500;
 }
 
 /* Cocogoose Classic Medium */
@@ -69,10 +58,6 @@ section {
   font-weight: 200;
 }
 
-/* Impact Custom */
-.font-impact-regular {
-  font-family: var(--font-impact), sans-serif;
-}
 
 /* Cocogoose Classic Extra Bold */
 .font-ebold-ccm {
@@ -91,7 +76,9 @@ section {
 .primary-text-gradient{
   @apply  text-transparent bg-gradient-to-r from-white to-[#3C3C3C] bg-clip-text;
 }
-
+ .tool-images{
+  @apply w-[85%] lg:w-[65rem] xl:w-[60rem] 2xl:w-[73vw] mx-auto;
+ }
 .horizontal-center-big{
 transform: translateX(-50%)!important;
 }
@@ -103,7 +90,9 @@ transform: translateX(-50%)!important;
   color: #686868;
   font-size: 11px;
 }
-
+.blog_description a{
+  @apply mx-1;
+}
 .blog_description .wp-box {
   background: #fff;
   border: 1px solid #e0e0e0;
@@ -150,8 +139,22 @@ wp-btn:active {
 }
 .blog_description img {
   max-width: 100%;
+  @apply bg-gradient-to-b from-white to-[#08090A] p-[2.5px];
+  border-radius: 36px!important;
 }
-
+.blog_description img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @apply bg-gradient-to-b from-white to-[#08090A] rounded-[36px] p-1;
+}
+.signature-container{
+  @apply bg-gradient-to-b from-white to-[#08090A] p-[3px];
+  border-radius: 30px!important;
+}
 .blog_description .button {
   display: inline-block;
   font-weight: 600;
@@ -212,20 +215,20 @@ wp-btn:active {
   font-style: normal;
 }
 .blog_description .primary-bg {
-  background: #ff00ff;
+  background: #fff;
 }
 .blog_description .button {
-  background: #ff00ff;
+  background: #fff;
   color: #fff;
 }
 .button:hover,
 .button:active {
-  background: #ff00ff;
+  background: #fff;
   color: #fff;
 }
 
 .blog_description .features {
-  color: #ff00ff;
+  color: #fff;
 }
 
 .blog_description table {
@@ -245,7 +248,7 @@ wp-btn:active {
 }
 
 .blog_description th {
-  background-color: #ff00ff;
+  background-color: #fff;
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
@@ -271,17 +274,17 @@ wp-btn:active {
   font-size: 1.2rem;
   font-weight: 700;
   padding: 10px;
-  background-color: #ff00ff;
+  background-color: #fff;
   color: #fff;
   text-align: left;
 }
 
 .blog_description td a {
-  color: #ff00ff;
+ @apply text-white/80 font-medium-geist underline italic mx-1;
   text-decoration: underline;
 }
 .blog_description a {
-  color: #ff00ff;
+  @apply text-white/80 font-medium-geist underline italic mx-1;
   text-decoration: underline;
 }
 .blog_description td a:hover {
@@ -294,7 +297,7 @@ wp-btn:active {
 .blog_description h4,
 .blog_description h5,
 .blog_description h6 {
-  font-family: "Arial", sans-serif;
+font-family: var(--font-cabinet-grotesk-variable), inter;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -321,18 +324,26 @@ wp-btn:active {
 
 .blog_description b {
   font-weight: 600;
-  color: #ff00ff;
+  color: #fff;
 }
 
 .blog_description p {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 20px;
+  font-family: var(--font-geist-variable), inter;
+  font-weight: 400;
+}
+.blog_description ul li{
+  @apply list-disc py-2;
+}
+.blog_description ul{
+  @apply my-2;
 }
 
 .blog_description p b {
   font-weight: bolder;
-  color: #ff00ff;
+  color: #fff;
 }
 
 .blog_description img {

@@ -2,17 +2,16 @@ import "./globals.css";
 import "./App.css";
 import Navigation from "@/components/Navigation";
 import ScriptsLoader from "@/components/ScriptsLoader";
-import FooterWrapper from "@/components/utils/FooterWrapper";
 import localFont from 'next/font/local'
 import ScreenProvider from "@/components/ScreenProvider";
 
 
-// const CabinetGroteskVariable = localFont({
-//   src: '../../public/fonts/CabinetGrotesk-Variable.ttf',
-//   weight: '400',
-//   style: 'normal',
-//   variable: '--font-cabinet-grotesk-variable',
-// });
+const Geist = localFont({
+  src: '../../public/fonts/Geist-Medium.woff2',
+  weight: '500',
+  style: 'normal',
+  variable: '--font-geist-variable',
+});
 const CabinetGroteskVariable = localFont({
   src: '../../public/fonts/CabinetGrotesk-Variable.ttf',
   variable: '--font-cabinet-grotesk-variable',
@@ -108,7 +107,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 
   return (
-    <html lang="en" suppressHydrationWarning={true} className={`${CabinetGroteskVariable.variable}`}>
+    <html lang="en" suppressHydrationWarning={true} className={`${CabinetGroteskVariable.variable} ${Geist.variable}`}>
      <head>
    <ScriptsLoader/>
      </head>

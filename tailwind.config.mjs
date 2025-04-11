@@ -16,6 +16,7 @@ export default {
 		  red: '#f02d00',
 		  pmBlack:'#08090A',
 		  osloGray:'#8A8F98',
+		  oslo2Gray:'#696A75',
 		  mtext:{
 			primary: '#f7f8f8',
 			secondary: '#d0d6e0',
@@ -131,6 +132,7 @@ export default {
 			'6': '6px',
 			'8': '8px',
 			'12': '12px',
+			'14': '14px',
 			'16': '16px',
 			'24': '24px',
 			'32': '32px',

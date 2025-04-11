@@ -12,7 +12,7 @@ function ButtonPrimary({
 }) {
   // Base styling used everywhere
   const baseClasses =
-    "Z-20 cursor-pointer shadow-stack-low border text-xs lg:text-sm medium-transition flex items-center";
+    "Z-20 cursor-pointer shadow-stack-low border text-xs lg:text-sm medium-transition flex items-center ";
 
   // Color/appearance classes
   let colorClasses = "";
@@ -30,7 +30,7 @@ function ButtonPrimary({
   if (nav) {
     sizeClasses = "px-3 py-1.5 lg:py-2 font-medium rounded-8";
   } else if (banner) {
-    sizeClasses = "px-9 lg:px-14 py-3.5 uppercase font-black lg:font-bold rounded-12";
+    sizeClasses = "px-9 lg:px-14 py-3.5 uppercase font-black lg:font-bold rounded-14 h-[55px]";
   } else {
     sizeClasses = "px-7 py-2 font-black lg:font-semibold rounded-8 w-auto";
   }
@@ -58,7 +58,7 @@ function ButtonPrimary({
   // Conditionally render either a <Link> or an <a> tag
   if (tag === "link") {
     return (
-      <Link href={url} className={combinedClasses}>
+      <Link href={url} className={combinedClasses} style={{backdropFilter: "blur(2px)"}}>
         {text}
         {icon && arrowIcon}
       </Link>

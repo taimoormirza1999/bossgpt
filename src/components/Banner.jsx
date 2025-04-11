@@ -8,10 +8,10 @@ import useScreenStore from "../../store/useScreenStore";
 import Image from "next/image";
 // import AnimatedText from "./utils/AnimatedText";
 import AnimatedText2 from "./utils/AnimatedText2";
+import BigheadingLeading from "./BigHeadingLeading";
 // import TestCompo from "./utils/TestCompo";
 
 const Banner = () => {
-  const isLargeScreen = useScreenStore((state) => state.isLargeScreen);
   const isMobileMScreen = useScreenStore((state) => state.isMobileMScreen);
   const isMobileSScreen = useScreenStore((state) => state.isMobileSScreen);
   const isMobileLScreen = useScreenStore((state) => state.isMobileLScreen);
@@ -30,7 +30,7 @@ const Banner = () => {
         draggable="false"
         // quality={100}
         // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-        className="object-cover object-center z-0 "
+        className="object-cover object-center z-0"
       />
       <div className="relative z-10 w-full h-full rounded-xl">
         <motion.div className=" relative page-max-width mx-auto ">
@@ -51,42 +51,10 @@ const Banner = () => {
                     : "md:mb-[2%] xl:mb-[2%]"
                 } lg:mb-[2%] `}
               >
-                {/* <motion.h6
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1.2, delay: 0.2 }}
-                  className={`text-sm text-center w-[90%] mx-auto lg:leading-auto lg:w-full lg:text-[3rem] font-semibold  font-primary lg:font-light  text-white/90 mb-4 lg:mb-10 `}
-                >
-                  Tired of not finshing any project?
-                </motion.h6> */}
-                <AnimatedText2 isMobileSScreen={isMobileSScreen}/>
-                <motion.h1
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 20 }}
-                  transition={{ duration: 2, ease: "easeInOut" }}
-                  className={`${
-                    isMobileSScreen
-                      ? "text-[2.7rem] leading-[2.7rem]"
-                      : "text-[3.5rem] leading-[3.7rem]"
-                  } md:text-4xl lg:text-[3.4rem] uppercase text-center lg:leading-[3.7rem] lg:text-7xl 2xl:text-8xl font-primary font-black text-white/90`}
-                >
-                  <motion.span
-                  
-                    className="block md:inline-block"
-                  >
-                    Meet Your
-                  </motion.span>
-                  <motion.span
-                    // initial={{ opacity: 0, y: 30 }}
-                  
-                    className="block md:inline-block"
-                  >
-                    &nbsp;AI Boss 🚀
-                  </motion.span>
-                </motion.h1>
-                {/* <AnimatedText isMobileSScreen={isMobileSScreen}/> */}
-                {/* Subtitle */}
+                <AnimatedText2 isMobileSScreen={isMobileSScreen} />
+
+                <BigheadingLeading text="Meet Your AI Boss 🚀" />
+
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
