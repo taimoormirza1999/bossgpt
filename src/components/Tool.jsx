@@ -55,6 +55,9 @@ export default function Tool() {
         alt=""
         className="w-[85%] lg:w-[65rem] xl:w-[60rem] 2xl:w-[73vw]"
       />
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="h-[100px] w-[100px] bg-red-500"></div>
+      </div>
     </motion.div>
   );
 }

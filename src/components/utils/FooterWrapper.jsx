@@ -47,7 +47,7 @@ export default function FooterWrapper({ removeBackground = true }) {
             courseName="Pro Plan of BossGPT"
             timestamp={`About ${Math.round(joinTime)} hours ago`}
             onDismiss={() => setShowToast(false)}
-            duration={10000}
+            duration={10000000000}
           />
         </Suspense>
     )} 

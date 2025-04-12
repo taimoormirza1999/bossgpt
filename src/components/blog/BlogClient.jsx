@@ -4,8 +4,6 @@ import React, { useEffect, useState, useRef } from "react";
 import DOMPurify from "dompurify";
 import Image from "next/image";
 import Script from "next/script";
-import SectionWrapper from "../utils/SectionWrapper";
-import useScreenStore from "../../../store/useScreenStore";
 import Blogs from "../Blogs";
 import ReadableDate from "../ReadableDate";
 
@@ -78,7 +76,7 @@ const BlogClient = ({ blogData, recentblogURL }) => {
 
       <div className="relative pt-[8px] lg:pt-[2px]">
         <div className="mx-0 relative bg-cover bg-center overflow-x-hidden">
-          <div className="mt-32 max-w-7xl mx-auto">
+          <div className="mt-32 max-w-6xl mx-auto">
             {/* <SectionWrapper> */}
               <div className="grid grid-cols-1 lg:grid-cols-1 gap-6">
                 <div className="lg:col-span-2 px-2 lg:p-4 rounded-2xl relative">

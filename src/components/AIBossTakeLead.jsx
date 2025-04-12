@@ -12,6 +12,7 @@ function AIBossTakeLead() {
         height={1200}
         width={1400}
         alt=""
+        draggable={false}
         className="tool-images"
       />
         </ContentSectionWrapper>

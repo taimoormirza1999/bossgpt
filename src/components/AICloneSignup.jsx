@@ -93,7 +93,7 @@ const imageShowUser = '/user_m.svg'
       <motion.div
         // initial={{ y: -20, opacity: 0 }}
         // animate={{ y: 0, opacity: 1, transition: { delay: 0.5, duration: 2 } }}
-        className="border-b border-zinc-800 sticky top-0 bg-[#2F3031] z-10 px-2 rounded-tl-24 rounded-tr-24"
+        className="border-b border-zinc-800 sticky top-0 bg-[#353535] z-10 px-2 rounded-tl-24 rounded-tr-24"
       >
         <header className=" py-3  px-2">
           <h1 className="text-xl font-semibold text-white flex flex-row items-center gap-5">
@@ -117,7 +117,7 @@ const imageShowUser = '/user_m.svg'
       </motion.div>
 
 {/* Messages Container */}
-<div className="flex-1 overflow-y-auto bg-[#181819] p-4 space-y-3 lg:space-y-4 pb-20 h-full scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent ">
+<div className="flex-1 overflow-y-auto bg-[#080808] p-4 space-y-3 lg:space-y-4 pb-20 h-full scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent ">
 
   {/* Logo Always on Top */}
   <div className="bg-[#181818]/80 p-3 border-[0.7px] border-[#D3D3D3] rounded-full w-20 h-20 mx-auto">
@@ -223,14 +223,14 @@ const imageShowUser = '/user_m.svg'
       <motion.div
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="bg-[#242526] border-t border-zinc-800 p-3 pb-4"
+        className="bg-[#353535] border-t border-zinc-800 p-3 pb-4"
       >
         <div className="flex gap-2">
           <input
             type="text"
             placeholder="Type your message..."
             disabled
-            className="flex-1 py-3 px-3 rounded-8 bg-[#2F3031] text-sm text-[#6C757D] border border-zinc-700 placeholder:text-zinc-300/80"
+            className="flex-1 py-3 px-3 rounded-8 bg-[#4b4b4b] text-sm text-[#6C757D] border border-white/10 placeholder:text-zinc-300/80"
             style={{ backdropFilter: 'blur(10px)' }}
           />
           <button

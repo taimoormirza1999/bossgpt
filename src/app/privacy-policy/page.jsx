@@ -3,8 +3,9 @@ import React from 'react';
 
 const PrivacyPolicy = () => {
   return (
-<div className='lg:pt-20'>
-      <div className=" w-90 max-w-5xl font-medium-fgm border-white/[21%] bg-white/[9%] border-2 border-pink200 bg-opacity-90 p-6 lg:p-8 rounded-2xl shadow-lg shadow-pink200/30  mt-28 mx-auto  mb-5  ">
+<div className='lg:pt-20 '>
+  <div className='signature-container max-w-5xl mx-auto w-90 mt-28 lg:mt-16'>
+  <div className="font-primary border-white/[21%] bg-black/[90%] border-2 border-pink200 bg-opacity-90 p-4 lg:p-6 rounded-[30px] lg:rounded-[36px] shadow-lg shadow-white/30   mx-auto  mb-5   ">
         <h1 className="text-2xl font-bold text-white mb-4">Privacy Policy</h1>
         <p className="text-gray-50">
           This Privacy Statement explains our practices, including your choices, regarding the collection, security, and use of your personal information in connection with the MSA-Academy service.
@@ -13,7 +14,7 @@ const PrivacyPolicy = () => {
         <h2 className="text-xl font-semibold text-white mt-4">Contact Us</h2>
         <p className="text-gray-50">
           If you have general questions about your account or how to contact customer service for assistance and for questions specifically about this Privacy Statement, or our use of your personal information, cookies, or similar technologies, please contact our Data Protection Officer/Privacy Office at:  
-          <strong className="block text-pink200">contact@msa-club.com</strong>
+          <strong className="block text-white">contact@msa-club.com</strong>
         </p>
 
         <h2 className="text-xl font-semibold text-white mt-4">Collection of Information</h2>
@@ -35,7 +36,7 @@ const PrivacyPolicy = () => {
         <h2 className="text-xl font-semibold text-white mt-4">Your Rights</h2>
         <p className="text-gray-50">
           You can request access to, correct, update, or delete your personal information by contacting:
-          <strong className="block text-pink200">contact@msa-club.com</strong>
+          <strong className="block text-white">contact@msa-club.com</strong>
         </p>
 
         <h2 className="text-xl font-semibold text-white mt-4 ">Subscription Policy</h2>
@@ -47,6 +48,8 @@ const PrivacyPolicy = () => {
           <li>Deleting the app does not cancel your subscription.</li>
         </ul>
       </div>
+  </div>
+     
 </div>
   );
 };

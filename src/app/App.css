@@ -77,7 +77,7 @@ section {
   @apply  text-transparent bg-gradient-to-r from-white to-[#3C3C3C] bg-clip-text;
 }
  .tool-images{
-  @apply w-[85%] lg:w-[65rem] xl:w-[60rem] 2xl:w-[73vw] mx-auto;
+  @apply w-[85%] lg:w-[65rem] xl:w-[60rem] 2xl:w-[63vw] mx-auto;
  }
 .horizontal-center-big{
 transform: translateX(-50%)!important;

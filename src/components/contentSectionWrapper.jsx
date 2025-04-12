@@ -12,7 +12,6 @@ const ContentSectionWrapper = ({
   return (
     <section
       className="w-full pt-16 lg:py-16 text-white overflow-hidden"
-      id="blogs"
     >
       <div className="max-w-6xl mx-auto text-center mb-10">
         {bigHeading1 && (

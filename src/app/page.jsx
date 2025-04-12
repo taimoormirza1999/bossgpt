@@ -74,7 +74,7 @@ const Home = () => {
           <TimelinesWithoutHassle/>
           <CookiePolicy />
           <CustomerReviews />
-          <Blogs URL={`${process.env.NEXT_PUBLIC_VITE_BACKEND_ADMIN_APIS}blogs?limit=8`}/>
+          {/* <Blogs URL={`${process.env.NEXT_PUBLIC_VITE_BACKEND_ADMIN_APIS}blogs?limit=8`}/> */}
           <div 
             className="relative"
             style={{

@@ -11,7 +11,8 @@ function TimelinesWithoutHassle() {
         src={imagesUrl4}
         height={1200}
         width={1400}
-        alt=""
+        alt="bossgpt.com timelines without hassle"
+        draggable={false}
         className="tool-images"
       />
         </ContentSectionWrapper>

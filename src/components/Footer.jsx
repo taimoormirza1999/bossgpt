@@ -11,14 +11,17 @@ const Footer = ({ removeBackground = false }) => {
   const isLargeScreen = useScreenStore((state) => state.isLargeScreen);
   const router = useRouter();
   const pathname = usePathname();
-  const handleScroll = (id) => {
-    if (pathname !== "/") {
+  const handleScroll = (id, external) => {
+    if (external) {
+      window.open(id, "_blank");
+      setMobileMenuOpen(false); 
+    } else if (pathname !== "/") {
       router.push("/");
       setTimeout(() => scrollToSection(id), 300);
     } else {
       scrollToSection(id);
     }
-    setMobileMenuOpen(false);
+    setMobileMenuOpen(false); 
   };
 
   const scrollToSection = (id) => {
@@ -81,12 +84,20 @@ const Footer = ({ removeBackground = false }) => {
             {[
               {
                 title: "Important Links",
-                links: ["Product", "FAQs", "Pricing", "Customer Reviews"],
+                links: ["Product", "FAQs", "Pricing", "Customer Reviews", "Privacy Policy"],
                 hrefs: [
                   "product",
                   "faq",
                   "pricing-section",
                   "customers",
+                  "/privacy-policy",
+                ],
+                external: [
+                  false,
+                  false,
+                  false,
+                  false,
+                  true,
                 ],
               },
             ].map(({ title, links, hrefs, external }, index) => (
@@ -98,7 +109,7 @@ const Footer = ({ removeBackground = false }) => {
                   {links?.map((link, i) => (
                     <li key={i}>
                       <span
-                        onClick={() => handleScroll(hrefs[i])}
+                        onClick={() => handleScroll(hrefs[i], external?.[i])}
                         target={external?.[i] ? "_blank" : "_self"}
                         className="hover:text-gray-300 cursor-pointer  "
                       >
