@@ -5,7 +5,7 @@ const TermsOfService = () => {
   return (
     <div className='lg:pt-20'>
       <div className='signature-container max-w-5xl mx-auto w-90 mt-28 lg:mt-16'>
-        <div className="font-primary border-white/[21%] bg-black/[90%] border-2 bg-opacity-90 p-4 lg:p-6 rounded-[30px] lg:rounded-[36px] shadow-lg shadow-white/30 mx-auto mb-5">
+        <div className="font-primary border-white/[21%] bg-black/[90%] border-2  p-4 lg:p-6 rounded-[30px] lg:rounded-[36px] shadow-lg shadow-white/30 mx-auto mb-5 bg-opacity-10">
           <h1 className="text-2xl font-bold text-white mb-4">Terms of Service</h1>
 
           <p className="text-gray-50">

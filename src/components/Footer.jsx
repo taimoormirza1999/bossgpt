@@ -14,14 +14,14 @@ const Footer = ({ removeBackground = false }) => {
   const handleScroll = (id, external) => {
     if (external) {
       window.open(id, "_blank");
-      setMobileMenuOpen(false); 
+      // setMobileMenuOpen(false); 
     } else if (pathname !== "/") {
       router.push("/");
       setTimeout(() => scrollToSection(id), 300);
     } else {
       scrollToSection(id);
     }
-    setMobileMenuOpen(false); 
+    // setMobileMenuOpen(false); 
   };
 
   const scrollToSection = (id) => {
@@ -86,10 +86,10 @@ const Footer = ({ removeBackground = false }) => {
                 title: "Important Links",
                 links: ["Product", "FAQs", "Pricing", "Customer Reviews", "Privacy Policy", "Terms of Service"],
                 hrefs: [
-                  "product",
-                  "faq",
-                  "pricing-section",
-                  "customers",
+                  "#product",
+                  "#faq",
+                  "#pricing-section",
+                  "#customers",
                   "/privacy-policy",
                   '/terms-service'
                 ],
@@ -110,13 +110,19 @@ const Footer = ({ removeBackground = false }) => {
                 <ul className="mt-3 space-y-5">
                   {links?.map((link, i) => (
                     <li key={i}>
-                      <span
-                        onClick={() => handleScroll(hrefs[i], external?.[i])}
-                        target={external?.[i] ? "_blank" : "_self"}
-                        className="hover:text-gray-300 cursor-pointer  "
+                      
+                      <Link
+                        href={hrefs[i]}
+                        className="hover:text-gray-300 cursor-pointer"
+                        onClick={(e) => {
+                          if (!external?.[i] && hrefs[i].startsWith('#')) {
+                            e.preventDefault();
+                            handleScroll(hrefs[i].substring(1));
+                          }
+                        }}
                       >
                         {link}
-                      </span>
+                      </Link>
                     </li>
                   ))}
                 </ul>
