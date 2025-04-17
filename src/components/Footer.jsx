@@ -84,13 +84,14 @@ const Footer = ({ removeBackground = false }) => {
             {[
               {
                 title: "Important Links",
-                links: ["Product", "FAQs", "Pricing", "Customer Reviews", "Privacy Policy"],
+                links: ["Product", "FAQs", "Pricing", "Customer Reviews", "Privacy Policy", "Terms of Service"],
                 hrefs: [
                   "product",
                   "faq",
                   "pricing-section",
                   "customers",
                   "/privacy-policy",
+                  '/terms-service'
                 ],
                 external: [
                   false,
@@ -98,6 +99,7 @@ const Footer = ({ removeBackground = false }) => {
                   false,
                   false,
                   true,
+                  true
                 ],
               },
             ].map(({ title, links, hrefs, external }, index) => (
