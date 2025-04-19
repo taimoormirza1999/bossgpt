@@ -11,7 +11,7 @@ function AIBossTakeLead() {
         src={imagesUrl2}
         height={1200}
         width={1400}
-        alt=""
+        alt="AIBossTakeLead bossgpt.com"
         draggable={false}
         className="tool-images"
       />

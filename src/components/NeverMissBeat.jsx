@@ -11,7 +11,7 @@ function NeverMissBeat() {
         src={imagesUrl3}
         height={1200}
         width={1400}
-        alt=""
+        alt="NeverMissBeat bossgpt.com"
         draggable={false}
         className="tool-images"
       />

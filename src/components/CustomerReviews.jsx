@@ -136,7 +136,7 @@ const CustomerReviews = () => {
                 <div className="flex flex-row gap-1 2xl:gap-x-3 ml-3 me-2 lg:mx-4 mt-3  lg:mt-3 mb-2 lg:mb-3">
                   <Image
                     src={review.imageUrl}
-                    alt={review.name}
+                    alt={review.name+" customer review bossgpt.com"}
                     width={48}
                     height={48}
                     className="rounded-full object-cover w-12 h-12 lg:w-14 lg:h-14 mt-2 flex-shrink-0 shadow-lg"

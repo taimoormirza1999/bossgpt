@@ -41,6 +41,7 @@ const Blogs = ({ URL }) => {
   const controls = useAnimationControls();
   const [blogData, setBlogData] = useState(null);
   const [isHovered, setIsHovered] = useState(false);
+  const [currentX, setCurrentX] = useState(0);
 
   const fetchBlogs = async () => {
     try {
@@ -59,6 +60,7 @@ const Blogs = ({ URL }) => {
 
   useEffect(() => {
     fetchBlogs();
+    console.log(blogData)
   }, []);
 
   useEffect(() => {
@@ -70,9 +72,9 @@ const Blogs = ({ URL }) => {
         // Only animate if content is wider than container
         if (scrollWidth > clientWidth) {
           await controls.start({
-            x: [0, -(scrollWidth - clientWidth)],
+            x: -(scrollWidth - clientWidth),
             transition: {
-              duration: 30, // Increased duration
+              duration: 30,
               ease: "linear",
               repeat: Infinity,
               repeatType: "reverse",
@@ -82,8 +84,10 @@ const Blogs = ({ URL }) => {
       }
     };
 
-    startAnimation();
-  }, [controls, blogData]); // Add blogData as dependency
+    if (!isHovered) {
+      startAnimation();
+    }
+  }, [controls, blogData, isHovered]);
 
   return (
     <section
@@ -108,18 +112,27 @@ const Blogs = ({ URL }) => {
           onMouseEnter={() => {
             setIsHovered(true);
             controls.stop();
+            controls.getState().then(state => {
+              setCurrentX(state?.x || 0);
+            });
           }}
           onMouseLeave={() => {
             setIsHovered(false);
-            controls.start({
-              x: [controls.get("x"), -(containerRef.current.scrollWidth - containerRef.current.clientWidth)],
-              transition: {
-                duration: 30,
-                ease: "linear",
-                repeat: Infinity,
-                repeatType: "reverse",
-              },
-            });
+            if (containerRef.current) {
+              const scrollWidth = containerRef.current.scrollWidth;
+              const clientWidth = containerRef.current.clientWidth;
+              
+              controls.start({
+                x: -(scrollWidth - clientWidth),
+                transition: {
+                  duration: 30,
+                  ease: "linear",
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  from: currentX,
+                },
+              });
+            }
           }}
         >
           <motion.div
@@ -133,11 +146,11 @@ const Blogs = ({ URL }) => {
                 className="flex-shrink-0 w-[250px] lg:w-[340px] 2xl:w-[380px] overflow-hidden relative group cursor-pointer"
                 style={{ willChange: "transform" }}
               >
-                <Link href={`/blog/post/${blogData[index].friendlyUrl}`}>
+                <Link href={`/blog/${blogData[index].friendlyUrl}`}>
                   <div className="bg-white/10 border-[1.6px] border-white/50 hover:border-[#3A3A3A] transition-all duration-300 p-3 rounded-[24px]">
                     <Image
                       src={blogData[index].coverImage}
-                      alt={blogData[index].title}
+                      alt={blogData[index].title||"Blog Image"}
                       width={400}
                       height={250}
                       priority={index < 2}
@@ -150,7 +163,7 @@ const Blogs = ({ URL }) => {
                   {/* Content overlay */}
                   <div className=" p-4 px-3 flex flex-col justify-end">
                     <h3 className="text-xl lg:text-xl font-bold text-white mb-4 group-hover:text-white/90 transition-colors">
-                      {blogData[index].title}
+                      {blogData[index].title||"Blog Title"}
                     </h3>
                     
                     <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-white/50 to-transparent rounded-full"></div>
@@ -225,9 +238,9 @@ const Blogs = ({ URL }) => {
                       </div>
                     </div>
                   </div>
-                </Link>
-              </motion.div>
-            ))}
+                  </Link>
+                </motion.div>
+              ))}
           </motion.div>
         </div>
 

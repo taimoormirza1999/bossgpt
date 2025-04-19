@@ -7,8 +7,6 @@ import Script from "next/script";
 import Blogs from "../Blogs";
 import ReadableDate from "../ReadableDate";
 
-
-
 const BlogClient = ({ blogData, recentblogURL }) => {
   const [sanitizedContent, setSanitizedContent] = useState("");
   const contentRef = useRef(null);
@@ -37,16 +35,16 @@ const BlogClient = ({ blogData, recentblogURL }) => {
     },
     publisher: {
       "@type": "Organization",
-      name: "MSA Club",
+      name: "bossgpt.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://msa-club.com/logo.png",
+        url: "https://bossgpt.com/logo.png",
       },
     },
     description: blogData?.metaDescription || "",
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://msa-club.com/blog/post/${blogData?.friendlyUrl || ''}`,
+      "@id": `bossgpt.com/blog/${blogData?.friendlyUrl || ''}`,
     },
   };
 
@@ -92,6 +90,7 @@ const BlogClient = ({ blogData, recentblogURL }) => {
                         }
                         width={20}
                         height={20}
+                        alt="User Icon bossgpt.com"
                         className="rounded-full h-10 w-10 2xl:h-12 2xl:w-12 bg-cover bg-center"
                       />
                       <span className=" text-oslo2Gray font-medium-geist text-lg 2xl:text-xl">
@@ -105,7 +104,7 @@ const BlogClient = ({ blogData, recentblogURL }) => {
                       width={1356}
                       height={842}
                       src={blogData?.coverImage}
-                      alt="Floating big Bubble"
+                      alt={blogData?.title+" cover image bossgpt.com"}
                       className=" left-0 w-12 md:w-12 lg:w-full lg:h-auto xl:h-[50rem] bg-cover bg-center 2xl:left-5 z-50 signature-container"
                       priority
                     />
