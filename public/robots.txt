@@ -1,2 +1,9 @@
+# *
 User-agent: *
 Allow: /
+
+# Host
+Host: https://www.bossgpt.com
+
+# Sitemaps
+Sitemap: https://www.bossgpt.com/sitemap.xml

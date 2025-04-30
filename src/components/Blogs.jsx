@@ -152,6 +152,7 @@ const Blogs = ({ URL }) => {
                       src={blogData[index].coverImage}
                       alt={blogData[index].title||"Blog Image"}
                       width={400}
+                      draggable="false"
                       height={250}
                       priority={index < 2}
                       loading={index < 2 ? "eager" : "lazy"}
