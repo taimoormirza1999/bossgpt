@@ -68,7 +68,7 @@ const imageShowUser = '/user_m.svg'
         animate={{ opacity: isHovered ? 1 : 0 }}
         transition={{ duration: 0.3 }}
         className="absolute inset-0 bg-gradient-to-b from-black/55 to-black/75 z-20 rounded-24 flex items-center justify-center"
-        onClick={() => (window.location.href = "https://www.bossgpt.com/tool/v1/?page=register")}
+        onClick={() => (window.location.href = "https://www.bossgpt.com/tool/?page=register")}
       >
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}

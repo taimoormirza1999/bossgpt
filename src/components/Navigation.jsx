@@ -107,19 +107,12 @@ const Navigation = () => {
               Blog
             </span>
           </li>
-          {/* <li>
-            <span
-              onClick={() => handleScroll("animation-course")}
-              className="nav-primary-link "
-            >
-              Contact
-            </span>
-          </li> */}
+        
         </ul>
 
         <div className="flex items-center font-normal space-x-2 lg:space-x-5 text-base">
           <Link
-            href="https://bossgpt.com/tool/v1/"
+            href="https://bossgpt.com/tool/"
             className=" px-4 py-1.5 rounded-lg primary-link "
           >
             Login
@@ -128,7 +121,7 @@ const Navigation = () => {
           <ButtonPrimary
             primary={true}
             text="Signup"
-            url="https://bossgpt.com/tool/v1/?page=register"
+            url="https://bossgpt.com/tool/?page=register"
             nav={true}
             tag="a"
           />
@@ -165,31 +158,31 @@ const Navigation = () => {
           >
             <li
               className="font-normal text-osloGray text-sm"
-              onClick={() => handleScroll("enroll-checkout")}
+              onClick={() => handleScroll("product")}
             >
               Product
             </li>
             <li
               className="font-normal text-osloGray text-sm"
-              onClick={() => handleScroll("drawing-course")}
+              onClick={() => handleScroll("faq")}
             >
               FAQ
             </li>
             <li
               className="font-normal text-osloGray text-sm"
-              onClick={() => handleScroll("animation-course")}
+              onClick={() => handleScroll("pricing-section")}
             >
               Pricing
             </li>
             <li
               className="font-normal text-osloGray text-sm"
-              onClick={() => handleScroll("animation-course")}
+              onClick={() => handleScroll("customers")}
             >
               Customers
             </li>
             <li
               className="font-normal text-osloGray text-sm"
-              onClick={() => handleScroll("animation-course")}
+              onClick={() => handleScroll("blogs")}
             >
               Blogs
             </li>

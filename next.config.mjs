@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: false,
   env: {
-    'TRY_NOW_LINK':'https://bossgpt.com/tool/v1/?page=register'
+    'TRY_NOW_LINK':'https://bossgpt.com/tool/?page=register'
   },
     images: {
       remotePatterns: [
