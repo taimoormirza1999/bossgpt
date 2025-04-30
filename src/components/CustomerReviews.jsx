@@ -188,7 +188,7 @@ const CustomerReviews = () => {
                 // primary={true}
                 banner="true"
                 text="SUBMIT YOUR REVIEW"
-                url="https://bossgpt.com/tool/v1"
+                url="https://bossgpt.com/tool/"
               />
             </motion.div>
     </section>
