@@ -1,12 +1,43 @@
 {
-  "name": "msa-academy.com-next",
+  "name": "bossgpt.com",
+  "description": "BossGPT: AI Project Management & Task Automation Tool",
+  "keywords": [
+    "AI to do app",
+    "AI task planner",
+    "AI productivity assistant",
+    "smart to-do list app",
+    "automated task manager",
+    "AI project management",
+    "AI task automation",
+    "workflow automation software",
+    "project management tool",
+    "AI productivity assistant",
+    "team collaboration platform",
+    "task manager AI",
+    "smart deadline tracker",
+    "AI project planner",
+    "personal assistant AI for tasks",
+    "organize my tasks with AI",
+    "remote work task manager",
+    "AI work assistant",
+    "AI project tracking software",
+    "enterprise task automation",
+    "automated project manager",
+    "BossGPT AI assistant",
+    "best project management AI tool",
+    "intelligent task scheduler",
+    "AI tool for business productivity",
+    "time management with AI",
+    "top AI tools for project managers"
+  ],
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@stripe/stripe-js": "^5.6.0",
@@ -32,6 +63,7 @@
     "@eslint/eslintrc": "^3",
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
+    "next-sitemap": "^4.2.3",
     "postcss": "^8",
     "tailwindcss": "^3.4.1"
   }

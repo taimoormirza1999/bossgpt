@@ -237,7 +237,7 @@ const imageShowUser = '/user_m.svg'
             disabled
             className="rounded-12 px-4 text-sm py-1.5 bg-white opacity-80 text-woodsmoke cursor-not-allowed"
           >
-           <Image src="/send.svg" alt="Send" className="w-8 h-8" width={20} height={20} />
+           <Image src="/send.svg" alt="Send button bossgpt.com" className="w-8 h-8" width={20} height={20} />
           </button>
         </div>
       </motion.div>

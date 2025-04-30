@@ -66,7 +66,7 @@ const Footer = ({ removeBackground = false }) => {
                 height={1500}
                 width={1500}
                 className="w-36 lg:w-36 h-auto px-3 shadow-xl mb-3 lg:mb-0"
-                alt="Logo"
+                alt="Logo bossgpt.com"
               />
               <span className="font-medium text-xl lg:text-2xl lg:pl-2 text-white">
                 BOSS<span className="pl-[2.5px] font-black">GPT</span>
@@ -84,11 +84,11 @@ const Footer = ({ removeBackground = false }) => {
             {[
               {
                 title: "Important Links",
-                links: ["Product", "FAQs", "Pricing", "Customer Reviews", "Privacy Policy", "Terms of Service"],
+                links: ["Product", "FAQs","Affiliate Program", "Customer Reviews", "Privacy Policy", "Terms of Service"],
                 hrefs: [
                   "#product",
                   "#faq",
-                  "#pricing-section",
+                  "http://bossgpt.getrewardful.com/signup",
                   "#customers",
                   "/privacy-policy",
                   '/terms-service'
@@ -96,7 +96,7 @@ const Footer = ({ removeBackground = false }) => {
                 external: [
                   false,
                   false,
-                  false,
+                  true,
                   false,
                   true,
                   true
