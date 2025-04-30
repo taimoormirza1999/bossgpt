@@ -84,11 +84,11 @@ const Footer = ({ removeBackground = false }) => {
             {[
               {
                 title: "Important Links",
-                links: ["Product", "FAQs", "Pricing", "Customer Reviews", "Privacy Policy", "Terms of Service"],
+                links: ["Product", "FAQs","Affiliate Program", "Customer Reviews", "Privacy Policy", "Terms of Service"],
                 hrefs: [
                   "#product",
                   "#faq",
-                  "#pricing-section",
+                  "http://bossgpt.getrewardful.com/signup",
                   "#customers",
                   "/privacy-policy",
                   '/terms-service'
@@ -96,7 +96,7 @@ const Footer = ({ removeBackground = false }) => {
                 external: [
                   false,
                   false,
-                  false,
+                  true,
                   false,
                   true,
                   true
