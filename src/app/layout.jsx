@@ -18,7 +18,13 @@ const CabinetGroteskVariable = localFont({
 });
 
 export const metadata = {
-  // manifest: 'https://msa-club.com/manifest.json',
+  manifest: '/manifest.json',
+  themeColor: "#000000",
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-32x32.png',
+    apple: '/apple-touch-icon.png',
+  },
   title: "BossGPT: AI Project Management & Task Automation Tool",
   description:
     "Boost productivity and streamline workflows with BossGPT, the ultimate AI-powered project management tool. Automate tasks, track progress, and collaborate effortlessly. Try it now!",
@@ -51,6 +57,9 @@ export const metadata = {
     "time management with AI",
     "top AI tools for project managers",
   ].join(", "),
+  alternates: {
+    canonical: "https://bossgpt.com/",
+  },
   generator: "https://bossgpt.com",
   applicationName: "bossgpt.com-BossGPT",
   referrer: "origin-when-cross-origin",
@@ -78,7 +87,6 @@ export const metadata = {
     description:
       "Streamline your workflow with BossGPT. AI-powered project planning, task automation, reminders, and smart insights – all in one intelligent tool.",
     images: [
-
       {
         url: "https://bossgpt.com/boss-gpt.png",
         width: 1800,
@@ -132,7 +140,6 @@ export default function RootLayout({ children }) {
         <div className={`mx-0 relative bg-cover bg-center overflow-x-hidden`}>
           <Navigation />
           <ScreenProvider>{children}</ScreenProvider>
-          {/* <FooterWrapper /> */}
         </div>
       </body>
     </html>
